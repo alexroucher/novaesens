@@ -1,0 +1,28 @@
+<article class="card">
+  <slot />
+</article>
+
+<style>
+  .card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-16);
+  }
+
+  .card h3 {
+    font-size: var(--font-size-20);
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--novablack);
+  }
+
+  .card p {
+    font-size: var(--font-size-16);
+    line-height: 1.5;
+    color: var(--novablack);
+    opacity: 0.8;
+  }
+</style> 

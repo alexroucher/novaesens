@@ -1,0 +1,129 @@
+---
+// Suppression de l'import CTA qui n'est plus nécessaire
+---
+
+<header class="header">
+  <div class="header-container">
+    <div class="logo">
+      <svg width="40" height="24" viewBox="0 0 40 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19.9999 23.3333C31.0456 23.3333 39.9999 18.1514 39.9999 11.6667C39.9999 5.18197 31.0456 0 19.9999 0C8.95421 0 -0.00012207 5.18197 -0.00012207 11.6667C-0.00012207 18.1514 8.95421 23.3333 19.9999 23.3333Z" fill="#2E3030"/>
+      </svg>
+      <span class="logo-text">novaesens</span>
+    </div>
+    
+    <nav class="main-nav" aria-label="Navigation principale">
+      <ul class="nav-list">
+        <li><a href="/mon-expertise">Mon expertise</a></li>
+        <li><a href="/cir-cii-jei">CIR, CII et JEI</a></li>
+        <li><a href="/a-propos">À propos</a></li>
+      </ul>
+    </nav>
+
+    <button class="header-cta">
+      Demander un audit
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="white"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<style>
+  .header {
+    width: 100%;
+    padding: 16px 32px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  .header-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 100px;
+    padding: 24px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 14px 0px rgba(54, 55, 55, 0.25);
+
+Colors
+Hex
+Hex
+
+Background colors
+
+#FFFFFF
+
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 40px;
+  }
+
+  .logo-text {
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-24);
+    font-weight: 500;
+    color: var(--novablack);
+  }
+
+  .main-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 48px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-list a {
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-16);
+    font-weight: 500;
+    color: var(--novablack);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .nav-list a:hover {
+    color: var(--novablue);
+  }
+
+  .cta-wrapper {
+    margin-left: 48px;
+  }
+
+  .header-cta {
+    display: flex;
+    width: 240px;
+    height: 53px;
+    padding: 0px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid var(--novablack);
+    background: var(--novablack);
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-16);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .header-cta:hover {
+    opacity: 0.9;
+  }
+</style> 

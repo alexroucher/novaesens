@@ -1,0 +1,394 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import Card from '../components/Card.astro';
+import '../styles/theme.css';
+
+const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
+  title: "Accueil - Novaesens",
+  description: "Expert en Crédit Impôt Recherche, CII et JEI.",
+  ogTitle: "Accueil - Novaesens",
+  ogDescription: "Expert en Crédit Impôt Recherche, CII et JEI.",
+  ogImage: "/path/to/image.jpg",
+  canonical: "https://www.novaesens.com/"
+};
+---
+
+<BaseLayout title={title} description={description} ogTitle={ogTitle} ogDescription={ogDescription} ogImage={ogImage} canonical={canonical}>
+  <!-- Section Hero -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-tag">
+        <span>Accompagnement CIR, CII, JEI</span>
+      </div>
+      
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Le crédit d'impôt, c'est très simple. Quand on le confie à la bonne personne.</h1>
+          <p>Avec 25 ans d'expertise en R&D, je sécurise et optimise vos crédits CIR, pendant que vous vous concentrez sur l'essentiel : innover.</p>
+        </div>
+        
+        <div class="hero-image">
+          <img src="/images/expert-photo.jpg" alt="Expert Novaesens" />
+          <div class="hero-dots"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Data -->
+  <section class="data-section">
+    <div class="data-container">
+      <div class="cta-container">
+        <CTA variant="cta1" label="Discutons de vos projets" />
+      </div>
+      
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-icon">⌛</div>
+          <div class="stat-line">
+            <div class="stat-number" data-target="25">0</div>
+            <div class="stat-label">ans</div>
+          </div>
+          <p class="stat-line-1">d'ingénierie et d'expertise pour</p>
+          <p class="stat-line-2">traiter les sujets les plus complexes</p>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon">💼</div>
+          <div class="stat-line">
+            <div class="stat-number" data-target="226">0</div>
+          </div>
+          <p class="stat-line-1">Projets d'innovation traités</p>
+          <p class="stat-line-2">pour du CIR ou CII</p>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon">🎯</div>
+          <div class="stat-line">
+            <div class="stat-number" data-target="100">0</div>
+            <div class="stat-label">%</div>
+          </div>
+          <p class="stat-line-1">D'acceptation</p>
+          <p class="stat-line-2">par les organismes officiels.</p>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon">💰</div>
+          <div class="stat-line">
+            <div class="stat-number" data-target="10.32">0</div>
+            <div class="stat-label">M€</div>
+          </div>
+          <p class="stat-line-1">De crédit d'impôts récupérés</p>
+          <p class="stat-line-2">sur l'ensemble de mes dossiers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section aria-labelledby="accompagnement">
+    <h2 id="accompagnement">Pourquoi être accompagné</h2>
+    <div>
+      <article>
+        <h3>Maintenir le nombre CIR/CII</h3>
+        <p>Assurez-vous que vos projets restent éligibles aux crédits d'impôt.</p>
+      </article>
+      <article>
+        <h3>Réduire le risque de redressement fiscal</h3>
+        <p>Nos experts vous aident à éviter les erreurs coûteuses.</p>
+      </article>
+    </div>
+    <CTA variant="cta2" label="Optimisez vos crédits d'impôts" />
+  </section>
+
+  <section aria-labelledby="dispositifs">
+    <h2 id="dispositifs">Les dispositifs que je gère pour vous</h2>
+    <div>
+      <Card>
+        <h3>Le Crédit Impôt Recherche</h3>
+        <p>Optimisez vos dépenses de recherche et développement.</p>
+      </Card>
+      <Card>
+        <h3>Le Crédit Impôt Innovation</h3>
+        <p>Encouragez l'innovation dans votre entreprise.</p>
+      </Card>
+      <Card>
+        <h3>Statut JEI</h3>
+        <p>Bénéficiez d'exonérations fiscales pour les jeunes entreprises innovantes.</p>
+      </Card>
+      <Card>
+        <h3>Agrément CIR</h3>
+        <p>Pour les sous-traitants, assurez-vous de votre éligibilité.</p>
+      </Card>
+    </div>
+    <CTA variant="cta2" label="Voir le détail des dispositifs" />
+  </section>
+
+  <section aria-labelledby="eligibilite">
+    <h2 id="eligibilite">Comment je vous rends éligible</h2>
+    <ol>
+      <li>
+        <h3>Audit de vos projets</h3>
+        <p>Analyse approfondie pour déterminer l'éligibilité.</p>
+      </li>
+      <li>
+        <h3>Chiffrage</h3>
+        <p>Évaluation précise des coûts et des bénéfices.</p>
+      </li>
+      <li>
+        <h3>Rédaction technique</h3>
+        <p>Documentation complète pour soutenir vos demandes.</p>
+      </li>
+      <li>
+        <h3>Suivi</h3>
+        <p>Assistance continue pour garantir la conformité.</p>
+      </li>
+    </ol>
+    <CTA variant="cta1" label="Prenons rendez-vous" />
+  </section>
+
+  <section aria-labelledby="vision">
+    <h2 id="vision">Ma vision du métier</h2>
+    <ul>
+      <li>Apporte de la clarté et de l'éligibilité</li>
+      <li>Réduit le risque de redressement fiscal</li>
+      <li>Optimise vos crédits</li>
+      <li>Vous rassure</li>
+    </ul>
+    <div>
+      <Card>
+        <h3>Avis client 1</h3>
+        <p>"Grâce à Novaesens, nous avons maximisé nos crédits d'impôt."</p>
+      </Card>
+      <Card>
+        <h3>Avis client 2</h3>
+        <p>"Un service professionnel et efficace, hautement recommandé."</p>
+      </Card>
+      <Card>
+        <h3>Avis client 3</h3>
+        <p>"Une expertise inégalée dans le domaine du CIR et CII."</p>
+      </Card>
+    </div>
+    <CTA variant="cta1" label="Je veux être satisfait" />
+  </section>
+</BaseLayout>
+
+<script>
+  function animateNumber(element, target, duration = 2000, decimals = 0) {
+    let start = 0;
+    const end = Number(target);
+    const startTime = performance.now();
+    
+    function update(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      
+      // Easing function
+      const easeOutQuad = progress * (2 - progress);
+      const current = start + (end - start) * easeOutQuad;
+      
+      element.textContent = decimals > 0 ? current.toFixed(decimals) : Math.floor(current);
+      
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      }
+    }
+    
+    requestAnimationFrame(update);
+  }
+
+  function startAnimationWhenVisible(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const element = entry.target;
+        const target = element.getAttribute('data-target');
+        const decimals = target.includes('.') ? 2 : 0;
+        animateNumber(element, target, 2000, decimals);
+        observer.unobserve(element);
+      }
+    });
+  }
+
+  // Set up Intersection Observer
+  const observer = new IntersectionObserver(startAnimationWhenVisible, {
+    threshold: 0.1
+  });
+
+  // Observe all stat numbers
+  document.querySelectorAll('.stat-number').forEach(stat => {
+    observer.observe(stat);
+  });
+</script>
+
+<style>
+  /* Hero Section */
+  .hero {
+    padding-top: 140px;
+    margin-bottom: 120px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .hero-tag {
+    display: inline-block;
+    background-color: var(--novablue);
+    border-radius: 100px;
+    padding: 8px 24px;
+    margin-top: 80px;
+  }
+
+  .hero-tag span {
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-16);
+    color: var(--novablack);
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .hero-text h1 {
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-48);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--novablack);
+    margin-bottom: 24px;
+  }
+
+  .hero-text p {
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-18);
+    line-height: 1.6;
+    color: var(--novablack);
+    margin-bottom: 40px;
+    max-width: 580px;
+  }
+
+  .hero-image {
+    position: relative;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-dots {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    bottom: -20px;
+    left: -20px;
+    background-image: radial-gradient(circle, var(--novablack) 2px, transparent 2px);
+    background-size: 20px 20px;
+    z-index: 0;
+  }
+
+  /* Data Section */
+  .data-section {
+    position: relative;
+    z-index: 2;
+    margin-top: -60px;
+    padding: 0 32px;
+    filter: drop-shadow(0px -11px 34px rgba(121, 121, 121, 0.20));
+    background-color: white;
+    border-radius: 80px 80px 0 0;
+  }
+
+  .data-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .cta-container {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-bottom: 60px;
+    padding-top: 100px;
+  }
+
+  .stat-item {
+    text-align: left;
+    font-family: 'Jost', sans-serif;
+  }
+
+  .stat-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    background-color: var(--novayellow);
+    border-radius: 50%;
+    margin-bottom: 16px;
+    font-size: var(--font-size-24);
+  }
+
+  .stat-line {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .stat-line-1 {
+    font-size: var(--font-size-16);
+    font-weight: 700;
+    color: var(--novablack);
+    line-height: 1.4;
+    margin: 8px 0 4px 0;
+  }
+
+  .stat-line-2 {
+    font-size: var(--font-size-16);
+    font-weight: 400;
+    color: var(--novablack);
+    opacity: 0.8;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .stat-number {
+    font-size: var(--font-size-36);
+    font-weight: 700;
+    color: var(--novablack);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: var(--font-size-36);
+    font-weight: 700;
+    color: var(--novablack);
+  }
+
+  .stat-description {
+    font-size: var(--font-size-16);
+    color: var(--novablack);
+    opacity: 0.8;
+    line-height: 1.4;
+    margin-top: 8px;
+  }
+</style> 
