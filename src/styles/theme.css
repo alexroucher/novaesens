@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap');
 
+/* Reset global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Jost', sans-serif;
+  font-size: var(--font-size-16);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
 :root {
   /* Couleurs */
   --novayellow: #FAFFA4;
@@ -10,7 +25,7 @@
   --blackbackground: linear-gradient(180deg, #FAFAFA 0%, #FAFAFA 100%);
   --whitebackground: white;
   
-  /* Tailles de typographie */
+  /* Tailles de typographie - Desktop par défaut */
   --font-size-12: 0.75rem;    /* 12px */
   --font-size-14: 0.875rem;   /* 14px */
   --font-size-16: 1rem;       /* 16px */
@@ -43,21 +58,70 @@
 .text-36 { font-size: var(--font-size-36); }
 .text-48 { font-size: var(--font-size-48); }
 
-/* Responsive typography */
+/* Classes pour éléments spécifiques avec responsivité automatique */
+.hero-title {
+  font-family: 'Jost', sans-serif;
+  font-size: var(--font-size-48);
+  line-height: 1.2;
+  color: var(--novablack);
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+  font-family: 'Jost', sans-serif;
+  font-size: var(--font-size-18);
+  line-height: 1.6;
+  color: var(--novablack);
+  margin: 0;
+}
+
+.hero-tag {
+  display: inline-block;
+  background-color: var(--novablue);
+  border-radius: 100px;
+  padding: 0.75rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-tag span {
+  font-family: 'Jost', sans-serif;
+  font-size: var(--font-size-16);
+  color: var(--novablack);
+}
+
+/* Responsive typography - Tablette */
 @media (max-width: 768px) {
+  :root {
+    --font-size-48: 2.25rem;   /* 36px sur tablette */
+    --font-size-36: 1.875rem;  /* 30px sur tablette */
+    --font-size-30: 1.5rem;    /* 24px sur tablette */
+    --font-size-24: 1.25rem;   /* 20px sur tablette */
+  }
+  
+  .hero-tag {
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Responsive typography - Mobile */
+@media (max-width: 480px) {
   :root {
     --font-size-48: 2.25rem;   /* 36px sur mobile */
     --font-size-36: 1.875rem;  /* 30px sur mobile */
     --font-size-30: 1.5rem;    /* 24px sur mobile */
     --font-size-24: 1.25rem;   /* 20px sur mobile */
+    --font-size-18: 1.125rem;  /* 18px sur mobile */
+    --font-size-16: 1rem;      /* 16px sur mobile */
   }
-}
-
-@media (max-width: 480px) {
-  :root {
-    --font-size-48: 1.875rem;  /* 30px sur petit mobile */
-    --font-size-36: 1.5rem;    /* 24px sur petit mobile */
-    --font-size-30: 1.25rem;   /* 20px sur petit mobile */
+  
+  .hero-tag {
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-tag span {
+    font-size: var(--font-size-16);
   }
 }
 

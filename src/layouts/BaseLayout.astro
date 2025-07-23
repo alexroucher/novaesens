@@ -9,6 +9,7 @@ const { title, description, ogTitle, ogDescription, canonical } = Astro.props;
 <html lang="fr">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <SEO title={title} description={description} ogTitle={ogTitle} ogDescription={ogDescription} canonical={canonical} />
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
@@ -22,7 +23,7 @@ const { title, description, ogTitle, ogDescription, canonical } = Astro.props;
       @import '../styles/theme.css';
     </style>
   </head>
-  <body>
+  <body class="theme-light">
     <Header />
     <main>
       <slot />
@@ -31,8 +32,3 @@ const { title, description, ogTitle, ogDescription, canonical } = Astro.props;
   </body>
 </html> 
 
-<style>
-  body {
-    margin: 0;
-  }
-</style>
