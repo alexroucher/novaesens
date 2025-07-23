@@ -24,6 +24,12 @@
   /* Typographie de base */
   font-family: 'Jost', sans-serif;
   font-size: var(--font-size-16);
+  font-weight: 400;
+}
+
+/* Reset global pour assurer font-weight 400 par défaut */
+* {
+  font-weight: 400;
 }
 
 /* Classes utilitaires pour la typographie */
