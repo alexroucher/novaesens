@@ -29,6 +29,38 @@ const { title, description, ogTitle, ogDescription, canonical } = Astro.props;
       <slot />
     </main>
     <Footer />
+
+    <script>
+      // Menu toggle functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const closeMenu = document.querySelector('.close-menu');
+        const bottomSheet = document.querySelector('.bottom-sheet');
+        const body = document.body;
+
+        function toggleMenu() {
+          body.classList.toggle('menu-open');
+        }
+
+        menuToggle?.addEventListener('click', toggleMenu);
+        closeMenu?.addEventListener('click', toggleMenu);
+
+        // Close menu when clicking outside
+        bottomSheet?.addEventListener('click', (e) => {
+          if (e.target === bottomSheet) {
+            body.classList.remove('menu-open');
+          }
+        });
+
+        // Close menu when clicking on a link
+        const mobileLinks = document.querySelectorAll('.mobile-nav-list a');
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            body.classList.remove('menu-open');
+          });
+        });
+      });
+    </script>
   </body>
 </html> 
 

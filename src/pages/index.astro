@@ -54,8 +54,8 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
                 <div class="stat-number" data-target="25">0</div>
                 <div class="stat-label">ans</div>
               </div>
-              <p class="stat-line-1">d'ingénierie et d'expertise pour</p>
-              <p class="stat-line-2">traiter les sujets les plus complexes</p>
+              <p class="stat-line-1">d'ingénierie et d'expertise</p>
+              <p class="stat-line-2">pour traiter les sujets complexes</p>
             </div>
 
             <div class="stat-item">
@@ -67,8 +67,8 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
               <div class="stat-line">
                 <div class="stat-number" data-target="226">0</div>
               </div>
-              <p class="stat-line-1">Projets d'innovation traités</p>
-              <p class="stat-line-2">pour du CIR ou CII</p>
+              <p class="stat-line-1">Projets d'innovation</p>
+              <p class="stat-line-2">traités pour CIR/CII</p>
             </div>
 
             <div class="stat-item">
@@ -82,7 +82,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
                 <div class="stat-label">%</div>
               </div>
               <p class="stat-line-1">D'acceptation</p>
-              <p class="stat-line-2">par les organismes officiels.</p>
+              <p class="stat-line-2">par les organismes officiels</p>
             </div>
 
             <div class="stat-item">
@@ -95,8 +95,8 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
                 <div class="stat-number" data-target="10.32">0</div>
                 <div class="stat-label">M€</div>
               </div>
-              <p class="stat-line-1">De crédit d'impôts récupérés</p>
-              <p class="stat-line-2">sur l'ensemble de mes dossiers.</p>
+              <p class="stat-line-1">De crédit d'impôts</p>
+              <p class="stat-line-2">récupérés sur mes dossiers</p>
             </div>
           </div>
         </div>
@@ -363,11 +363,26 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
             </div>
             <div class="vision-right">
               <ul class="vision-list">
-                <li>Apporter de la clarté, de la pédagogie</li>
-                <li>Anticiper les attentes de l'administration fiscale</li>
-                <li>Une rigueur sans faille</li>
-                <li>Une exigence de qualité</li>
-                <li>Des honoraires adaptés</li>
+                <li>
+                  <img src="/images/li-check.png" alt="Check" class="check-icon" />
+                  Apporter de la clarté, de la pédagogie
+                </li>
+                <li>
+                  <img src="/images/li-check.png" alt="Check" class="check-icon" />
+                  Anticiper les attentes de l'administration fiscale
+                </li>
+                <li>
+                  <img src="/images/li-check.png" alt="Check" class="check-icon" />
+                  Une rigueur sans faille
+                </li>
+                <li>
+                  <img src="/images/li-check.png" alt="Check" class="check-icon" />
+                  Une exigence de qualité
+                </li>
+                <li>
+                  <img src="/images/li-check.png" alt="Check" class="check-icon" />
+                  Des honoraires adaptés
+                </li>
               </ul>
             </div>
           </div>
@@ -726,14 +741,14 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
   @media (max-width: 480px) {
 
     .hero-container {
-    height: 80%;
+    height: 75%;
   }
 
     .hero-text-content {
       width: 90%;
       padding: 1.5rem 0;
-      margin-top: 10rem;
-      margin-left: 0.5rem;
+      margin-top: 7rem;
+      margin-left: 0.75rem;
     }
 
     .hero-tag {
@@ -751,8 +766,9 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     }
 
     .hero-image {
-      width: 500px;
-      right: -40%;
+      width: 400px;
+      right: -30%;
+      bottom: -5%;
     }
     
     .hero-container {
@@ -763,7 +779,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
   .scrolling-content {
     position: relative;
     z-index: 2;
-    margin-top: -40px; /* Superposition de 40px sur le Hero */
+    margin-top: 20px; /* Superposition de 40px sur le Hero */
   }
 
 
@@ -778,7 +794,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     padding: 0 2rem;
     filter: drop-shadow(0px -11px 34px rgba(121, 121, 121, 0.20));
     background-color: white;
-    border-radius: 20px 20px 0 0;
+    border-radius: 80px 80px 0 0;
     padding-bottom: 1rem;
   }
 
@@ -790,11 +806,127 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
 
   .data-section .cta-container {
     position: absolute;
-    top: -25px;
+    top: -45px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
   }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-bottom: 60px;
+    padding-top: 6.25rem; /* 100px */
+  }
+
+  .stat-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: var(--novayellow);
+    border-radius: 50%;
+    margin-bottom: 16px;
+    font-size: var(--font-size-24);
+  }
+
+  .stat-line {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .stat-line-1 {
+    font-size: var(--font-size-16);
+    font-weight: 700;
+    color: var(--novablack);
+    line-height: 1.4;
+    margin: 8px 0 4px 0;
+  }
+
+  .stat-line-2 {
+    font-size: var(--font-size-16);
+    color: var(--novablack);
+    opacity: 0.8;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .stat-number {
+    font-size: var(--font-size-36);
+    font-weight: 700;
+    color: var(--novablack);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: var(--font-size-36);
+    font-weight: 700;
+    color: var(--novablack);
+  }
+
+  .stat-description {
+    font-size: var(--font-size-16);
+    color: var(--novablack);
+    opacity: 0.8;
+    line-height: 1.4;
+    margin-top: 8px;
+  }
+
+  /* Responsive Stats Section */
+  @media (max-width: 1024px) {
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      padding-top: 4rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .data-section {
+      padding: 0 1rem;
+      margin-top: -40px; /* Réduction pour mobile */
+      padding-bottom: 2rem;
+      border-radius: 20px 20px 0 0;
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0rem;
+      padding-top: 4rem;
+      margin-bottom: 2rem;
+    }
+
+    .stat-item {
+      text-align: center; /* Centrage sur mobile */
+      padding: 1.5rem;
+      border-radius: 1rem;
+    }
+
+    .stat-number {
+      font-size: var(--font-size-36); /* Garder une belle taille */
+    }
+
+    .stat-label {
+      font-size: var(--font-size-36);
+    }
+
+    .stat-line-1, .stat-line-2 {
+      font-size: var(--font-size-12);
+    }
+
+    .stat-icon {
+      width: 40px;
+      height: 40px;
+      margin: 0 auto 1rem;
+    }
+  }
+
+
+  
 
   /* Section Accompagnement */
   .accompagnement-section {
@@ -915,7 +1047,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
 
   .accompagnement-card p {
     font-family: 'Jost', sans-serif;
-    font-size: var(--font-size-14);
+    font-size: var(--font-size-16);
     line-height: 1.5;
     color: var(--novablack);
     opacity: 0.8;
@@ -933,6 +1065,8 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     height: auto;
     max-width: 724px;
   }
+
+
 
   /* Responsive Accompagnement Section */
   @media (max-width: 1024px) {
@@ -967,17 +1101,15 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
 
   @media (max-width: 768px) {
     .accompagnement-section {
-      padding: 2rem 1rem;
+      padding: 3rem 1rem;
     }
 
     .accompagnement-container h2 {
-      font-size: var(--font-size-28);
       margin-bottom: 1rem;
       text-align: center;
     }
 
     .accompagnement-intro {
-      font-size: var(--font-size-14);
       margin-bottom: 2rem;
       text-align: center;
       max-width: 100%;
@@ -995,7 +1127,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     }
 
     .circles-background {
-      display: none; /* Masquer l'arrière-plan sur mobile */
+      display: none /* Masquer l'arrière-plan sur mobile */
     }
 
     .accompagnement-card {
@@ -1021,12 +1153,10 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     }
 
     .accompagnement-card h3 {
-      font-size: var(--font-size-16);
       margin-bottom: 0.75rem;
     }
 
     .accompagnement-card p {
-      font-size: var(--font-size-13);
       line-height: 1.4;
     }
 
@@ -1045,20 +1175,8 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
   }
 
   @media (max-width: 480px) {
-    .accompagnement-section {
-      padding: 1.5rem 0.5rem;
-    }
-
     .accompagnement-card {
       padding: 1rem;
-    }
-
-    .accompagnement-card h3 {
-      font-size: var(--font-size-15);
-    }
-
-    .accompagnement-card p {
-      font-size: var(--font-size-12);
     }
   }
 
@@ -1101,74 +1219,12 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     transform: translateX(0.25rem);
   }
 
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 32px;
-    margin-bottom: 60px;
-    padding-top: 6.25rem; /* 100px */
-  }
 
   .stat-item {
     text-align: left;
     font-family: 'Jost', sans-serif;
   }
 
-  .stat-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    background-color: var(--novayellow);
-    border-radius: 50%;
-    margin-bottom: 16px;
-    font-size: var(--font-size-24);
-  }
-
-  .stat-line {
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-    margin-bottom: 8px;
-  }
-
-  .stat-line-1 {
-    font-size: var(--font-size-16);
-    font-weight: 700;
-    color: var(--novablack);
-    line-height: 1.4;
-    margin: 8px 0 4px 0;
-  }
-
-  .stat-line-2 {
-    font-size: var(--font-size-16);
-    color: var(--novablack);
-    opacity: 0.8;
-    line-height: 1.4;
-    margin: 0;
-  }
-
-  .stat-number {
-    font-size: var(--font-size-36);
-    font-weight: 700;
-    color: var(--novablack);
-    line-height: 1;
-  }
-
-  .stat-label {
-    font-size: var(--font-size-36);
-    font-weight: 700;
-    color: var(--novablack);
-  }
-
-  .stat-description {
-    font-size: var(--font-size-16);
-    color: var(--novablack);
-    opacity: 0.8;
-    line-height: 1.4;
-    margin-top: 8px;
-  }
 
   .dispositifs {
     background-color: white;
@@ -1338,13 +1394,11 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     }
 
     .dispositifs h2 {
-      font-size: var(--font-size-28);
       text-align: center;
       margin-bottom: 1rem;
     }
 
     .dispositifs-intro {
-      font-size: var(--font-size-14);
       text-align: center;
       margin-bottom: 2rem;
     }
@@ -1412,8 +1466,9 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
 
   @media (max-width: 480px) {
     .dispositifs {
-      padding: 1.5rem 0.5rem;
+      padding: 1.5rem 0.75rem;
     }
+  
 
     .dispositifs-grid {
       gap: 1rem;
@@ -1433,16 +1488,8 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
       padding: 1rem;
     }
 
-    .card-text h3 {
-      font-size: var(--font-size-18);
-    }
-
-    .card-text h4 {
-      font-size: var(--font-size-16);
-    }
-
     .card-text p {
-      font-size: var(--font-size-13);
+      font-size: var(--font-size-16);
       margin-bottom: 2.5rem;
     }
 
@@ -1612,6 +1659,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     font-size: var(--font-size-24);
     color: var(--novablack);
     margin-bottom: 1rem;
+    margin-top: 1rem;
   }
 
   .step-description {
@@ -1648,7 +1696,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
   /* Responsive Comment Section */
   @media (max-width: 1024px) {
     .comment-section {
-      padding: 3rem 1.5rem 0rem 0rem;
+      padding: 3rem 1.5rem 3rem 2rem;
     }
 
     .comment-container {
@@ -1657,13 +1705,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     }
 
     .separator {
-      left: 0;
-      right: 0;
-      top: auto;
-      bottom: calc(60% - 2rem);
-      width: 100%;
-      height: 0.4rem;
-      transform: none;
+      display: none;
     }
 
     .comment-left, .comment-right {
@@ -1683,19 +1725,14 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
 
     .comment-left h2 {
       padding-right: 0;
-      font-size: var(--font-size-28);
     }
 
     .comment-left p {
       padding-right: 0;
-      font-size: var(--font-size-14);
     }
 
     .expert-image {
-      position: relative;
-      left: 50%;
-      margin-top: 2rem;
-      max-width: 400px;
+      display: none;
     }
   }
 
@@ -1709,13 +1746,11 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     }
 
     .comment-left h2 {
-      font-size: var(--font-size-24);
       text-align: center;
       margin-bottom: 1rem;
     }
 
     .comment-left p {
-      font-size: var(--font-size-13);
       text-align: center;
       margin-bottom: 1.5rem;
     }
@@ -1749,18 +1784,12 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     }
 
     .step-content h3 {
-      font-size: var(--font-size-18);
       margin-bottom: 0.75rem;
       text-align: center;
     }
 
-    .step-description {
-      font-size: var(--font-size-14);
-      text-align: center;
-    }
 
     .step-detail {
-      font-size: var(--font-size-13);
       line-height: 1.5;
       text-align: left;
     }
@@ -1773,7 +1802,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
 
   @media (max-width: 480px) {
     .comment-section {
-      padding: 1.5rem 0.5rem 0rem 0.5rem;
+      padding: 1.5rem 1rem 0rem 1rem;
     }
 
     .step {
@@ -1785,22 +1814,12 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
       width: 60px;
     }
 
-    .step-content h3 {
-      font-size: var(--font-size-16);
-    }
-
-    .step-description {
-      font-size: var(--font-size-13);
-    }
-
-    .step-detail {
-      font-size: var(--font-size-12);
-    }
-
+ 
     .expert-image {
       max-width: 250px;
     }
   }
+
 
   .expert-image {
     position: absolute;
@@ -1817,6 +1836,9 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     display: block;
   }
 
+    /*vision*/
+
+ 
   .vision-section {
     position: relative;
     background: white;
@@ -2010,19 +2032,16 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     }
 
     .vision-content h2 {
-      font-size: var(--font-size-28);
       text-align: center;
       margin-bottom: 1rem;
     }
 
     .vision-left p {
-      font-size: var(--font-size-14);
       text-align: center;
       margin-bottom: 1.5rem;
     }
 
     .text-link {
-      font-size: var(--font-size-14);
       justify-content: center;
     }
 
@@ -2031,21 +2050,20 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     }
 
     .vision-list li {
-      font-size: var(--font-size-14);
       margin-bottom: 0.75rem;
     }
 
     .vision-section h3 {
-      font-size: var(--font-size-20);
       text-align: center;
       margin: 2rem 0 1rem 0;
     }
 
     .vision-title-wrapper {
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       gap: 1rem;
     }
+    
 
     .arrow-svg {
       width: 50px;
@@ -2063,21 +2081,9 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     }
 
     .testimonial-card p {
-      font-size: var(--font-size-14);
       margin-bottom: 1.5rem;
     }
 
-    .author-info strong {
-      font-size: var(--font-size-14);
-    }
-
-    .author-info span {
-      font-size: var(--font-size-13);
-    }
-
-    .rating {
-      font-size: var(--font-size-20);
-    }
 
     .vision-background {
       display: none; /* Masquer l'arrière-plan sur mobile */
@@ -2090,27 +2096,21 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     }
 
     .vision-container {
-      padding: 0 0.5rem;
-    }
-
-    .vision-content h2 {
-      font-size: var(--font-size-24);
-    }
-
-    .vision-left p {
-      font-size: var(--font-size-13);
+      padding: 0 1rem;
     }
 
     .vision-list {
       padding: 1rem;
     }
 
+    /* Correction des icônes pour 480px */
     .vision-list li {
-      font-size: var(--font-size-13);
+      gap: 0.5rem;
     }
 
-    .vision-section h3 {
-      font-size: var(--font-size-18);
+    .check-icon {
+      width: 20px;
+      height: 20px;
     }
 
     .testimonials {
@@ -2121,21 +2121,9 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
       padding: 1rem;
     }
 
-    .testimonial-card p {
-      font-size: var(--font-size-13);
-    }
-
-    .author-info strong {
-      font-size: var(--font-size-13);
-    }
-
-    .author-info span {
-      font-size: var(--font-size-12);
-    }
 
     .arrow-svg {
-      width: 40px;
-      height: 25px;
+      display: none;
     }
   }
 
@@ -2159,14 +2147,6 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     transform: rotate(0deg);
     flex-shrink: 0;
     fill: var(--novablack);
-  }
-
-  @media (max-width: 768px) {
-    .vision-title-wrapper {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1rem;
-    }
   }
 
   .vision-content {
@@ -2204,32 +2184,13 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     margin-bottom: 1rem;
     font-size: var(--font-size-18);
     color: var(--novablack);
-    position: relative;
   }
 
-  .vision-list li:before {
-    content: "";
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25' fill='none'%3E%3Cpath d='M19.2099 7.70986C19.117 7.61613 19.0064 7.54174 18.8845 7.49097C18.7627 7.4402 18.632 7.41406 18.4999 7.41406C18.3679 7.41406 18.2372 7.4402 18.1154 7.49097C17.9935 7.54174 17.8829 7.61613 17.79 7.70986L10.34 15.1699L7.20995 12.0299C7.11343 11.9366 6.99949 11.8633 6.87463 11.8141C6.74978 11.7649 6.61645 11.7408 6.48227 11.7431C6.34809 11.7454 6.21568 11.7741 6.0926 11.8276C5.96953 11.8811 5.85819 11.9583 5.76495 12.0549C5.67171 12.1514 5.5984 12.2653 5.54919 12.3902C5.49999 12.515 5.47586 12.6484 5.47818 12.7825C5.4805 12.9167 5.50923 13.0491 5.56272 13.1722C5.61622 13.2953 5.69343 13.4066 5.78995 13.4999L9.62995 17.3399C9.72291 17.4336 9.83351 17.508 9.95537 17.5588C10.0772 17.6095 10.2079 17.6357 10.34 17.6357C10.472 17.6357 10.6027 17.6095 10.7245 17.5588C10.8464 17.508 10.957 17.4336 11.05 17.3399L19.2099 9.17986C19.3115 9.08622 19.3925 8.97257 19.4479 8.84607C19.5033 8.71957 19.5319 8.58296 19.5319 8.44486C19.5319 8.30676 19.5033 8.17015 19.4479 8.04365C19.3925 7.91715 19.3115 7.8035 19.2099 7.70986V7.70986Z' fill='%232E3030'/%3E%3C/svg%3E");
-    background-size: contain;
+  .check-icon {
     flex-shrink: 0;
-    position: relative;
-    z-index: 1;
-  }
-
-  .vision-list li:after {
-    content: "";
-    display: inline-block;
     width: 28px;
     height: 28px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28' fill='none'%3E%3Ccircle cx='14' cy='14' r='13.5' fill='%23C6E6FB'/%3E%3C/svg%3E");
-    background-size: contain;
-    position: absolute;
-    left: -1.5px;
-    top: -1.5px;
-    z-index: 0;
+    object-fit: contain;
   }
 
   .vision-left .cta {
@@ -2270,55 +2231,6 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     transform: translateX(4px);
   }
 
-  /* Responsive Stats Section */
-  @media (max-width: 1024px) {
-    .stats-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-      padding-top: 4rem;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .data-section {
-      padding: 0 1rem;
-      margin-top: -40px; /* Réduction pour mobile */
-      padding-bottom: 2rem;
-    }
-
-    .stats-grid {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      padding-top: 3rem;
-      margin-bottom: 2rem;
-    }
-
-    .stat-item {
-      text-align: center; /* Centrage sur mobile */
-      padding: 1.5rem;
-      background: rgba(250, 255, 164, 0.1);
-      border-radius: 1rem;
-    }
-
-    .stat-number {
-      font-size: var(--font-size-32); /* Réduction sur mobile */
-    }
-
-    .stat-label {
-      font-size: var(--font-size-32);
-    }
-
-    .stat-line-1, .stat-line-2 {
-      font-size: var(--font-size-14);
-    }
-
-    .stat-icon {
-      width: 40px;
-      height: 40px;
-      margin: 0 auto 1rem;
-    }
-  }
-
 
   /* Optimisations générales pour mobile */
   @media (max-width: 768px) {
@@ -2337,7 +2249,6 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     }
 
     .cta-link {
-      font-size: var(--font-size-14);
       gap: 0.25rem;
     }
 
