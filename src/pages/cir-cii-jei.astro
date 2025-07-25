@@ -1,0 +1,1257 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import Card from '../components/Card.astro';
+import '../styles/theme.css';
+
+const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
+  title: "Tout savoir sur le CIR et le CII - Novaesens",
+  description: "Qui est concerné par le crédit Impôt Recherche, crédit impot innovation et JEI, et les critères pour les obtenir",
+  ogTitle: "Tout sur le CIR, CII, JEI et agrément CIR - Novaesens",
+  ogDescription: "Qui est concerné par le crédit Impôt Recherche, crédit impot innovation et JEI, et les critères pour les obtenir",
+  ogImage: "/path/to/image.jpg",
+  canonical: "https://www.novaesens.com/"
+};
+---
+
+<BaseLayout title={title} description={description} ogTitle={ogTitle} ogDescription={ogDescription} ogImage={ogImage} canonical={canonical}>
+  <div class="page-container">
+    <!-- Hero en arrière-plan -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-text-content">
+          <div class="hero-tag-cir">
+            <span>Dispositifs CIR, CII, JEI</span>
+          </div>
+          <h1 class="hero-title">Je vous dis tout sur le CIR, le CII et le statut JEI</h1>
+          <p class="hero-subtitle">CIR, CII, JEI, agrément CIR… Ces dispositifs fiscaux sont de puissants leviers pour votre trésorerie, mais ils sont aussi techniques, encadrés, et régulièrement mis à jour par l’administration. Voici ce qu’il faut savoir sur ces crédits d’impôt.</p>
+        </div>
+        
+        <div class="hero-image">
+          <img src="/images/CIR-tech-min.jpg" alt="Expert Novaesens" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Contenu qui passe au-dessus -->
+    <div class="scrolling-content">
+      <!-- Section Data -->
+     
+      <section class="cir-section" aria-labelledby="cir">
+        <div class="cir-section-background">
+          <img src="/images/circles-bg-min.png" alt="" />
+        </div>
+        <div class="cir-top-cta">
+          <CTA variant="cta1" label="Être accompagné d’un expert" />
+        </div>
+        <div class="template-container">
+          <div class="template-left">
+            <div class="template-sticky-content">
+              <h2 id="cir">Le crédit impôt recherche (CIR)</h2>
+              <p>Vous cherchez un prestataire crédit impôt recherche, voulez estimer le montant de votre CIR ou simplement savoir comment bénéficier du crédit impôt recherche? Je vous explique l'essentiel ici.</p>
+              <div class="template-sticky-image">
+                <img src="/images/CIR-image-min.png" alt="Illustration CIR" />
+              </div>
+            </div>
+            <div class="template-leftbottom-content">
+              <div class="template-separator"></div>
+              <h3 class="template-bottom-title">Réaliser son dossier seul ?</h3>
+              <p class="template-bottom-subtitle">Vous pouvez. Mais c’est très fortement déconseillé.
+                Le CIR est un dispositif contrôlé par l’administration fiscale, qui nécessite la création de dossiers financiers et techniques solides pour être validés. Vous y passerez beaucoup de temps avec un résultat peu garanti. Un expert maximise très fortement les chances d’être accepté, et surtout, ce que vous dépenserez en honoraires sera largement compensé par la maximisation des montants (en plus de vous couvrir en cas de contrôle).</p>
+              <a href="#" class="cta-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 18l6-6-6-6"/>
+                </svg>
+                Voir mes résultats
+              </a>
+              <CTA variant="cta1" label="Mettre mon CIR entre des mains expertes" />
+            </div>
+          </div>
+
+          <div class="template-right">
+            <div class="template-step">
+              <div class="template-step-icon">
+                <div class="cir-circle"></div>
+              </div>
+              <div class="template-step-content-wrapper">
+                <div class="template-step-header">
+                  <h3>Définition du crédit impôt recherche</h3>
+                </div>
+                <div class="template-step-content">
+                  <p>Le Crédit d'Impôt Recherche (CIR) est un levier fiscal pour financer la recherche et développement en entreprise.</p>
+                  <p>Il permet de récupérer 30 % des dépenses liées à des projets R&D (jusqu'à 100 M€ et 5% au-delà, soit l'Assiette R&D). Salaires de techniciens à ingenieurs ou encore dépense de développement expérimental.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="template-step">
+              <div class="template-step-icon">
+                <div class="cir-circle"></div>
+                </div>
+              <div class="template-step-content-wrapper">
+                <div class="template-step-header">
+                  <h3>Qui peut bénéficier du CIR ?</h3>
+              </div>
+                <div class="template-step-content">
+                  <p>Le dispositif CIR est conçu pour toutes les entreprises industrielles. Et notamment startup, PME, TPE et bureaux d'études.</p>
+                  <p>Toutes les entreprises industrielles, technologiques, numériques ou scientifiques soumises à l'IS ou à l'IR sont concernées, sans condition de taille, ni secteur, ni localisation.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="template-step">
+              <div class="template-step-icon">
+                <div class="cir-circle"></div>
+                </div>
+              <div class="template-step-content-wrapper">
+                <div class="template-step-header">
+                  <h3>Exemple d'activités qui ouvrent droit au CIR</h3>
+              </div>
+                <div class="template-step-content">
+                  <p>Le crédit impôt recherche est cadré et le type d'activité bien précis. Les activités qui ouvrent droit au CIR sont les suivantes :</p>
+                  <ul class="template-activities-list">
+                    <li>✓ Travaux expérimentaux pour dépasser un verrou technologique</li>
+                    <li>✓ Amélioration d'un procédé ou développement d'un algorithme</li>
+                    <li>✓ Conception de preuve de concept, tests de faisabilité</li>
+                    <li>✓ Conception de preuve de concept, tests de faisabilité</li>
+                    <li>✓ Explorations techniques complexes pour concrétiser une innovation</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="template-step">
+              <div class="template-step-icon">
+                <div class="cir-circle"></div>
+                </div>
+              <div class="template-step-content-wrapper">
+                <div class="template-step-header">
+                  <h3>Toutes les dépenses sont-elles valorisables ?</h3>
+              </div>
+                <div class="template-step-content">
+                  <p>Si vos activités sont éligibles au CIR, voici les dépenses qui rentrent dans le montant valorisable :</p>
+                  <ul class="template-expenses-list">
+                    <li>✓ Rémunération du personnel de R&D (salaires + charges)</li>
+                    <li>✓ Dépenses de sous-traitance (prestataires agréés uniquement)</li>
+                    <li>✓ Amortissements des équipements utilisés en R&D</li>
+                    <li>✓ Dépenses de veille technologique, brevets, normalisation avant 2025</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="template-step cir-step-highlight">
+              <div class="template-step-content-wrapper">
+                <div class="template-step-header">
+                  <h3>Agrément CIR : rendre éligible vos prestations</h3>
+                </div>
+                <div class="template-step-content">
+                  <p>Startups, TPE, PME, bureaux d'études : vous réalisez des prestations R&D pour le compte de vos clients, il vous faut un agrément CIR pour faire bénéficier vos clients, sinon vos clients ne pourront pas déclarer dans leur CIR.</p>
+                  <a href="#" class="cta-link-agrement">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                    Voir mes résultats
+                  </a>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Version mobile de template-leftbottom-content (affichée uniquement en 480px) -->
+          <div class="template-leftbottom-content-mobile">
+            <div class="template-separator"></div>
+            <h3 class="template-bottom-title">Réaliser son dossier seul ?</h3>
+            <p class="template-bottom-subtitle">Vous pouvez. Mais c'est très fortement déconseillé.
+              Le CIR est un dispositif contrôlé par l'administration fiscale, qui nécessite la création de dossiers financiers et techniques solides pour être validés. Vous y passerez beaucoup de temps avec un résultat peu garanti. Un expert maximise très fortement les chances d'être accepté, et surtout, ce que vous dépenserez en honoraires sera largement compensé par la maximisation des montants (en plus de vous couvrir en cas de contrôle).</p>
+            <a href="#" class="cta-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+              Voir mes résultats
+            </a>
+            <CTA variant="cta1" label="Mettre mon CIR entre des mains expertes" />
+          </div>
+
+        </div>
+      </section>
+
+      <section class="cii-section" aria-labelledby="cii">
+        <div class="cii-section-background">
+          <img src="/images/circles-bg-min.png" alt="" />
+    </div>
+        <div class="template-container">
+          <div class="template-left">
+                         <div class="template-sticky-content">
+               <h2 id="cii">Le crédit impôt innovation (CII ou C2I)</h2>
+               <p>Depuis plusieurs années, je réalise les déclaration Cll en tant que conseiller crédit impôt innovation. Expert en audit CII et montage de dossier CII, je vous livre ici les infos nécessaires à comprendre le dispositif.</p>
+               <div class="template-sticky-image">
+                <img src="/images/cii-image-min.png" alt="Illustration CII" loading="lazy" />
+  </div>
+          </div>
+            <div class="template-leftbottom-content">
+              <div class="template-separator"></div>
+              <h3 class="template-bottom-title">Comme pour le CIR, faites-vous accompagner.</h3>
+              <p class="template-bottom-subtitle">La procédure de demande de crédit impôt innovation requiert un formalisme rigoureux, mais surtout une très bonne compréhension des méthodes et besoins des inspecteurs des impôts ou experts du ministère de la recherche. Un spécialiste augmentera largement la probabilité d'un accord et les sommes prises en charge seront supérieures.</p>
+              <a href="#" class="cta-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 18l6-6-6-6"/>
+                </svg>
+                Voir mes résultats, ma méthode
+              </a>
+              <CTA variant="cta1" label="Je vous accompagne jusqu'à l'obtention" />
+            </div>
+          </div>
+
+
+          <div class="template-right">
+            <div class="template-step">
+              <div class="template-step-icon">
+                <div class="cii-circle"></div>
+              </div>
+              <div class="template-step-content-wrapper">
+                <div class="template-step-header">
+                  <h3>Le principe du CII</h3>
+                </div>
+                <div class="template-step-content">
+                  <p>Le Crédit d'Impôt Innovation (CII) est une extension du CIR, réservée aux PME. Il vise à encourager le développement de produits innovants, même sans recherche scientifique poussée.</p>
+                  <p>Il permet de récupérer <strong>20 % des dépenses d'innovation produit</strong>, ce qui en fait un outil fiscal particulièrement adapté aux entreprises industrielles, design, tech ou hardware.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="template-step">
+              <div class="template-step-icon">
+                <div class="cii-circle"></div>
+              </div>
+              <div class="template-step-content-wrapper">
+                <div class="template-step-header">
+                  <h3>Qui peut bénéficier du CII ?</h3>
+                </div>
+                <div class="template-step-content">
+                  <p>Seules les PME au sens européen, soumises à l'IS ou IR, indépendantes peuvent en profiter. Elles peuvent être industrielles, commerciales, artisanales ou dans le domaine agricole.</p>
+                  <p>En Europe, les PME sont définis par un maximum de 250 salariés ou un CA inférieur à 50 millions d'euros (total bilan inférieur à 43M€) durant au moins 2 exercices.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="template-step">
+              <div class="template-step-icon">
+                <div class="cii-circle"></div>
+              </div>
+              <div class="template-step-content-wrapper">
+                <div class="template-step-header">
+                  <h3>Toutes les activités sont-elles éligibles au CII ?</h3>
+                </div>
+                <div class="template-step-content">
+                  <p>Pour être prise en charge par le CII, vos projets doivent concerner la conception de prototype utilisé comme modèle pour la réalisation d'un nouveau produit. Ou l'installation de pilotes permettant de tester un produit ou un procédé.</p>
+                  <ul class="template-activities-list">
+                    <li>✓ Opérations de conception d'un prototype</li>
+                    <li>✓ Installation pilote d'un nouveau produit inexistant et différent des autres produits sur le marché</li>
+                    <li>✓ Nouvelle version d'un produit avec modification majeure comme l'ajout de nouvelles fonctionnalités</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="template-step">
+              <div class="template-step-icon">
+                <div class="cii-circle"></div>
+              </div>
+              <div class="template-step-content-wrapper">
+                <div class="template-step-header">
+                  <h3>Toutes les dépenses sont-elles valorisables ?</h3>
+                </div>
+                <div class="template-step-content">
+                  <p>Dès lors que vos activités entrent dans le cadre CII, vous pourrez valoriser les dépenses suivantes :</p>
+                  <ul class="template-expenses-list">
+                    <li>✓ Amortissements de biens ou batiments</li>
+                    <li>✓ Salaires et éventuelles charges des équipes R&D et innovation</li>
+                    <li>✓ Les eventuelles sous-traitances externes</li>
+                    <li>✓ Dépenses de design, prototypage, essais, recherche</li>
+                  </ul>
+                </div>
+              </div>
+                        </div>
+          </div>
+
+          <!-- Version mobile de template-leftbottom-content (affichée uniquement en 480px) -->
+          <div class="template-leftbottom-content-mobile">
+            <div class="template-separator"></div>
+            <h3 class="template-bottom-title">Comme pour le CIR, faites-vous accompagner.</h3>
+            <p class="template-bottom-subtitle">La procédure de demande de crédit impôt innovation requiert un formalisme rigoureux, mais surtout une très bonne compréhension des méthodes et besoins des inspecteurs des impôts ou experts du ministère de la recherche. Un spécialiste augmentera largement la probabilité d'un accord et les sommes prises en charge seront supérieures.</p>
+            <a href="#" class="cta-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+              Voir mes résultats, ma méthode
+            </a>
+            <CTA variant="cta1" label="Je vous accompagne jusqu'à l'obtention" />
+          </div>
+
+        </div>
+      </section>
+
+      <section class="jei-section" aria-labelledby="cii">
+        <div class="jei-section-background">
+          <img src="/images/circles-bg-min.png" alt="" />
+        </div>
+        <div class="template-container">
+          <div class="template-left">
+                         <div class="template-sticky-content">
+               <h2 id="jei">Le statut Jeune entreprise innovante (JEI)</h2>
+               <p>Pour les jeunes entreprises, les exonérations sont une aubaine à ne pas rater. Voici les détails essentiels à connaitre sur le statut JEI et le rescrit.</p>
+               <div class="template-sticky-image">
+                <img src="/images/jei-image-min.png" alt="Illustration Jei" loading="lazy" />
+              </div>
+              </div>
+            <div class="template-leftbottom-content">
+              <div class="template-separator"></div>
+              <h3 class="template-bottom-title">Maximisez vos chances d'accord</h3>
+              <p class="template-bottom-subtitle">Plus simple que les dossiers CIR et CII, le dossier de rescrit JEI doit tout de même être solide et argumenté. Il est préférable de se faire accompagner pour éviter les refus.</p>
+              <a href="#" class="cta-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 18l6-6-6-6"/>
+                </svg>
+                En savoir plus sur mon approche
+              </a>
+              <CTA variant="cta1" label="Prendre conseil" />
+            </div>
+          </div>
+
+
+          <div class="template-right">
+            <div class="template-step">
+              <div class="template-step-icon">
+                <div class="jei-circle"></div>
+              </div>
+              <div class="template-step-content-wrapper">
+                <div class="template-step-header">
+                  <h3>Qu'est-ce que le JEI</h3>
+                </div>
+                <div class="template-step-content">
+                  <p>Le statut JEI (Jeune Entreprise Innovante) est un dispositif fiscal destiné aux entreprises innovantes et de R&D. Il nécessite un "rescrit JEI" pour sécuriser votre situation.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="template-step">
+              <div class="template-step-icon">
+                <div class="jei-circle"></div>
+              </div>
+              <div class="template-step-content-wrapper">
+                <div class="template-step-header">
+                  <h3>Quelle entreprise est concernée par le JEI ?</h3>
+                </div>
+                <div class="template-step-content">
+                  <p>Le statut JEI est accessible sans restriction de secteur, principalement pour les startups mais aussi les PME. Conditions : moins de 8 ans d'existence, moins de 250 salariés, créée ex-nihilo, et consacrant au moins 20% des charges à la R&D.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="template-step">
+              <div class="template-step-icon">
+                <div class="jei-circle"></div>
+              </div>
+              <div class="template-step-content-wrapper">
+                <div class="template-step-header">
+                  <h3>Toutes les activités sont-elles éligibles au JEI ?</h3>
+                </div>
+                <div class="template-step-content">
+                  <p>Pour être éligible au statut JEI, vos activités doivent correspondre aux critères suivants :</p>
+                  <ul class="template-activities-list">
+                    <li>✓ Développement expérimental</li>
+                    <li>✓ Recherche appliquée</li>
+                    <li>✓ Projets répondant aux critères du CIR (même logique)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="template-step">
+              <div class="template-step-icon">
+                <div class="jei-circle"></div>
+              </div>
+              <div class="template-step-content-wrapper">
+                <div class="template-step-header">
+                  <h3>Quelles exonérations sont liées au JEI</h3>
+                </div>
+                <div class="template-step-content">
+                  <p>Le statut JEI vous permet de bénéficier des exonérations suivantes :</p>
+                  <ul class="template-expenses-list">
+                    <li>✓ Exonération de charges sociales sur les salaires R&D</li>
+                    <li>✓ Exonération partielle d'impôt sur les sociétés (IS)</li>
+                    <li>✓ Exonération de CFE et taxe foncière (sous conditions)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Version mobile de template-leftbottom-content (affichée uniquement en 480px) -->
+          <div class="template-leftbottom-content-mobile">
+            <div class="template-separator"></div>
+            <h3 class="template-bottom-title">Maximisez vos chances d'accord</h3>
+            <p class="template-bottom-subtitle">Plus simple que les dossiers CIR et CII, le dossier de rescrit JEI doit tout de même être solide et argumenté. Il est préférable de se faire accompagner pour éviter les refus.</p>
+            <a href="#" class="cta-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+              En savoir plus sur mon approche
+            </a>
+            <CTA variant="cta1" label="Prendre conseil" />
+          </div>
+
+        </div>
+      </section>
+
+      <section class="agr-section" aria-labelledby="cii">
+        <div class="agr-section-background">
+          <img src="/images/circles-bg-min.png" alt="" />
+        </div>
+        <div class="template-container">
+          <div class="template-left">
+                             <div class="template-sticky-content">
+                <h2 id="agr">L'agrément CIR</h2>
+                <p>Vous réalisez des prestations R&D pour le compte de vos clients ? L'agrément CIR est essentiel pour permettre à vos clients de valoriser vos prestations dans leur déclaration de crédit d'impôt recherche.</p>
+                <div class="template-sticky-image">
+                 <img src="/images/agr-image-min.png" alt="Illustration Agrement cir" loading="lazy" />
+               </div>
+             </div>
+            <div class="template-leftbottom-content">
+              <div class="template-separator"></div>
+              <h3 class="template-bottom-title">Sécurisez votre activité R&D</h3>
+              <p class="template-bottom-subtitle">L'agrément CIR est un gage de qualité et de reconnaissance officielle. Il vous permet de rassurer vos clients et d'augmenter vos tarifs grâce à cette certification.</p>
+              <a href="#" class="cta-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 18l6-6-6-6"/>
+                </svg>
+                Découvrir ma méthode d'agrément
+              </a>
+              <CTA variant="cta1" label="Obtenir mon agrément CIR" />
+            </div>
+          </div>
+
+
+          <div class="template-right">
+            <div class="template-step">
+              <div class="template-step-icon">
+                <div class="agr-circle"></div>
+              </div>
+              <div class="template-step-content-wrapper">
+                <div class="template-step-header">
+                  <h3>Qu'est-ce que l'agrément CIR ?</h3>
+                </div>
+                <div class="template-step-content">
+                  <p>L'agrément CIR est une reconnaissance officielle délivrée par le ministère de la Recherche. Il permet aux prestataires de R&D d'être reconnus comme éligibles pour leurs clients.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="template-step">
+              <div class="template-step-icon">
+                <div class="agr-circle"></div>
+              </div>
+              <div class="template-step-content-wrapper">
+                <div class="template-step-header">
+                  <h3>Qui peut demander un agrément CIR ?</h3>
+                </div>
+                <div class="template-step-content">
+                  <p>Toute entreprise réalisant des prestations R&D pour le compte de tiers peut demander un agrément CIR. Cela concerne les bureaux d'études, cabinets de conseil, laboratoires privés, etc.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="template-step">
+              <div class="template-step-icon">
+                <div class="agr-circle"></div>
+              </div>
+              <div class="template-step-content-wrapper">
+                <div class="template-step-header">
+                  <h3>Quelles prestations sont éligibles ?</h3>
+                </div>
+                <div class="template-step-content">
+                  <p>Pour être éligibles à l'agrément CIR, vos prestations doivent correspondre aux critères suivants :</p>
+                  <ul class="template-activities-list">
+                    <li>✓ Travaux de recherche fondamentale</li>
+                    <li>✓ Recherche appliquée et développement expérimental</li>
+                    <li>✓ Prestations répondant aux critères du CIR</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="template-step">
+              <div class="template-step-icon">
+                <div class="agr-circle"></div>
+              </div>
+              <div class="template-step-content-wrapper">
+                <div class="template-step-header">
+                  <h3>Quels sont les avantages de l'agrément ?</h3>
+                </div>
+                <div class="template-step-content">
+                  <p>L'agrément CIR vous apporte les avantages suivants :</p>
+                  <ul class="template-expenses-list">
+                    <li>✓ Reconnaissance officielle de votre expertise R&D</li>
+                    <li>✓ Possibilité pour vos clients de valoriser vos prestations</li>
+                    <li>✓ Différenciation concurrentielle et augmentation des tarifs</li>
+                    <li>✓ Sécurisation de votre activité auprès des clients</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Version mobile de template-leftbottom-content (affichée uniquement en 480px) -->
+          <div class="template-leftbottom-content-mobile">
+            <div class="template-separator"></div>
+            <h3 class="template-bottom-title">Sécurisez votre activité R&D</h3>
+            <p class="template-bottom-subtitle">L'agrément CIR est un gage de qualité et de reconnaissance officielle. Il vous permet de rassurer vos clients et d'augmenter vos tarifs grâce à cette certification.</p>
+            <a href="#" class="cta-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+              Découvrir ma méthode d'agrément
+            </a>
+            <CTA variant="cta1" label="Obtenir mon agrément CIR" />
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
+
+
+
+<style>
+  /* Forcer l'application des media queries sur mobile */
+  @media (max-width: 768px) {
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+  }
+  
+  .page-container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: #f1f1f1;
+  }
+
+  /* Assurer que le page-container est en pleine largeur sur mobile */
+  @media (max-width: 768px) {
+    .page-container {
+      width: 100vw;
+      max-width: 100vw;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+
+
+  /* Hero Section */
+  .hero {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80vh;
+    width: 100%;
+    background: #F1F1F1;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .hero-container {
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 2rem;
+  }
+
+  .hero-text-content {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    padding: 2rem;
+    z-index: 2;
+  }
+
+  .hero-image {
+    position: absolute;
+    bottom: 0;
+    right: -10%;
+    width: 900px;
+      z-index: 0;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: 2;
+  }
+
+  .hero-dots {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, var(--novablack) 2px, transparent 2px);
+    background-size: 20px 20px;
+    z-index: 1;
+    opacity: 0.1;
+  }
+
+  /* Hero Responsive */
+  @media (max-width: 768px) {
+    .hero {
+      height: 80vh;
+    }
+    
+    .hero-container {
+      padding: 0 1rem;
+      padding-top: 3rem;
+    }
+    
+    .hero-text-content {
+      position: relative;
+      left: auto;
+      top: auto;
+      transform: none;
+      width: 70%;
+      padding: 2rem 0;
+      margin-top: 3rem;
+    }
+    
+    .hero-image {
+      position: absolute;
+      bottom: 0;
+      right: -20%;
+      width: 600px;
+    }
+    
+  }
+
+  @media (max-width: 480px) {
+
+    .hero-container {
+    height: 80vh;
+  }
+
+    .hero-text-content {
+      width: 85%;
+      padding: 1.5rem 0;
+      margin-top: 7rem;
+      margin-left: 0.75rem;
+    }
+
+    .hero-tag {
+        margin-bottom: 2rem;
+}
+
+    .hero-subtitle {
+      max-width: 300px;
+    }
+
+    .hero-image {
+      width: 400px;
+      right: -40%;
+      bottom: 7%;
+    }
+    
+    .hero-container {
+      padding: 0 0.5rem;
+    }
+
+    .cir-top-cta {
+      display: none;
+    }
+  }
+
+  .scrolling-content {
+    position: relative;
+    z-index: 2;
+    margin-top: 80vh; /* Espacement pour le hero fixe */
+  }
+
+
+
+  /*CIR*/
+  /* Image de fond de la section */
+  .cir-section-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .cir-section-background img {
+    display: block;
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    opacity: 0.6;
+  }
+
+  /* Styles pour les nouvelles classes CIR */
+  .template-step {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.05);
+    position: relative;
+  }
+
+  .template-step-icon {
+    position: absolute;
+    top: 1.3rem;
+    left: 2rem;
+    z-index: 1;
+  }
+
+  .cir-circle {
+    width: 50px;
+    height: 50px;
+    background-color: var(--novablue);
+    border-radius: 50%;
+  }
+
+  .template-step-content-wrapper {
+    position: relative;
+    z-index: 2;
+    padding-left: 1rem;
+  }
+
+  .template-step-header h3 {
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-20);
+    color: var(--novablack);
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .template-step-content p {
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-16);
+    line-height: 1.6;
+    color: var(--novablack);
+    margin-bottom: 1rem;
+  }
+
+  .template-step-content p:last-child {
+    margin-bottom: 0;
+  }
+
+  .template-activities-list,
+  .template-expenses-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+  }
+
+  .template-activities-list li,
+  .template-expenses-list li {
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-16);
+    line-height: 1.6;
+    color: var(--novablack);
+    margin-bottom: 0.75rem;
+    padding-left: 0;
+  }
+
+  .cir-step-highlight {
+    background-color: rgba(250, 255, 164, 0.4);
+  }
+
+  .cir-details p {
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-14);
+    line-height: 1.5;
+    color: var(--novablack);
+    margin-top: 0.5rem;
+    opacity: 0.8;
+  }
+
+
+  .cir-section {
+    background: white;
+    padding: 5rem 0rem 0rem 0rem;
+    position: relative;
+    border-radius: 80px 80px 0 0;
+  }
+
+  .cir-top-cta {
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+
+  .cir-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    z-index: -1;
+  }
+
+  .template-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    position: relative;
+    align-items: stretch;
+  }
+
+  .template-left {
+    flex: 0 0 50%;
+    position: relative;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .template-sticky-content {
+    position: sticky;
+    top: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 30rem;
+    flex: 1;
+  }
+
+  .template-sticky-image {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .template-sticky-image img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+  }
+
+  .template-left h2 {
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-36);
+    color: var(--novablack);
+    margin-bottom: 1rem;
+    padding-right: 2rem;
+  }
+
+  .template-left p {
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-16);
+    line-height: 1.6;
+    color: var(--novablack);
+    margin-bottom: 2rem;
+    padding-right: 2rem;
+  }
+
+  /* Styles pour template-leftbottom-content */
+  .template-leftbottom-content {
+    margin-top: auto;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  /* Version mobile masquée par défaut */
+  .template-leftbottom-content-mobile {
+    display: none;
+  }
+
+  .template-separator {
+    width: 90%;
+    height: 1px;
+    background-color: var(--novablack);
+    margin-bottom: 1rem;
+  }
+
+  .template-bottom-title {
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-24);
+    color: var(--novablack);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  .template-bottom-subtitle {
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-16);
+    line-height: 1.6;
+    color: var(--novablack);
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+  }
+
+  .template-right {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .cta-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-16);
+    color: var(--novablack);
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+
+  .cta-link:hover {
+    opacity: 0.7;
+  }
+
+  .cta-link svg {
+    transition: transform 0.2s ease;
+  }
+
+  .cta-link:hover svg {
+    transform: translateX(0.25rem);
+  }
+
+  .cta-link-agrement {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-16);
+    font-weight: 700;
+    color: var(--novablack);
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+
+  .cta-link-agrement:hover {
+    opacity: 0.7;
+  }
+
+  .cta-link-agrement svg {
+    transition: transform 0.2s ease;
+  }
+
+  .cta-link-agrement:hover svg {
+    transform: translateX(0.25rem);
+  }
+
+
+  /* Responsive Comment Section */
+  @media (max-width: 1024px) {
+    .cir-section {
+      padding: 3rem 1.5rem 3rem 2rem;
+    }
+
+    .template-container {
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .template-left, .template-right {
+      flex: 0 0 auto;
+      width: 100%;
+    }
+
+    .template-left {
+      position: static;
+      padding-right: 0;
+    }
+
+    .template-sticky-content {
+      position: static;
+      margin-bottom: 0;
+    }
+
+    .template-leftbottom-content {
+      margin-top: 2rem;
+      text-align: center;
+      align-items: center;
+    }
+
+    .template-separator {
+      margin: 0 auto 1rem;
+    }
+
+    .template-left h2 {
+      padding-right: 0;
+    }
+
+    .template-left p {
+      padding-right: 0;
+    }
+
+    .expert-image {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .cir-section {
+      padding: 2rem 1rem 0rem 1rem;
+      border-radius: 30px 30px 0 0;
+    }
+
+    .template-container {
+      gap: 2rem;
+    }
+
+    .template-left h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .template-left p {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .template-sticky-content {
+      gap: 1.5rem;
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    .template-leftbottom-content {
+      margin-top: 2rem;
+      text-align: center;
+      align-items: center;
+    }
+
+    .template-bottom-title {
+      text-align: center;
+    }
+
+    .template-bottom-subtitle {
+      text-align: center;
+    }
+    .template-right {
+    gap: 0rem;
+
+    }
+
+
+  @media (max-width: 480px) {
+    .cir-section {
+      padding: 1.5rem 1rem 0rem 1rem;
+    }
+        .template-leftbottom-content {
+      display: none;
+    }
+
+    .template-leftbottom-content-mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin: -2rem 1rem;
+      padding: 2rem 1rem;
+      text-align: center;
+      align-items: center;
+      background: rgba(250, 250, 250, 0.9);
+      border-radius: 1rem;
+      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+  }
+
+
+
+
+
+  /* Optimisations générales pour mobile */
+  @media (max-width: 768px) {
+    /* Réduction générale des paddings de section */
+    .cir-section,
+    .cii-section,
+    .jei-section,
+    .agrement-section,
+      scroll-margin-top: 100px; /* Compensation pour header fixe */
+    }
+
+    /* Optimisation de l'espacement vertical */
+    section + section {
+      margin-top: 0;
+    }
+  }
+
+  /* Scroll smooth pour navigation mobile */
+  @media (max-width: 768px) {
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Optimisation du viewport pour éviter les problèmes d'iframe */
+    body {
+      -webkit-text-size-adjust: none;
+      -moz-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+      text-size-adjust: none;
+    }
+
+    /* Amélioration des performances d'animation sur mobile */
+    * {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+    }
+  }
+
+
+
+
+  /*specific CII*/
+    /* Image de fond de la section */
+    .cii-section-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .cii-section-background img {
+    display: block;
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    opacity: 0.6;
+  }
+
+  .cii-circle {
+    width: 50px;
+    height: 50px;
+    background-color: var(--novayellow);
+    border-radius: 50%;
+  }
+  .cii-section {
+    background: rgba(217, 217, 217, 0.02);
+    padding: 5rem 1rem 0rem 1rem;
+    position: relative;
+  }
+
+  .cii-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #FAFAFA;
+    z-index: -1;
+  }
+
+  /*specific JEI*/
+    /* Image de fond de la section */
+    .jei-section-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .jei-section-background img {
+    display: block;
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    opacity: 0.6;
+  }
+
+  .jei-circle {
+    width: 50px;
+    height: 50px;
+    background-color: var(--novapurple);
+    border-radius: 50%;
+  }
+  .jei-section {
+    background: white;
+    padding: 5rem 1rem 0rem 1rem;
+    position: relative;
+  }
+
+  .jei-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #FAFAFA;
+    z-index: -1;
+  }
+    /*specific agr*/
+    /* Image de fond de la section */
+    .agr-section-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .agr-section-background img {
+    display: block;
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    opacity: 0.6;
+  }
+
+  .agr-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #E3FFEA;
+    border-radius: 50%;
+  }
+  .agr-section {
+    background: rgba(217, 217, 217, 0.02);
+    padding: 5rem 1rem 0rem 1rem;
+    position: relative;
+  }
+
+  .agr-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #FAFAFA;
+    z-index: -1;
+  }
+
+
+  @media (max-width: 480px) {
+    .agr-section::before {
+      margin-bottom: -8rem;
+    }
+  }
+</style> 

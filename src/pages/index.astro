@@ -181,17 +181,13 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
             </p>
           </div>
 
-          <div class="dispositifs-grid">
+          <div class="dispositifs-grid-container">
             <button class="carousel-nav prev" aria-label="Précédent">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15 18L9 12L15 6" stroke="#2E3030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
-            <button class="carousel-nav next" aria-label="Suivant">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 18L15 12L9 6" stroke="#2E3030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
+            <div class="dispositifs-grid">
             <article class="dispositif-card blue">
               <div class="card-content">
                 <img src="/images/CIR.avif" alt="Crédit Impôt Recherche" loading="lazy" />
@@ -255,6 +251,12 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
                 </div>
               </div>
             </article>
+          </div>
+            <button class="carousel-nav next" aria-label="Suivant">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
           </div>
 
           <div class="dispositifs-footer">
@@ -513,7 +515,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
         cards.forEach((card, index) => {
           const direction = index % 2 === 0 ? 1 : -1; // Direction alternée
           const offset = rate * direction;
-          card.style.transform = `translateX(${Math.max(-1.2 * 16, Math.min(1.2 * 16, offset))}px)`; // Limité à ±1.2rem
+          card.style.transform = `translateX(${Math.max(-3 * 16, Math.min(3 * 16, offset))}px)`; // Limité à ±3rem
         });
         
         scrollAnimationId = null;
@@ -558,25 +560,43 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
   // Carousel navigation
   function initCarousel() {
     const carousel = document.querySelector('.dispositifs-grid') as HTMLElement;
-    if (!carousel) return;
+    const container = document.querySelector('.dispositifs-grid-container') as HTMLElement;
+    if (!carousel || !container) return;
     
-    const prevBtn = carousel.querySelector('.prev') as HTMLButtonElement;
-    const nextBtn = carousel.querySelector('.next') as HTMLButtonElement;
+    const prevBtn = container.querySelector('.prev') as HTMLButtonElement;
+    const nextBtn = container.querySelector('.next') as HTMLButtonElement;
     const cards = carousel.querySelectorAll('.dispositif-card');
 
     if (!prevBtn || !nextBtn || !cards.length) return;
 
-    const cardWidth = 393 + 32; // card width + gap
-
     function scrollToNext() {
       if (carousel) {
-        carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        const currentScrollLeft = carousel.scrollLeft;
+        const cardWidth = 393 + 32; // card width + gap
+        
+        // Calculer la position de la prochaine carte
+        const nextPosition = currentScrollLeft + cardWidth;
+        const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+        
+        // Limiter à la fin du carousel
+        const targetPosition = Math.min(nextPosition, maxScroll);
+        
+        carousel.scrollTo({ left: targetPosition, behavior: 'smooth' });
       }
     }
 
     function scrollToPrev() {
       if (carousel) {
-        carousel.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+        const currentScrollLeft = carousel.scrollLeft;
+        const cardWidth = 393 + 32; // card width + gap
+        
+        // Calculer la position de la carte précédente
+        const prevPosition = currentScrollLeft - cardWidth;
+        
+        // Limiter au début du carousel
+        const targetPosition = Math.max(prevPosition, 0);
+        
+        carousel.scrollTo({ left: targetPosition, behavior: 'smooth' });
       }
     }
 
@@ -600,14 +620,21 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
       updateTimeoutId = setTimeout(() => {
         if (!carousel || !clonedPrevBtn || !clonedNextBtn) return;
         
-        const isAtStart = carousel.scrollLeft <= 1;
-        const isAtEnd = carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1;
+        const isAtStart = carousel.scrollLeft <= 5;
+        const isAtEnd = carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 5;
         
-        clonedPrevBtn.style.opacity = isAtStart ? '0' : '1';
-        clonedPrevBtn.style.pointerEvents = isAtStart ? 'none' : 'auto';
+        // Gérer l'affichage des boutons avec la classe 'show'
+        if (isAtStart) {
+          clonedPrevBtn.classList.remove('show');
+        } else {
+          clonedPrevBtn.classList.add('show');
+        }
         
-        clonedNextBtn.style.opacity = isAtEnd ? '0' : '1';
-        clonedNextBtn.style.pointerEvents = isAtEnd ? 'none' : 'auto';
+        if (isAtEnd) {
+          clonedNextBtn.classList.remove('show');
+        } else {
+          clonedNextBtn.classList.add('show');
+        }
         
         updateTimeoutId = null;
       }, 16); // ~60fps
@@ -654,11 +681,14 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
 
   /* Hero Section */
   .hero {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     height: 80vh;
     width: 100%;
     background: linear-gradient(309deg, #EFEFEF 32.64%, #FFF 68.14%);
     overflow: hidden;
+    z-index: 1;
   }
 
   .hero-container {
@@ -779,7 +809,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
   .scrolling-content {
     position: relative;
     z-index: 2;
-    margin-top: 20px; /* Superposition de 40px sur le Hero */
+    margin-top: 80vh; /* Espacement pour le hero fixe */
   }
 
 
@@ -790,7 +820,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
   .data-section {
     position: relative;
     z-index: 2;
-    margin-top: -40px; /* Superposition de 40px sur le Hero */
+    margin-top: -60px; /* Superposition sur le hero fixe */
     padding: 0 2rem;
     filter: drop-shadow(0px -11px 34px rgba(121, 121, 121, 0.20));
     background-color: white;
@@ -1377,6 +1407,46 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     transition: transform 0.2s ease;
   }
 
+
+  /* Flèches de navigation du carousel */
+  .carousel-nav {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--novablack);
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    transition: opacity 0.3s ease;
+  }
+
+  .carousel-nav.prev {
+    left: -20px;
+  }
+
+  .carousel-nav.next {
+    right: -20px;
+  }
+
+  .carousel-nav svg {
+    width: 24px;
+    height: 24px;
+    color: white;
+  }
+
+  /* Afficher les boutons quand nécessaire */
+  .carousel-nav.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
   /* Responsive Dispositifs Section */
   @media (max-width: 1024px) {
     .dispositifs {
@@ -1453,6 +1523,12 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     .carousel-nav svg {
       width: 20px;
       height: 20px;
+      color: white;
+    }
+
+    /* Afficher les boutons sur tablette */
+    .carousel-nav.show {
+      display: flex;
     }
 
     .dispositifs-footer {
@@ -1501,35 +1577,20 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     .carousel-nav {
       display: none; /* Masquer les flèches sur très petit écran */
     }
+    .carousel-nav.prev {
+      display: none;
+    }
+
+    .carousel-nav.next {
+      display: none;
+    }
   }
 
-  /* Flèches de navigation du carousel */
-  .carousel-nav {
-    display: none;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: white;
-    border: none;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    z-index: 2;
-  }
-
-  .carousel-nav.prev {
-    left: -24px;
-  }
-
-  .carousel-nav.next {
-    right: -24px;
-  }
-
-  .carousel-nav svg {
-    width: 24px;
-    height: 24px;
+  /* Conteneur pour le grid et les boutons de navigation */
+  .dispositifs-grid-container {
+    position: relative;
+    display: flex;
+    align-items: center;
   }
 
   @media (max-width: 1640px) {

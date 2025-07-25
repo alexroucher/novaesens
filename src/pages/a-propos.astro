@@ -1,0 +1,1359 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import Card from '../components/Card.astro';
+import '../styles/theme.css';
+
+const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
+  title: "Tout savoir sur le CIR et le CII - Novaesens",
+  description: "Qui est concerné par le crédit Impôt Recherche, crédit impot innovation et JEI, et les critères pour les obtenir",
+  ogTitle: "Tout sur le CIR, CII, JEI et agrément CIR - Novaesens",
+  ogDescription: "Qui est concerné par le crédit Impôt Recherche, crédit impot innovation et JEI, et les critères pour les obtenir",
+  ogImage: "/path/to/image.jpg",
+  canonical: "https://www.novaesens.com/"
+};
+---
+
+<BaseLayout title={title} description={description} ogTitle={ogTitle} ogDescription={ogDescription} ogImage={ogImage} canonical={canonical}>
+  <div class="page-container">
+    <!-- Hero en arrière-plan -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-text-content">
+
+          <h1 class="hero-title">Conseiller CIR/CII, Expert-metier, chercheur, ingénieur, responsable pédagogique.</h1>
+          <p class="hero-subtitle">Quelques mots sur ce que mon parcours a fait de moi, parce qu’il s’agit avant tout d’une aventure humaine.</p>
+        </div>
+        
+        <div class="hero-image">
+          <img src="public/images/moh.png" alt="Expert CIR et CII" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Contenu qui passe au-dessus -->
+    <div class="scrolling-content">
+      <!-- Section Data -->
+     
+      <section class="why-section" aria-labelledby="cir">
+        <div class="why-top-cta">
+          <CTA variant="cta1" label="Être accompagné d'un expert" />
+        </div>
+
+        <div class="why-container">
+          <div class="why-content">
+            <div class="why-left">
+              <h2>Pourquoi faire appel à un expert CIR ?</h2>
+              <div class="why-text">
+                <p>Le CIR, le CII et le statut JEI sont des dispositifs fiscaux complexes qui nécessitent une expertise pointue. Voici pourquoi faire appel à un expert peut faire la différence :</p>
+              </div>
+            </div>
+            <div class="why-right">
+              <div class="why-list">
+                <ul>
+                  <li>
+                    <img src="/images/smile.svg" alt="Smile" class="check-icon" />
+                    <span>Expertise technique approfondie des dispositifs</span>
+                  </li>
+                  <li>
+                    <img src="/images/li-check.png" alt="Check" class="check-icon" />
+                    <span>Optimisation maximale de vos crédits d'impôt</span>
+                  </li>
+                  <li>
+                    <img src="/images/yellowcheck.png" alt="Yellow Check" class="check-icon" />
+                    <span>Sécurisation de votre dossier auprès de l'administration</span>
+                  </li>
+                  <li>
+                    <img src="/images/purplecheck.png" alt="Purple Check" class="check-icon" />
+                    <span>Accompagnement personnalisé tout au long du processus</span>
+                  </li>
+                  <li>
+                    <img src="/images/greencheck.png" alt="Green Check" class="check-icon" />
+                    <span>Veille réglementaire et mise à jour des procédures</span>
+                  </li>
+                  <li>
+                    <img src="/images/li-check.png" alt="Check" class="check-icon" />
+                    <span>Gestion des relations avec l'administration fiscale</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- Section 3 colonnes avec images -->
+        <div class="steps-section">
+          <div class="steps-container">
+            <div class="step-column">
+              <div class="step-header">
+                <div class="step-image">
+                  <img src="/images/01-min.avif" alt="Étape 1" />
+                </div>
+                <div class="step-separator"></div>
+              </div>
+              <div class="step-content">
+                <p>J'ai commencé par la recherche. Docteur en imagerie radar, chercheur, ingénieur d'études, et chef de projet. J'ai appris à creuser les sujets, à documenter rigoureusement, à me positionner face à l'incertitude — et vous verrez, c'est ce que vous retrouverez dans un bon dossier CIR.</p>
+              </div>
+            </div>
+
+            <div class="step-column">
+              <div class="step-header">
+                <div class="step-image">
+                  <img src="/images/02-min.avif" alt="Étape 2" />
+                </div>
+                <div class="step-separator"></div>
+              </div>
+              <div class="step-content">
+                <p>Ensuite enseignant et responsable pédagogique en école d'ingénieur, j'ai appris une chose précieuse : <strong>l'écoute réelle</strong>. Expliquer un concept technique à quelqu'un qui n'est pas du métier, c'est un exercice de clarté, mais aussi d'empathie. On ne transmet bien que si on comprend et ressent les blocages, les doutes, les non-dits.</p>
+              </div>
+            </div>
+
+            <div class="step-column">
+              <div class="step-header">
+                <div class="step-image">
+                  <img src="/images/03-min.avif" alt="Étape 3" />
+                </div>
+                <div class="step-separator"></div>
+              </div>
+              <div class="step-content">
+                <p>Aujourd'hui, mon travail consiste à faire ce pont entre la technicité de mes clients et les exigences souvent arides de l'administration fiscale. Et je le fais avec ce même réflexe : comprendre vite, clarifier, structurer, anticiper les besoins.</p>
+                <div class="step-benefits">
+                  <p><strong>Pour ne pas vous faire perdre de temps</strong></p>
+                  <p><strong>Pour avoir des accords</strong></p>
+                  <p><strong>Pour obtenir plus de prise en charge.</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section indépendant vs cabinet -->
+        <div class="independent-section">
+          <div class="independent-container">
+            <div class="independent-left">
+              <h2>Pourquoi indépendant et pas en cabinet ?</h2>
+              <div class="independent-text">
+                <p>Être indépendant me permet d'être au plus près de mes clients, de réagir rapidement à leurs besoins, de garantir une cohérence dans mon approche et de livrer un travail de qualité. Je ne suis pas contraint par les procédures internes d'un cabinet.</p>
+                <p>Mon engagement personnel est la raison pour laquelle mes clients me font confiance. Je suis directement responsable de la qualité de mon travail et de la satisfaction de mes clients.</p>
+                <p>Je suis un professionnel indépendant intégré dans un réseau : le réseau des experts CIR indépendants "la mêlée" et le club des entrepreneurs de Saint Orens.</p>
+              </div>
+            </div>
+            <div class="independent-right">
+              <img src="/images/happy-min.jpg" alt="Happy" class="independent-image" />
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="why-cta-section">
+            <div class="why-cta-container">
+                <a href="#" class="why-text-link">
+                En savoir plus sur ma méthode
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                </a>
+                <CTA variant="cta2" label="Contactons-nous" />
+            </div>
+            </div>
+    </section>
+
+        <!-- Section Datawhy -->
+        <section class="datawhy-section">
+          <div class="datawhy-container">
+            <h2>Quelques chiffres</h2>
+            <div class="stats-grid">
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                    <path d="M21.3334 7.29183H18.0834V6.2085C18.0834 5.34654 17.741 4.51989 17.1315 3.9104C16.522 3.30091 15.6954 2.9585 14.8334 2.9585H12.6667C11.8048 2.9585 10.9781 3.30091 10.3687 3.9104C9.75916 4.51989 9.41675 5.34654 9.41675 6.2085V7.29183H6.16675C5.30479 7.29183 4.47814 7.63424 3.86865 8.24373C3.25916 8.85323 2.91675 9.67988 2.91675 10.5418V20.2918C2.91675 21.1538 3.25916 21.9804 3.86865 22.5899C4.47814 23.1994 5.30479 23.5418 6.16675 23.5418H21.3334C22.1954 23.5418 23.022 23.1994 23.6315 22.5899C24.241 21.9804 24.5834 21.1538 24.5834 20.2918V10.5418C24.5834 9.67988 24.241 8.85323 23.6315 8.24373C23.022 7.63424 22.1954 7.29183 21.3334 7.29183ZM11.5834 6.2085C11.5834 5.92118 11.6976 5.64563 11.9007 5.44246C12.1039 5.2393 12.3794 5.12516 12.6667 5.12516H14.8334C15.1207 5.12516 15.3963 5.2393 15.5994 5.44246C15.8026 5.64563 15.9167 5.92118 15.9167 6.2085V7.29183H11.5834V6.2085ZM22.4167 20.2918C22.4167 20.5791 22.3026 20.8547 22.0994 21.0579C21.8963 21.261 21.6207 21.3752 21.3334 21.3752H6.16675C5.87943 21.3752 5.60388 21.261 5.40072 21.0579C5.19755 20.8547 5.08341 20.5791 5.08341 20.2918V14.3335C7.84186 15.4278 10.7825 15.9902 13.7501 15.991C16.7176 15.9892 19.658 15.4268 22.4167 14.3335V20.2918ZM22.4167 11.961C19.685 13.1611 16.7338 13.7808 13.7501 13.7808C10.7664 13.7808 7.81515 13.1611 5.08341 11.961V10.5418C5.08341 10.2545 5.19755 9.97896 5.40072 9.7758C5.60388 9.57263 5.87943 9.4585 6.16675 9.4585H21.3334C21.6207 9.4585 21.8963 9.57263 22.0994 9.7758C22.3026 9.97896 22.4167 10.2545 22.4167 10.5418V11.961Z" fill="#1C1C1C"/>
+                  </svg>
+                </div>
+                <div class="stat-line">
+                  <span class="stat-number">19</span>
+                </div>
+                <div class="stat-line-1">Clients accompagnés sur le CIR ou CII</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                    <path d="M18.6746 11.8922L18.4774 8.6702L16.0291 6.5L7.28656 6.50252L5.56406 6.50354C5.35987 6.50411 5.15999 6.56239 4.98749 6.67164C4.81498 6.7809 4.67686 6.93669 4.58906 7.12104C4.51295 7.29697 4.48488 7.48994 4.50772 7.68027C4.53056 7.87059 4.60348 8.05144 4.71906 8.20437L12.0641 17.4452V21.6702H7.45989C7.17258 21.6702 6.89703 21.7843 6.69386 21.9875C6.4907 22.1907 6.37656 22.4662 6.37656 22.7535C6.37656 23.0409 6.4907 23.3164 6.69386 23.5196C6.89703 23.7227 7.17258 23.8369 7.45989 23.8369H18.8349C19.1222 23.8369 19.3978 23.7227 19.6009 23.5196C19.8041 23.3164 19.9182 23.0409 19.9182 22.7535C19.9182 22.4662 19.8041 22.1907 19.6009 21.9875C19.3978 21.7843 19.1222 21.6702 18.8349 21.6702H14.2307V17.4452L19.6145 10.7177L18.6746 11.8922ZM7.81739 8.6702H9.45323H18.4774L17.6201 9.74292L16.7461 10.8352L9.45323 10.7177L7.81739 8.6702ZM13.1474 15.3327L11.1866 12.8844H13.6674H15.1064L17.6201 9.74292L13.1474 15.3327ZM9.45323 8.6702H18.4774L17.6201 9.74292L18.6746 11.8922L19.6145 10.7177L19.4849 10.8802L21.5757 8.25854C21.6913 8.10561 21.7642 7.92476 21.7871 7.73443C21.8099 7.54411 21.7818 7.35113 21.7057 7.1752C21.6259 6.98072 21.4912 6.81366 21.3181 6.69439C21.145 6.57513 20.9409 6.50882 20.7307 6.50354H16.0291V6.50958V6.5167V6.51879C16.0291 6.51879 9.16591 8.6702 9.45323 8.6702Z" fill="#1C1C1C"/>
+                  </svg>
+                </div>
+                <div class="stat-line">
+                  <span class="stat-number">100</span>
+                  <span class="stat-label">%</span>
+                </div>
+                <div class="stat-line-1">D'acceptation par les organismes officiels.</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                    <path d="M12 1.4375C9.82441 1.4375 7.69767 2.08264 5.88873 3.29133C4.07979 4.50003 2.66989 6.21799 1.83733 8.22798C1.00477 10.238 0.786929 12.4497 1.21137 14.5835C1.6358 16.7173 2.68345 18.6773 4.22183 20.2157C5.76021 21.7541 7.72022 22.8017 9.85401 23.2261C11.9878 23.6506 14.1995 23.4327 16.2095 22.6002C18.2195 21.7676 19.9375 20.3577 21.1462 18.5488C22.3549 16.7398 23 14.6131 23 12.4375C23 9.52012 21.8411 6.72223 19.7782 4.65933C17.7153 2.59643 14.9174 1.4375 12 1.4375V1.4375ZM12 21.4375C10.22 21.4375 8.47992 20.9097 6.99987 19.9207C5.51983 18.9318 4.36628 17.5262 3.68509 15.8817C3.0039 14.2371 2.82567 12.4275 3.17294 10.6817C3.5202 8.93586 4.37737 7.33221 5.63604 6.07354C6.89472 4.81487 8.49836 3.9577 10.2442 3.61043C11.99 3.26317 13.7996 3.4414 15.4442 4.12258C17.0887 4.80377 18.4943 5.95733 19.4832 7.43737C20.4722 8.91741 21 10.6575 21 12.4375C21 14.8244 20.0518 17.1136 18.364 18.8015C16.6761 20.4893 14.387 21.4375 12 21.4375V21.4375ZM14 7.4375V6.4375C14 6.17228 13.8946 5.91793 13.7071 5.73039C13.5196 5.54286 13.2652 5.4375 13 5.4375C12.7348 5.4375 12.4804 5.54286 12.2929 5.73039C12.1054 5.91793 12 6.17228 12 6.4375V7.4375H11V6.4375C11 6.17228 10.8946 5.91793 10.7071 5.73039C10.5196 5.54286 10.2652 5.4375 10 5.4375C9.73479 5.4375 9.48043 5.54286 9.2929 5.73039C9.10536 5.91793 9 6.17228 9 6.4375V7.4375H8C7.73479 7.4375 7.48043 7.54286 7.2929 7.73039C7.10536 7.91793 7 8.17228 7 8.4375C7 8.70272 7.10536 8.95707 7.2929 9.14461C7.48043 9.33214 7.73479 9.4375 8 9.4375H9V15.4375H8C7.73479 15.4375 7.48043 15.5429 7.2929 15.7304C7.10536 15.9179 7 16.1723 7 16.4375C7 16.7027 7.10536 16.9571 7.2929 17.1446C7.48043 17.3321 7.73479 17.4375 8 17.4375H9V18.4375C9 18.7027 9.10536 18.9571 9.2929 19.1446C9.48043 19.3321 9.73479 19.4375 10 19.4375C10.2652 19.4375 10.5196 19.3321 10.7071 19.1446C10.8946 18.9571 11 18.7027 11 18.4375V17.4375H12V18.4375C12 18.7027 12.1054 18.9571 12.2929 19.1446C12.4804 19.3321 12.7348 19.4375 13 19.4375C13.2652 19.4375 13.5196 19.3321 13.7071 19.1446C13.8946 18.9571 14 18.7027 14 18.4375V17.4375C14.7957 17.4375 15.5587 17.1214 16.1213 16.5588C16.6839 15.9962 17 15.2331 17 14.4375C16.9983 13.6988 16.7242 12.9866 16.23 12.4375C16.7242 11.8884 16.9983 11.1762 17 10.4375C17 9.64185 16.6839 8.87879 16.1213 8.31618C15.5587 7.75357 14.7957 7.4375 14 7.4375V7.4375ZM14 15.4375H11V13.4375H14C14.2652 13.4375 14.5196 13.5429 14.7071 13.7304C14.8946 13.9179 15 14.1723 15 14.4375C15 14.7027 14.8946 14.9571 14.7071 15.1446C14.5196 15.3321 14.2652 15.4375 14 15.4375ZM14 11.4375H11V9.4375H14C14.2652 9.4375 14.5196 9.54286 14.7071 9.73039C14.8946 9.91793 15 10.1723 15 10.4375C15 10.7027 14.8946 10.9571 14.7071 11.1446C14.5196 11.3321 14.2652 11.4375 14 11.4375Z" fill="#1C1C1C"/>
+                  </svg>
+                </div>
+                <div class="stat-line">
+                  <span class="stat-number">543</span>
+                  <span class="stat-label">000€</span>
+                </div>
+                <div class="stat-line-1">par client en moyenne De crédit d'impôts en moyenne</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M17 4H16C16 3.46957 15.7893 2.96086 15.4142 2.58579C15.0391 2.21071 14.5304 2 14 2H10C9.46957 2 8.96086 2.21071 8.58579 2.58579C8.21071 2.96086 8 3.46957 8 4H7C6.20435 4 5.44129 4.31607 4.87868 4.87868C4.31607 5.44129 4 6.20435 4 7V19C4 19.7956 4.31607 20.5587 4.87868 21.1213C5.44129 21.6839 6.20435 22 7 22H17C17.7956 22 18.5587 21.6839 19.1213 21.1213C19.6839 20.5587 20 19.7956 20 19V7C20 6.20435 19.6839 5.44129 19.1213 4.87868C18.5587 4.31607 17.7956 4 17 4V4ZM10 4H14V5V6H10V4ZM18 19C18 19.2652 17.8946 19.5196 17.7071 19.7071C17.5196 19.8946 17.2652 20 17 20H7C6.73478 20 6.48043 19.8946 6.29289 19.7071C6.10536 19.5196 6 19.2652 6 19V7C6 6.73478 6.10536 6.48043 6.29289 6.29289C6.48043 6.10536 6.73478 6 7 6H8C8 6.53043 8.21071 7.03914 8.58579 7.41421C8.96086 7.78929 9.46957 8 10 8H14C14.5304 8 15.0391 7.78929 15.4142 7.41421C15.7893 7.03914 16 6.53043 16 6H17C17.2652 6 17.5196 6.10536 17.7071 6.29289C17.8946 6.48043 18 6.73478 18 7V19Z" fill="#1C1C1C"/>
+                  </svg>
+                </div>
+                <div class="stat-line">
+                  <span class="stat-number">226</span>
+                </div>
+                <div class="stat-line-1">Projets intégrés dans les dispositifs CIR ou CII</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                    <path d="M22.4199 7.245C22.3185 7.00065 22.1243 6.80647 21.8799 6.705C21.7597 6.65376 21.6306 6.62658 21.4999 6.625H16.4999C16.2347 6.625 15.9804 6.73036 15.7928 6.91789C15.6053 7.10543 15.4999 7.35978 15.4999 7.625C15.4999 7.89022 15.6053 8.14457 15.7928 8.33211C15.9804 8.51964 16.2347 8.625 16.4999 8.625H19.0899L13.4999 14.215L10.2099 10.915C10.117 10.8213 10.0064 10.7469 9.88452 10.6961C9.76266 10.6453 9.63195 10.6192 9.49994 10.6192C9.36793 10.6192 9.23722 10.6453 9.11536 10.6961C8.9935 10.7469 8.8829 10.8213 8.78994 10.915L2.78994 16.915C2.69621 17.008 2.62182 17.1186 2.57105 17.2404C2.52028 17.3623 2.49414 17.493 2.49414 17.625C2.49414 17.757 2.52028 17.8877 2.57105 18.0096C2.62182 18.1314 2.69621 18.242 2.78994 18.335C2.8829 18.4287 2.9935 18.5031 3.11536 18.5539C3.23722 18.6047 3.36793 18.6308 3.49994 18.6308C3.63195 18.6308 3.76266 18.6047 3.88452 18.5539C4.00637 18.5031 4.11698 18.4287 4.20994 18.335L9.49994 13.035L12.7899 16.335C12.8829 16.4287 12.9935 16.5031 13.1154 16.5539C13.2372 16.6047 13.3679 16.6308 13.4999 16.6308C13.632 16.6308 13.7627 16.6047 13.8845 16.5539C14.0064 16.5031 14.117 16.4287 14.2099 16.335L20.4999 10.035V12.625C20.4999 12.8902 20.6053 13.1446 20.7928 13.3321C20.9804 13.5196 21.2347 13.625 21.4999 13.625C21.7652 13.625 22.0195 13.5196 22.207 13.3321C22.3946 13.1446 22.4999 12.8902 22.4999 12.625V7.625C22.4984 7.49432 22.4712 7.36522 22.4199 7.245V7.245Z" fill="#1C1C1C"/>
+                  </svg>
+                </div>
+                <div class="stat-line">
+                  <span class="stat-number">10,34</span>
+                  <span class="stat-label">M€</span>
+                </div>
+                <div class="stat-line-1">De crédit d'impôts récupérés sur l'ensemble de mes dossiers.</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                    <path d="M18.9917 21.627H17.9917V19.96C17.9886 19.3877 17.8873 18.8202 17.6921 18.2822C17.6812 18.2529 17.6697 18.2256 17.6562 18.1977C17.4943 17.7561 17.2705 17.3397 16.9917 16.9609L15.5918 15.0937C15.2034 14.5736 14.9929 13.9421 14.9917 13.293V12.2832C14.994 11.4881 15.3096 10.726 15.8701 10.1621L16.5273 9.50483C17.291 8.73708 17.7815 7.73993 17.9236 6.66645C17.9242 6.65254 17.9316 6.64094 17.9316 6.6269L17.9288 6.61317C17.9636 6.40025 17.9846 6.18531 17.9917 5.96968V3.62695H18.9917C19.2569 3.62695 19.5113 3.5216 19.6988 3.33406C19.8864 3.14652 19.9917 2.89217 19.9917 2.62695C19.9917 2.36174 19.8864 2.10738 19.6988 1.91985C19.5113 1.73231 19.2569 1.62695 18.9917 1.62695H4.99171C4.72649 1.62695 4.47214 1.73231 4.2846 1.91985C4.09707 2.10738 3.99171 2.36174 3.99171 2.62695C3.99171 2.89217 4.09707 3.14652 4.2846 3.33406C4.47214 3.5216 4.72649 3.62695 4.99171 3.62695H5.99171V5.96968C5.99881 6.18531 6.01981 6.40025 6.05458 6.61317L6.05176 6.62695C6.05176 6.64095 6.0592 6.65259 6.05976 6.6665C6.20192 7.73998 6.69245 8.73713 7.45606 9.50488L8.11329 10.1621C8.67378 10.726 8.9894 11.4881 8.9917 12.2832V13.293C8.9904 13.942 8.78015 14.5734 8.39209 15.0937L6.99121 16.9609C6.71245 17.3399 6.48878 17.7564 6.32684 18.1981C6.31354 18.2258 6.30212 18.2527 6.29132 18.2818C6.09618 18.8199 5.99483 19.3875 5.9917 19.96V21.627H4.9917C4.72648 21.627 4.47213 21.7323 4.28459 21.9198C4.09706 22.1074 3.9917 22.3617 3.9917 22.627C3.9917 22.8922 4.09706 23.1465 4.28459 23.3341C4.47213 23.5216 4.72648 23.627 4.9917 23.627H18.9917C19.2569 23.627 19.5113 23.5216 19.6988 23.3341C19.8863 23.1465 19.9917 22.8922 19.9917 22.627C19.9917 22.3617 19.8863 22.1074 19.6988 21.9198C19.5113 21.7323 19.2569 21.627 18.9917 21.627V21.627ZM7.9917 5.62695V3.62695H15.9917V5.62695H7.9917ZM8.87012 8.09082C8.72921 7.94926 8.60294 7.79385 8.49323 7.62695H15.4902C15.3805 7.79385 15.2542 7.94926 15.1133 8.09082L14.456 8.74805C13.676 9.5235 13.1758 10.5362 13.0342 11.627H10.9492C10.8075 10.5362 10.3074 9.52343 9.52734 8.74795L8.87012 8.09082ZM9.99219 16.293C10.5708 15.5176 10.9139 14.5921 10.9805 13.627H13.0029C13.0694 14.5922 13.4127 15.5178 13.9917 16.293L14.9918 17.627H8.99133L9.99219 16.293ZM15.9917 21.627H7.9917V19.96C7.99448 19.8485 8.00357 19.7374 8.01892 19.627H15.9645C15.9798 19.7374 15.9889 19.8485 15.9917 19.96V21.627Z" fill="#1C1C1C"/>
+                  </svg>
+                </div>
+                <div class="stat-line">
+                  <span class="stat-number">765</span>
+                </div>
+                <div class="stat-line-1">Jours de travail épargnés à mes clients</div>
+              </div>
+            </div>
+            <div class="datawhy-cta-container">
+              <CTA variant="cta1" label="M'ajouter à ces chiffres" />
+            </div>
+          </div>
+        </section>
+
+        <!-- Nouvelle section Activités et Secteurs -->
+        <section class="activites-secteurs-section">
+          <div class="activites-secteurs-container">
+            
+            <!-- Premier bloc : Activités -->
+            <div class="activites-block">
+              <h2>Les activités déjà accompagnées</h2>
+              <div class="activites-content">
+                <div class="activites-image">
+                  <img src="/images/activites-min.png" alt="Activités accompagnées" />
+                </div>
+                <div class="activites-text-left">
+                  <ul>
+                    <li>CIR Dépollution des sols</li>
+                    <li>CIR Electronique / Radar pour les transports en commun</li>
+                    <li>CII Ingénierie pour l'industrie lourde</li>
+                    <li>CIR Ingénierie, maintenance électromécanique et électronique</li>
+                    <li>CIR Electronique embarquée</li>
+                    <li>CIR Technologie du cinéma et jeux vidéos</li>
+                    <li>CIR Signature électronique qualifiée</li>
+                    <li>CII Ingénierie industrielle</li>
+                    <li>CIR Usinage et fabrication industrielle</li>
+                    <li>CII Systèmes de sonorisation de sécurité pour ERP</li>
+                  </ul>
+                </div>
+                <div class="activites-text-right">
+                  <ul>
+                    <li>CIR Cybersécurité</li>
+                    <li>CIR TIC appliquée à la santé numérique</li>
+                    <li>CII Services numériques appliqués au sport</li>
+                    <li>CIR Réseaux et Télécommunications</li>
+                    <li>CIR Mathématiques et algorithmie</li>
+                    <li>CIR Conception Micro-électronique</li>
+                    <li>CIR Conception électronique</li>
+                    <li>CIR Electronique pour les infrastructures ferroviaires</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Deuxième bloc : Secteurs -->
+            <div class="secteurs-block">
+              <h2>Les secteurs déjà traités</h2>
+              <div class="secteurs-content">
+                <div class="secteurs-image">
+                  <img src="/images/secteurs-min.png" alt="Secteurs traités" />
+                </div>
+                <div class="secteurs-text-left">
+                  <ul>
+                    <li>CIR Environnement</li>
+                    <li>CIR Transport public urbain</li>
+                    <li>CII Industrie lourde et nucléaire</li>
+                    <li>CIR Maintenance industrielle</li>
+                    <li>CIR Santé</li>
+                    <li>CIR Cinéma et jeux vidéos</li>
+                    <li>CII Ingénierie</li>
+                    <li>CIR Industrie</li>
+                  </ul>
+                </div>
+                <div class="secteurs-text-right">
+                  <ul>
+                    <li>CII Sonorisation</li>
+                    <li>CIR Santé numérique</li>
+                    <li>CII Sport numérique</li>
+                    <li>CIR Electronique</li>
+                    <li>CIR Conception électronique</li>
+                    <li>CIR Ferroviaires</li>
+                    <li>CIR Transport</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="activites-secteurs-cta">
+              <CTA variant="cta1" label="Prendre RDV" />
+            </div>
+
+          </div>
+
+
+      </section>
+
+    </div>
+  </div>
+</BaseLayout>
+
+
+
+<style>
+  /* Forcer l'application des media queries sur mobile */
+  @media (max-width: 768px) {
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+  }
+  
+  .page-container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: #f1f1f1;
+  }
+
+  /* Assurer que le page-container est en pleine largeur sur mobile */
+  @media (max-width: 768px) {
+    .page-container {
+      width: 100vw;
+      max-width: 100vw;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+
+
+  /* Hero Section */
+  .hero {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80vh;
+    width: 100%;
+    background: #F1F1F1;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .hero-container {
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 2rem;
+  }
+
+  .hero-text-content {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    padding: 2rem;
+    z-index: 2;
+  }
+
+      .hero-image {
+      position: relative;
+      bottom: -20%;
+      right: -60%;
+      width: 600px;
+      z-index: 0;
+    }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: 2;
+  }
+
+  .hero-dots {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, var(--novablack) 2px, transparent 2px);
+    background-size: 20px 20px;
+    z-index: 1;
+    opacity: 0.1;
+  }
+
+  /* Hero Responsive */
+  @media (max-width: 768px) {
+    .hero {
+      height: 80vh;
+    }
+    
+    .hero-container {
+      padding: 0 1rem;
+      padding-top: 3rem;
+    }
+    
+    .hero-text-content {
+      position: relative;
+      left: auto;
+      top: auto;
+      transform: none;
+      width: 70%;
+      padding: 2rem 0;
+      margin-top: 3rem;
+    }
+    
+    .hero-image {
+      position: absolute;
+      bottom: 0;
+      right: -20%;
+      width: 600px;
+    }
+    
+  }
+
+  @media (max-width: 480px) {
+
+    .hero-container {
+    height: 80vh;
+  }
+
+    .hero-text-content {
+      width: 85%;
+      padding: 1.5rem 0;
+      margin-top: 7rem;
+      margin-left: 0.75rem;
+    }
+
+    .hero-tag {
+        margin-bottom: 2rem;
+    }
+
+    .hero-subtitle {
+      max-width: 300px;
+    }
+
+    .hero-image {
+      width: 400px;
+      right: -40%;
+      bottom: 7%;
+    }
+    
+    .hero-container {
+      padding: 0 0.5rem;
+    }
+
+    .why-top-cta {
+      display: none;
+    }
+  }
+
+  .scrolling-content {
+    position: relative;
+    z-index: 2;
+    margin-top: 80vh; /* Espacement pour le hero fixe */
+  }
+
+
+
+  /*CIR*/
+  /* Image de fond de la section */
+  .why-section-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .why-section-background img {
+    display: block;
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    opacity: 0.6;
+  }
+
+
+  .why-section {
+    background: white;
+    padding: 5rem 0rem 0rem 0rem;
+    position: relative;
+    border-radius: 80px 80px 0 0;
+  }
+
+  .why-top-cta {
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+
+  .why-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    z-index: -1;
+  }
+
+  /* Why Content Styles (basés sur vision-content) */
+  .why-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .why-content {
+    display: flex;
+    gap: 4rem;
+    margin: 2rem 0;
+  }
+
+  .why-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .why-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .why-left h2 {
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-36);
+    color: var(--novablack);
+    margin-bottom: 2rem;
+  }
+
+  .why-text {
+    max-width: 600px;
+    margin-bottom: 3rem;
+  }
+
+  .why-text p {
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-16);
+    line-height: 1.6;
+    color: var(--novablack);
+    margin-bottom: 2rem;
+  }
+
+  .why-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: var(--light-blue);
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 100%;
+  }
+
+  .why-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .why-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: var(--font-size-18);
+    color: var(--novablack);
+  }
+
+  .check-icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+  }
+
+  .text-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--novablack);
+    text-decoration: none;
+    font-size: var(--font-size-18);
+    margin-top: 2rem;
+    transition: color 0.3s ease;
+  }
+
+  .text-link:hover {
+    color: var(--primary);
+  }
+
+  .text-link svg {
+    transition: transform 0.3s ease;
+  }
+
+  .text-link:hover svg {
+    transform: translateX(4px);
+  }
+
+  /* Why CTA Section */
+  .why-cta-section {
+    padding: 3rem 0;
+    background: white;
+    text-align: center;
+  }
+
+  .why-cta-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .why-text-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--novablack);
+    text-decoration: none;
+    font-size: var(--font-size-18);
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .why-text-link:hover {
+    color: var(--primary);
+  }
+
+  .why-text-link svg {
+    transition: transform 0.3s ease;
+  }
+
+  .why-text-link:hover svg {
+    transform: translateX(4px);
+  }
+
+  /* Steps Section Styles */
+  .steps-section {
+    padding: 4rem 0;
+    background: white;
+    position: relative;
+  }
+
+  .steps-section::before,
+  .steps-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+  }
+
+  .steps-section::before {
+    left: 0;
+  }
+
+  .steps-section::after {
+    right: 0;
+  }
+
+  .steps-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+
+  .step-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .step-image {
+    width: auto;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .step-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  .step-image img {
+    width: auto;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    max-width: none;
+  }
+
+  .step-separator {
+    flex: 1;
+    height: 1px;
+    background: var(--novablack);
+    margin-left: 0;
+    min-width: 100px;
+  }
+
+  .step-content p {
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-16);
+    line-height: 1.6;
+    color: var(--novablack);
+    margin-bottom: 1.5rem;
+  }
+
+  .step-benefits {
+    margin-top: 2rem;
+  }
+
+  .step-benefits p {
+    margin-bottom: 0.5rem;
+    font-size: var(--font-size-16);
+  }
+
+  /* Independent Section Styles */
+  .independent-section {
+    padding: 4rem 0;
+    background: var(--light-blue);
+    position: relative;
+  }
+
+  .independent-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+    background-color: rgba(198, 230, 251, 0.4);
+    border-radius: 12px;
+  }
+
+  .independent-left {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* .independent-circle supprimé - remplacé par pseudo-élément */
+
+  .independent-left h2 {
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-24);
+    color: var(--novablack);
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  .independent-left h2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -2rem;
+    width: 60px;
+    height: 60px;
+    background: var(--novablue);
+    border-radius: 50%;
+    z-index: -1;
+  }
+
+  .independent-text {
+    margin-left: 0rem;
+    padding-left: 3rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  .independent-text {
+    margin-left: 0rem;
+  }
+
+  .independent-text p {
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-16);
+    line-height: 1.6;
+    color: var(--novablack);
+    margin-bottom: 1.5rem;
+  }
+
+  .independent-right {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+  }
+
+  .independent-image {
+    width: auto;
+    height: 100%;
+    border-radius: 0 12px 12px 0;
+    object-fit: cover;
+  }
+
+  /* Responsive Comment Section */
+  @media (max-width: 1024px) {
+    .why-section {
+      padding: 3rem 1.5rem 3rem 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .why-section {
+      padding: 2rem 1rem 0rem 1rem;
+      border-radius: 30px 30px 0 0;
+    }
+
+    .why-container {
+      padding: 0 1.5rem;
+    }
+
+    .why-content {
+      flex-direction: column;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .why-left h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .why-text p {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .text-link {
+      justify-content: center;
+    }
+
+    .why-list {
+      padding: 1.5rem;
+    }
+
+    .why-list li {
+      margin-bottom: 0.75rem;
+    }
+}
+
+  @media (max-width: 480px) {
+    .why-section {
+      padding: 1.5rem 1rem 0rem 1rem;
+    }
+
+    .why-container {
+      padding: 0 1rem;
+    }
+
+    .why-content {
+      gap: 1.5rem;
+    }
+
+    .why-list {
+      padding: 1rem;
+    }
+
+    .why-list li {
+      font-size: var(--font-size-16);
+    }
+
+    .independent-text {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+
+  }
+
+  /* Steps Section Responsive */
+  @media (max-width: 1024px) {
+    .steps-container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .steps-container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .steps-section {
+      padding: 2rem 0;
+    }
+
+    .step-content p {
+      text-align: center;
+    }
+
+    .step-benefits {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .steps-container {
+      padding: 0 1rem;
+      gap: 1.5rem;
+    }
+
+    .step-content p {
+      font-size: var(--font-size-14);
+    }
+
+  }
+
+  /* Datawhy Section Styles */
+  .datawhy-section {
+    position: relative;
+    z-index: 2;
+    padding: 4rem 0;
+    background: linear-gradient(180deg, #FAFAFA 0%, #FAFAFA 100%);
+  }
+
+  .datawhy-section::after {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background-image: url('/images/circles-bg-min.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+  }
+
+  .datawhy-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 2rem;
+  }
+
+  .datawhy-section h2 {
+    font-size: var(--font-size-36);
+    font-weight: 400;
+    color: var(--novablack);
+    margin-bottom: 3rem;
+    text-align: left;
+  }
+
+  /* Styles de base pour les stats */
+  .datawhy-section .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding-top: 2rem;
+  }
+
+  .datawhy-section .stat-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    font-size: var(--font-size-24);
+  }
+
+  /* Alternance des couleurs de fond des icônes */
+  .datawhy-section .stat-item:nth-child(1) .stat-icon {
+    background-color: var(--novablue);
+  }
+
+  .datawhy-section .stat-item:nth-child(2) .stat-icon {
+    background-color: var(--novayellow);
+  }
+
+  .datawhy-section .stat-item:nth-child(3) .stat-icon {
+    background-color: var(--novapurple);
+  }
+
+  .datawhy-section .stat-item:nth-child(4) .stat-icon {
+    background-color: #E3FFEA;
+  }
+
+  .datawhy-section .stat-item:nth-child(5) .stat-icon {
+    background-color: var(--novablue);
+  }
+
+  .datawhy-section .stat-item:nth-child(6) .stat-icon {
+    background-color: var(--novayellow);
+  }
+
+  .datawhy-section .stat-line {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .datawhy-section .stat-line-1 {
+    font-size: var(--font-size-16);
+    font-weight: 400;
+    color: var(--novablack);
+    line-height: 1.4;
+    margin: 8px 0 4px 0;
+    max-width: 200px;
+  }
+
+  .datawhy-section .stat-line-2 {
+    font-size: var(--font-size-16);
+    color: var(--novablack);
+    opacity: 0.8;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .datawhy-section .stat-number {
+    font-size: var(--font-size-36);
+    font-weight: 700;
+    color: var(--novablack);
+    line-height: 1;
+  }
+
+  .datawhy-section .stat-label {
+    font-size: var(--font-size-36);
+    font-weight: 700;
+    color: var(--novablack);
+  }
+
+  .datawhy-section .stat-description {
+    font-size: var(--font-size-16);
+    color: var(--novablack);
+    opacity: 0.8;
+    line-height: 1.4;
+    margin-top: 8px;
+  }
+
+  /* CTA et séparateur */
+  .datawhy-cta-container {
+    text-align: center;
+    margin-top: 3rem;
+    position: relative;
+  }
+
+
+  /* Datawhy Section Responsive */
+  @media (max-width: 1024px) {
+    .datawhy-section .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      padding-top: 4rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .datawhy-container {
+      margin-top: 2rem;
+    }
+    
+    .datawhy-section {
+      padding: 2rem 1rem;
+      margin-top: -40px;
+      padding-bottom: 2rem;
+      border-radius: 0px 0px 0 0;
+      margin-left: 0rem;
+      margin-right: 0rem;
+    }
+
+    .datawhy-section .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0rem;
+      padding-top: 2rem;
+      margin-bottom: 2rem;
+      margin-left: 0rem;
+      margin-right: 0rem;
+    }
+
+    .datawhy-section .stat-item {
+      text-align: left;
+      padding: 1.5rem;
+      border-radius: 1rem;
+    }
+
+    .datawhy-section h2 {
+    margin-bottom: 1rem;
+  }
+
+    .datawhy-section .stat-icon {
+      width: 40px;
+      height: 40px;
+      margin: 0 auto 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    
+    .datawhy-section .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+    }
+
+    .datawhy-section .stat-item {
+      padding: 1rem;
+    }
+
+  }
+
+  /* Independent Section Responsive */
+  @media (max-width: 768px) {
+    .independent-container {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .independent-left h2 {
+      text-align: center;
+      margin-left: 0;
+    }
+
+    .independent-text {
+      margin-left: 0;
+      text-align: center;
+    }
+
+    .independent-image {
+      display: none;   
+    }
+  }
+
+  @media (max-width: 480px) {
+    .independent-right {
+      display: none;
+    }
+
+    .independent-left {
+      text-align: center;
+    }
+
+
+    .independent-circle {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+
+
+
+
+  /* Optimisations générales pour mobile */
+  @media (max-width: 768px) {
+    /* Réduction générale des paddings de section */
+    .cir-section,
+    .cii-section,
+    .jei-section,
+    .agrement-section {
+      scroll-margin-top: 100px; /* Compensation pour header fixe */
+    }
+
+    /* Optimisation de l'espacement vertical */
+    section + section {
+      margin-top: 0;
+    }
+  }
+
+  /* Activités et Secteurs Section */
+  .activites-secteurs-section {
+    position: relative;
+    z-index: 2;
+    padding: 4rem 0;
+    background: linear-gradient(180deg, #FAFAFA 0%, #FAFAFA 100%);
+  }
+
+  .activites-secteurs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .activites-block,
+  .secteurs-block {
+    margin-bottom: 4rem;
+  }
+
+  .activites-block h2,
+  .secteurs-block h2 {
+    font-size: var(--font-size-36);
+    font-weight: 400;
+    color: var(--novablack);
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+
+  .activites-content,
+  .secteurs-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    background: #FFFFFF;
+    padding: 0 0 0 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .activites-image,
+  .secteurs-image {
+    flex: 0 0 5rem;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .activites-image img,
+  .secteurs-image img {
+    width: 57px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .activites-text-left,
+  .activites-text-right,
+  .secteurs-text-left,
+  .secteurs-text-right {
+    flex: 1;
+    margin-top: 3rem;
+  }
+
+  .activites-text-left ul,
+  .activites-text-right ul,
+  .secteurs-text-left ul,
+  .secteurs-text-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .activites-text-left li,
+  .activites-text-right li,
+  .secteurs-text-left li,
+  .secteurs-text-right li {
+    font-size: var(--font-size-16);
+    color: var(--novablack);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    padding-left: 0;
+  }
+
+  .activites-secteurs-cta {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  /* Responsive pour Activités et Secteurs */
+  @media (max-width: 768px) {
+    .activites-content,
+    .secteurs-content {
+      flex-direction: column;
+      gap: 0rem;
+      padding: 0rem 2rem 2rem 2rem;
+    }
+
+    .activites-image,
+    .secteurs-image {
+      flex: none;
+      width: 100%;
+      display: none;
+    }
+
+    .activites-text-left,
+    .activites-text-right,
+    .secteurs-text-left,
+    .secteurs-text-right {
+      flex: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .activites-secteurs-container {
+      padding: 0 1rem;
+    }
+
+  }
+
+  /* Scroll smooth pour navigation mobile */
+  @media (max-width: 768px) {
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Optimisation du viewport pour éviter les problèmes d'iframe */
+    body {
+      -webkit-text-size-adjust: none;
+      -moz-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+      text-size-adjust: none;
+    }
+
+    /* Amélioration des performances d'animation sur mobile */
+    * {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+    }
+  }
+
+</style> 
