@@ -26,7 +26,6 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
           <h1 class="hero-title">Je vous dis tout sur le CIR, le CII et le statut JEI</h1>
           <p class="hero-subtitle">CIR, CII, JEI, agrément CIR… Ces dispositifs fiscaux sont de puissants leviers pour votre trésorerie, mais ils sont aussi techniques, encadrés, et régulièrement mis à jour par l’administration. Voici ce qu’il faut savoir sur ces crédits d’impôt.</p>
         </div>
-        
         <div class="hero-image">
           <img src="/images/CIR-tech-min.jpg" alt="Expert Novaesens" />
         </div>
@@ -39,18 +38,19 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
      
       <section class="cir-section" aria-labelledby="cir">
         <div class="cir-section-background">
-          <img src="/images/circles-bg-min.png" alt="" />
-        </div>
+          <img src="/images/circles-bg-min.png" alt="illustration de fond" loading="lazy" />
+            </div>
         <div class="cir-top-cta">
           <CTA variant="cta1" label="Être accompagné d’un expert" />
-        </div>
+          </div>
+
         <div class="template-container">
           <div class="template-left">
             <div class="template-sticky-content">
               <h2 id="cir">Le crédit impôt recherche (CIR)</h2>
               <p>Vous cherchez un prestataire crédit impôt recherche, voulez estimer le montant de votre CIR ou simplement savoir comment bénéficier du crédit impôt recherche? Je vous explique l'essentiel ici.</p>
               <div class="template-sticky-image">
-                <img src="/images/CIR-image-min.png" alt="Illustration CIR" />
+                <img src="/images/CIR-image-min.png" alt="Illustration CIR" loading="lazy" />
               </div>
             </div>
             <div class="template-leftbottom-content">
@@ -72,11 +72,11 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
             <div class="template-step">
               <div class="template-step-icon">
                 <div class="cir-circle"></div>
-              </div>
+                </div>
               <div class="template-step-content-wrapper">
                 <div class="template-step-header">
                   <h3>Définition du crédit impôt recherche</h3>
-                </div>
+              </div>
                 <div class="template-step-content">
                   <p>Le Crédit d'Impôt Recherche (CIR) est un levier fiscal pour financer la recherche et développement en entreprise.</p>
                   <p>Il permet de récupérer 30 % des dépenses liées à des projets R&D (jusqu'à 100 M€ et 5% au-delà, soit l'Assiette R&D). Salaires de techniciens à ingenieurs ou encore dépense de développement expérimental.</p>
@@ -136,15 +136,15 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
                     <li>✓ Amortissements des équipements utilisés en R&D</li>
                     <li>✓ Dépenses de veille technologique, brevets, normalisation avant 2025</li>
                   </ul>
-                </div>
               </div>
             </div>
+          </div>
 
             <div class="template-step cir-step-highlight">
               <div class="template-step-content-wrapper">
                 <div class="template-step-header">
                   <h3>Agrément CIR : rendre éligible vos prestations</h3>
-                </div>
+          </div>
                 <div class="template-step-content">
                   <p>Startups, TPE, PME, bureaux d'études : vous réalisez des prestations R&D pour le compte de vos clients, il vous faut un agrément CIR pour faire bénéficier vos clients, sinon vos clients ne pourront pas déclarer dans leur CIR.</p>
                   <a href="#" class="cta-link-agrement">
@@ -182,7 +182,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     </div>
         <div class="template-container">
           <div class="template-left">
-                         <div class="template-sticky-content">
+            <div class="template-sticky-content">
                <h2 id="cii">Le crédit impôt innovation (CII ou C2I)</h2>
                <p>Depuis plusieurs années, je réalise les déclaration Cll en tant que conseiller crédit impôt innovation. Expert en audit CII et montage de dossier CII, je vous livre ici les infos nécessaires à comprendre le dispositif.</p>
                <div class="template-sticky-image">
@@ -294,7 +294,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
 
       <section class="jei-section" aria-labelledby="cii">
         <div class="jei-section-background">
-          <img src="/images/circles-bg-min.png" alt="" />
+          <img src="/images/circles-bg-min.png" alt="illustration de fond" loading="lazy" />
         </div>
         <div class="template-container">
           <div class="template-left">
@@ -518,6 +518,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
 
         </div>
       </section>
+
     </div>
   </div>
 </BaseLayout>
@@ -613,6 +614,12 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     opacity: 0.1;
   }
 
+  .scrolling-content {
+    position: relative;
+    z-index: 2;
+    margin-top: 80vh; /* Espacement pour le hero fixe */
+  }
+
   /* Hero Responsive */
   @media (max-width: 768px) {
     .hero {
@@ -647,7 +654,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
 
     .hero-container {
     height: 80vh;
-  }
+   }
 
     .hero-text-content {
       width: 85%;
@@ -658,7 +665,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
 
     .hero-tag {
         margin-bottom: 2rem;
-}
+    }
 
     .hero-subtitle {
       max-width: 300px;
@@ -674,16 +681,9 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
       padding: 0 0.5rem;
     }
 
-    .cir-top-cta {
-      display: none;
-    }
   }
 
-  .scrolling-content {
-    position: relative;
-    z-index: 2;
-    margin-top: 80vh; /* Espacement pour le hero fixe */
-  }
+
 
 
 
@@ -830,12 +830,11 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
   }
 
   .template-sticky-content {
-    position: sticky;
-    top: 8rem;
+    position: static; /* Suppression du sticky */
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-bottom: 30rem;
+    margin-bottom: 4rem; /* Marge ajustée */
     flex: 1;
   }
 
@@ -1060,18 +1059,34 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
 
 
   @media (max-width: 480px) {
+
+    .hero {
+      position: relative; /* plus de fixed */
+      height: auto;       /* laisse la hauteur naturelle */
+    }
+
+    .scrolling-content {
+      margin-top: 0;      /* plus besoin de compenser le hero fixe */
+      margin-bottom: 60vh;
+    }
+    
     .cir-section {
       padding: 1.5rem 1rem 0rem 1rem;
     }
         .template-leftbottom-content {
       display: none;
     }
+    .cir-top-cta {
+      width: 269px;
+  }
+
 
     .template-leftbottom-content-mobile {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
-      margin: -2rem 1rem;
+      margin: 0 1rem 2rem 1rem; /* Marge négative supprimée */
+      transform: translateY(-2rem); /* Décalage visuel sans affecter le scroll */
       padding: 2rem 1rem;
       text-align: center;
       align-items: center;
@@ -1122,7 +1137,6 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
       transform: translateZ(0);
     }
   }
-
 
 
 
