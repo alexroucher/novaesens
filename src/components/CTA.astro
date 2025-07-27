@@ -27,6 +27,12 @@ const { variant, label } = Astro.props;
     transition: all 0.2s ease;
   }
 
+  @media (max-width: 480px) {
+    .cta1 {
+      width: 270px;
+    }
+  }
+
   .cta1:hover {
     opacity: 0.9;
   }

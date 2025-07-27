@@ -1,0 +1,417 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import '../styles/theme.css';
+
+const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
+  title: "Contact - Novaesens",
+  description: "Contactez-nous pour un accompagnement expert en CIR, CII et JEI",
+  ogTitle: "Contact - Novaesens",
+  ogDescription: "Contactez-nous pour un accompagnement expert en CIR, CII et JEI",
+  ogImage: "/path/to/image.jpg",
+  canonical: "https://www.novaesens.com/contact"
+};
+---
+
+<BaseLayout title={title} description={description} ogTitle={ogTitle} ogDescription={ogDescription} ogImage={ogImage} canonical={canonical}>
+  <div class="page-container">
+    <!-- Hero en arrière-plan -->
+    <section class="hero">
+    </section>
+
+    <!-- Contenu qui passe au-dessus -->
+    <div class="scrolling-content">
+      <!-- Section Formulaire -->
+      <section class="contact-section" aria-labelledby="contact">
+
+        <div class="contact-container">
+          <div class="contact-content">
+            <div class="contact-left">
+              <h2 id="contact">Assez parlé de moi, Parlons de vos projets.</h2>
+              <div class="contact-text">
+                <p>Inutile de lire tout ce site, appelons-nous 30 minutes et je vous explique tout.</p>
+              </div>
+              
+              <div class="contact-list">
+                <ul>
+                  <li>
+                    <img src="/images/smile.svg" alt="Smile" class="check-icon" />
+                    <span>Pour un conseil sur le CIR et CII</span>
+                  </li>
+                  <li>
+                    <img src="/images/yellowcheck.png" alt="Yellow Check" class="check-icon" />
+                    <span>Pour un audit sur vos crédits d'impôts</span>
+                  </li>
+                  <li>
+                    <img src="/images/purplecheck.png" alt="Purple Check" class="check-icon" />
+                    <span>Pour lever vos interrogations</span>
+                  </li>
+                  <li>
+                    <img src="/images/greencheck.png" alt="Green Check" class="check-icon" />
+                    <span>Pour faire connaissance</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="contact-info">
+                <div class="contact-photo">
+                  <img src="/images/me.png" alt="Mohamed" />
+                </div>
+                <div class="contact-details">
+                  <p>06 10 10 10 10</p>
+                  <p>mohamed@novaesens.fr</p>
+                  <p>8 rue de la fine équipe, Toulouse</p>
+                </div>
+              </div>
+            </div>
+            <div class="contact-right">
+              <form class="contact-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" name="prenom" />
+                  </div>
+                  <div class="form-group">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom" />
+                  </div>
+                </div>
+                
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="societe">Société</label>
+                    <input type="text" id="societe" name="societe" />
+                  </div>
+                  <div class="form-group">
+                    <label for="role">Votre rôle</label>
+                    <input type="text" id="role" name="role" />
+                  </div>
+                </div>
+                
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" />
+                  </div>
+                  <div class="form-group">
+                    <label for="telephone">Téléphone</label>
+                    <input type="tel" id="telephone" name="telephone" />
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="message">En quoi puis-je vous aider ?</label>
+                  <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet et vos besoins..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                  Envoyer
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  /* Forcer l'application des media queries sur mobile */
+  @media (max-width: 768px) {
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+  }
+  
+  .page-container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: #f1f1f1;
+  }
+
+  /* Assurer que le page-container est en pleine largeur sur mobile */
+  @media (max-width: 768px) {
+    .page-container {
+      width: 100vw;
+      max-width: 100vw;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  /* Hero Section */
+  .hero {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50vh;
+    width: 100%;
+    background: url('/images/fondherocontact-min.png') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  /* Scrolling Content */
+  .scrolling-content {
+    position: relative;
+    z-index: 2;
+    margin-top: 40vh;
+  }
+
+  /* Contact Section */
+  .contact-section {
+    background: white;
+    padding: 5rem 1rem 0rem 1rem;
+    position: relative;
+    border-radius: 80px 80px 0px 0px;
+    box-shadow: 0px -11px 34px 0px rgba(0, 0, 0, 0.1);
+
+  }
+
+  .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .contact-left {
+    max-width: 400px;
+  }
+
+  .contact-left h2 {
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-36);
+    font-weight: 400;
+    color: var(--novablack);
+    margin-bottom: 2rem;
+    
+  }
+
+  .contact-text {
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-20);
+    color: var(--novablack);
+    line-height: 1.6;
+  }
+
+  .contact-text p {
+    margin-bottom: 1rem;
+  }
+
+  .contact-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Liste avec icônes de check */
+  .contact-list {
+    margin: 2rem 0;
+  }
+
+  .contact-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 1rem;
+  }
+
+  .contact-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  .contact-list .check-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .contact-list span {
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-18);
+    color: var(--novablack);
+    line-height: 1.4;
+  }
+
+  /* Informations de contact */
+  .contact-info {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .contact-photo {
+    flex-shrink: 0;
+  }
+
+  .contact-photo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .contact-details p {
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-18);
+    color: var(--novablack);
+    margin: 0.25rem 0;
+  }
+
+  /* Formulaire */
+  .contact-form {
+    padding: 2rem;
+ 
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-row:last-child {
+    margin-bottom: 0;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-16);
+    font-weight: 500;
+    color: var(--novablack);
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #E0E0E0;
+    border-radius: 0.5rem;
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-16);
+    background: rgb(255, 255, 255);
+    transition: border-color 0.2s ease;
+    box-shadow: 0px 4px 16px rgba(133, 133, 133, 0.1);
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--novablack);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--novablack);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-16);
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: opacity 0.2s ease;
+  }
+
+  .submit-btn:hover {
+    opacity: 0.9;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .contact-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .contact-info {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .contact-section {
+      padding: 3rem 1rem 0rem 1rem;
+      border-radius: 20px 20px 0 0;
+    }
+
+    .contact-form {
+      padding: 1.5rem;
+    }
+
+    .contact-list .check-icon {
+      width: 18px;
+      height: 18px;
+    }
+
+  }
+
+  @media (max-width: 480px) {
+    .hero-container {
+      padding: 0 1rem;
+    }
+
+    .contact-section {
+      padding: 2rem 1rem 0rem 1rem;
+    }
+    .contact-info {
+      flex-direction: row;
+      gap: 1rem;
+    }
+    .contact-left {
+        margin-top: 2rem;
+  }
+
+    .form-row {
+    gap: 0.5rem;
+    }
+
+.form-group {
+  width: 100%;
+ margin-top: -1.5rem;
+}
+</style> 
