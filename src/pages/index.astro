@@ -28,7 +28,12 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
         </div>
         
         <div class="hero-image">
-          <img src="/images/expert-photo.png" alt="Expert Novaesens" fetchpriority="high" />
+          <picture>
+            <!-- Version WebP si disponible (à créer) -->
+            <!-- <source srcset="/images/expert-photo.webp" type="image/webp"> -->
+            <!-- Version PNG optimisée actuelle -->
+            <img src="/images/expert-photo.png" alt="Expert Novaesens" fetchpriority="high" loading="eager" decoding="sync" width="400" height="400" />
+          </picture>
           <div class="hero-dots"></div>
         </div>
       </div>
@@ -104,9 +109,9 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
         </div>
       </section>
       
-      <section class="accompagnement-section" aria-labelledby="accompagnement" id="accompagnement">
+      <section class="accompagnement-section" aria-labelledby="accompagnement-title" id="accompagnement">
         <div class="accompagnement-container">
-          <h2 id="accompagnement">Pourquoi être accompagné</h2>
+          <h2 id="accompagnement-title">Pourquoi être accompagné</h2>
           <p class="accompagnement-intro">
             Que ce soit par moi ou par un autre cabinet spécialisé CIR, l'accompagnement est 
             nécessaire. Les dispositifs CIR, CII et JEI sont complexes, sujets à évolution, 
@@ -174,10 +179,10 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
         </div>
       </section>
 
-      <section class="dispositifs" aria-labelledby="dispositifs" id="dispositifs">
+      <section class="dispositifs" aria-labelledby="dispositifs-title" id="dispositifs">
         <div class="dispositifs-container">
           <div class="dispositifs-intro-container">
-            <h2 id="dispositifs">Les dispositifs que je gère pour vous</h2>
+            <h2 id="dispositifs-title">Les dispositifs que je gère pour vous</h2>
             <p class="dispositifs-intro">
               Je m'engage à vos côtés de bout en bout sur les déclarations CIR, CII, mais aussi le rescrit JEI ou les 
               demandes d'agrément CIR. Que vous soyez une TPE, PME, Startup ou un bureau d'étude, si vous 
@@ -279,11 +284,11 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
         </div>
       </section>
 
-      <section class="comment-section" aria-labelledby="comment" id="comment">
+      <section class="comment-section" aria-labelledby="comment-title" id="comment">
         <div class="comment-container">
           <div class="comment-left">
             <div class="sticky-content">
-              <h2 id="comment">Comment je vous rend éligible</h2>
+              <h2 id="comment-title">Comment je vous rend éligible</h2>
               <p>Soyons clair, je ne fais pas de magie. Si vous ne faites pas de R&D, vous ne serez pas éligible. Mais si vous en faites, voici ma méthode pour vous faire accéder aux financements CIR ou CII de la manière la plus simple possible pour vous, et la plus efficace.</p>
               <a href="/contact">
                 <CTA variant="cta1" label="Prenons contact" />
@@ -353,7 +358,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
         </div>
       </section>
 
-      <section class="vision-section" aria-labelledby="vision" id="vision">
+      <section class="vision-section" aria-labelledby="vision-title" id="vision">
         <div class="vision-background">
           <img src="/images/circles-bg-min.png" alt="Éléments décoratifs de fond" />
         </div>
@@ -361,7 +366,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
           <div class="vision-content">
             <div class="vision-left">
               <div class="vision-title-wrapper">
-                <h2>Ma vision du métier</h2>
+                <h2 id="vision-title">Ma vision du métier</h2>
               </div>
               <p>Pour bien vous accompagner, je dois comprendre votre activité, vos contraintes, vos ambitions et par conséquent être capable de créer une relation de confiance, dans la durée. Mon objectif n'est donc <strong>pas seulement que votre dossier passe, mais qu'il passe sans stress, sans réserve, et dans les meilleures conditions</strong>.</p>
               <a href="/a-propos" class="text-link">

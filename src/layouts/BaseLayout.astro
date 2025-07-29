@@ -15,22 +15,18 @@ const { title, description, ogTitle, ogDescription, canonical, isHomePage } = As
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     
-    <!-- Preload des ressources critiques par ordre de priorité -->
+    <!-- Preload uniquement des ressources critiques utilisées immédiatement -->
     
-    <!-- 1. CSS critique d'abord -->
-    <link rel="preload" href="/src/styles/fonts.css" as="style">
-    <link rel="preload" href="/src/styles/theme.css" as="style">
+    <!-- Image LCP uniquement sur la page d'accueil -->
+    {isHomePage && <link rel="preload" href="/images/expert-photo.png" as="image" fetchpriority="high">}
     
-    <!-- 2. Polices critiques ensuite -->
+    <!-- Preloads des polices critiques -->
     <link rel="preload" href="/fonts/jost-latin-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/jost-latin-500.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/jost-latin-700.woff2" as="font" type="font/woff2" crossorigin>
     
-    <!-- 3. Image LCP critique (page d'accueil uniquement) -->
-    {isHomePage && <link rel="preload" href="/images/expert-photo.png" as="image">}
-    
-    <!-- 4. Preload des scripts critiques si possible -->
-    <link rel="modulepreload" href="/_astro/hoisted.ce428ee7.js">
+    <!-- Scripts preload désactivés -->
+    <!-- <link rel="modulepreload" href="/_astro/hoisted.ce428ee7.js"> -->
     
     <link rel="icon" type="image/png" href="/images/favicon-novaesens-min.png">
     <SEO title={title} description={description} ogTitle={ogTitle} ogDescription={ogDescription} canonical={canonical} />
@@ -61,31 +57,31 @@ const { title, description, ogTitle, ogDescription, canonical, isHomePage } = As
       }
     </style>
     
+    <!-- Import direct des styles pour assurer le chargement -->
+    <link rel="stylesheet" href="/src/styles/theme.css">
+    
+    <!-- Fallback en cas de problème -->
     <style>
       @import '../styles/theme.css';
     </style>
     
     <!-- Google tag (gtag.js) - Chargé en fin de head -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-10067027GL"></script>
-    <script>
+    <script type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id=G-10067027GL"></script>
+    <script type="text/javascript">
       // Configuration Google Analytics moderne
-      declare global {
-        interface Window {
-          dataLayer: any[];
-          gtag: (...args: any[]) => void;
-        }
-      }
-      
       try {
         window.dataLayer = window.dataLayer || [];
-        window.gtag = function(...args: any[]) {
-          window.dataLayer.push(args);
+        window.gtag = function() {
+          window.dataLayer.push(arguments);
         };
         window.gtag('js', new Date());
         window.gtag('config', 'G-10067027GL', {
+          // Paramètres de confidentialité modernes
+          cookie_flags: 'secure;samesite=lax',
           anonymize_ip: true,
           allow_google_signals: false,
-          allow_ad_personalization_signals: false
+          allow_ad_personalization_signals: false,
+          send_page_view: true
         });
       } catch (error) {
         console.warn('Google Analytics initialization failed:', error);
