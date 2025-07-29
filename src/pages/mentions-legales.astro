@@ -1,0 +1,318 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/theme.css';
+
+const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
+  title: "Mentions Légales - Novaesens | Expert CIR, CII, JEI",
+  description: "Mentions légales du site Novaesens, expert en crédit d'impôt recherche (CIR), crédit d'impôt innovation (CII) et jeune entreprise innovante (JEI).",
+  ogTitle: "Mentions Légales - Novaesens",
+  ogDescription: "Mentions légales du site Novaesens, expert en crédit d'impôt recherche (CIR), crédit d'impôt innovation (CII) et jeune entreprise innovante (JEI).",
+  ogImage: "/images/expert-photo.png",
+  canonical: "https://www.novaesens.fr/mentions-legales"
+};
+---
+
+<BaseLayout title={title} description={description} ogTitle={ogTitle} ogDescription={ogDescription} ogImage={ogImage} canonical={canonical}>
+  <div class="page-container">
+    <!-- Hero en arrière-plan -->
+    <section class="hero" id="hero">
+      <div class="hero-container">
+        <div class="hero-text-content">
+          <h1 class="hero-title">Mentions Légales</h1>
+          <p class="hero-subtitle">Informations légales concernant le site Novaesens et ses services d'expertise en crédit d'impôt recherche.</p>
+        </div>
+        
+        <div class="hero-image">
+          <img src="/images/expert-photo.png" alt="Expert Novaesens" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Contenu qui passe au-dessus -->
+    <div class="scrolling-content">
+      <!-- Section Mentions Légales -->
+      <section class="mentions-section" id="mentions">
+        <div class="mentions-container">
+          <div class="mentions-content">
+            
+            <!-- Éditeur du site -->
+            <div class="mentions-block">
+              <h2>Éditeur du site</h2>
+              <div class="mentions-text">
+                <p><strong>Novaesens</strong></p>
+                <p>Expert en Crédit Impôt Recherche (CIR), Crédit Impôt Innovation (CII) et Jeune Entreprise Innovante (JEI)</p>
+                <p><strong>Adresse :</strong> 8 rue de la fine équipe, Toulouse, France</p>
+                <p><strong>Téléphone :</strong> 06 10 10 10 10</p>
+                <p><strong>Email :</strong> mohamed@novaesens.fr</p>
+                <p><strong>SIRET :</strong> [À compléter]</p>
+                <p><strong>Directeur de publication :</strong> Mohamed [Nom complet à compléter]</p>
+              </div>
+            </div>
+
+            <!-- Hébergement -->
+            <div class="mentions-block">
+              <h2>Hébergement</h2>
+              <div class="mentions-text">
+                <p><strong>Hébergeur :</strong> [À compléter - ex: Firebase, Vercel, etc.]</p>
+                <p><strong>Adresse :</strong> [À compléter]</p>
+                <p><strong>Contact :</strong> [À compléter]</p>
+              </div>
+            </div>
+
+            <!-- Propriété intellectuelle -->
+            <div class="mentions-block">
+              <h2>Propriété intellectuelle</h2>
+              <div class="mentions-text">
+                <p>L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.</p>
+                <p>La reproduction de tout ou partie de ce site sur un support électronique quel qu'il soit est formellement interdite sauf autorisation expresse du directeur de la publication.</p>
+              </div>
+            </div>
+
+            <!-- Protection des données -->
+            <div class="mentions-block">
+              <h2>Protection des données personnelles</h2>
+              <div class="mentions-text">
+                <p>Conformément à la loi Informatique et Libertés du 6 janvier 1978 modifiée et au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition aux données personnelles vous concernant.</p>
+                <p>Pour exercer ces droits, vous pouvez nous contacter à l'adresse email suivante : mohamed@novaesens.fr</p>
+                <p>Les données collectées sur ce site sont destinées exclusivement à l'usage de Novaesens et ne seront en aucun cas transmises à des tiers.</p>
+              </div>
+            </div>
+
+            <!-- Cookies -->
+            <div class="mentions-block">
+              <h2>Cookies</h2>
+              <div class="mentions-text">
+                <p>Ce site utilise des cookies pour améliorer votre expérience de navigation. Vous pouvez à tout moment désactiver les cookies dans les paramètres de votre navigateur.</p>
+                <p>Les cookies utilisés sont :</p>
+                <ul>
+                  <li>Cookies de session pour le bon fonctionnement du site</li>
+                  <li>Cookies analytiques (Google Analytics) pour mesurer l'audience</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Responsabilité -->
+            <div class="mentions-block">
+              <h2>Responsabilité</h2>
+              <div class="mentions-text">
+                <p>Les informations contenues sur ce site sont fournies à titre informatif et ne constituent pas un conseil fiscal ou juridique. Novaesens s'efforce d'assurer l'exactitude des informations diffusées mais ne peut garantir qu'elles soient exemptes d'erreurs.</p>
+                <p>Novaesens décline toute responsabilité quant aux conséquences directes ou indirectes de l'utilisation des informations contenues sur ce site.</p>
+              </div>
+            </div>
+
+            <!-- Liens hypertextes -->
+            <div class="mentions-block">
+              <h2>Liens hypertextes</h2>
+              <div class="mentions-text">
+                <p>Les liens hypertextes mis en place dans le cadre du présent site web en direction d'autres ressources présentes sur le réseau Internet ne sauraient engager la responsabilité de Novaesens.</p>
+              </div>
+            </div>
+
+            <!-- Droit applicable -->
+            <div class="mentions-block">
+              <h2>Droit applicable</h2>
+              <div class="mentions-text">
+                <p>Le présent site est soumis au droit français. Tout litige relatif à l'utilisation de ce site sera soumis à la compétence des tribunaux français.</p>
+              </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="mentions-block">
+              <h2>Contact</h2>
+              <div class="mentions-text">
+                <p>Pour toute question concernant ces mentions légales, vous pouvez nous contacter :</p>
+                <p><strong>Email :</strong> mohamed@novaesens.fr</p>
+                <p><strong>Téléphone :</strong> 06 10 10 10 10</p>
+                <p><strong>Adresse :</strong> 8 rue de la fine équipe, Toulouse, France</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  /* Forcer l'application des media queries sur mobile */
+  @media (max-width: 768px) {
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+  }
+  
+  .page-container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: #f1f1f1;
+  }
+
+  /* Assurer que le page-container est en pleine largeur sur mobile */
+  @media (max-width: 768px) {
+    .page-container {
+      width: 100vw;
+      max-width: 100vw;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  /* Hero Section */
+  .hero {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80vh;
+    width: 100%;
+    background: #F1F1F1;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .hero-container {
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 2rem;
+  }
+
+  .hero-text-content {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 50%;
+    padding: 2rem;
+    z-index: 2;
+  }
+
+  .hero-title {
+    font-size: var(--font-size-36);
+    font-weight: 400;
+    color: var(--novablack);
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-18);
+    color: var(--novablack);
+  }
+
+  .hero-image {
+    position: relative;
+    bottom: -20%;
+    right: -60%;
+    width: 600px;
+    z-index: 0;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Scrolling Content */
+  .scrolling-content {
+    position: relative;
+    z-index: 2;
+    margin-top: 45vh;
+    background: white;
+  }
+
+  /* Mentions Section */
+  .mentions-section {
+    padding: 4rem 0;
+  }
+
+  .mentions-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .mentions-content {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .mentions-block {
+    margin-bottom: 3rem;
+  }
+
+  .mentions-block:last-child {
+    margin-bottom: 0;
+  }
+
+  .mentions-block h2 {
+    font-size: var(--font-size-24);
+    font-weight: 700;
+    color: var(--novablack);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--novablack);
+    padding-bottom: 0.5rem;
+  }
+
+  .mentions-text {
+    font-size: var(--font-size-16);
+    line-height: 1.6;
+    color: var(--novablack);
+  }
+
+  .mentions-text p {
+    margin-bottom: 1rem;
+  }
+
+  .mentions-text ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+
+  .mentions-text li {
+    margin-bottom: 0.5rem;
+  }
+
+  .mentions-text strong {
+    font-weight: 600;
+    color: var(--novablack);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero-text-content {
+      width: 100%;
+      padding: 1rem;
+    }
+
+    .mentions-container {
+      padding: 0 1rem;
+    }
+
+    .mentions-content {
+      padding: 2rem 1.5rem;
+    }
+
+  }
+
+  @media (max-width: 480px) {
+    .hero-container {
+      padding: 0 1rem;
+    }
+
+    .mentions-content {
+      padding: 1.5rem 1rem;
+    }
+
+  }
+</style> 

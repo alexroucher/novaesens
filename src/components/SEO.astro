@@ -1,5 +1,109 @@
 ---
 const { title, description, canonical, ogTitle, ogDescription, ogImage } = Astro.props;
+
+// Données de base de l'organisation
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://www.novaesens.fr",
+  "name": "Novaesens",
+  "url": "https://www.novaesens.fr",
+  "logo": "https://www.novaesens.fr/images/novaesens-logo-min.png",
+  "image": "https://www.novaesens.fr/images/expert-photo.png",
+  "description": "Expert en crédit d'impôt recherche (CIR), crédit d'impôt innovation (CII) et statut Jeune Entreprise Innovante (JEI). Accompagnement personnalisé et sécurisé pour optimiser vos dispositifs fiscaux R&D.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "FR"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/novaesens"
+  ]
+};
+
+// Données des services principaux
+const servicesSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.novaesens.fr/cir-cii-jei",
+  "name": "Accompagnement CIR, CII et JEI",
+  "provider": {
+    "@id": "https://www.novaesens.fr"
+  },
+  "serviceType": ["Conseil", "Crédit d'impôt recherche", "Crédit d'impôt innovation", "Statut JEI"],
+  "areaServed": {
+    "@type": "Country",
+    "name": "France"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services Novaesens",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Accompagnement CIR",
+          "description": "Accompagnement complet pour l'obtention et la sécurisation du Crédit d'Impôt Recherche",
+          "url": "https://www.novaesens.fr/cir-cii-jei#cir"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Accompagnement CII",
+          "description": "Accompagnement pour l'obtention du Crédit d'Impôt Innovation",
+          "url": "https://www.novaesens.fr/cir-cii-jei#cii"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Statut JEI",
+          "description": "Accompagnement pour l'obtention et la sécurisation du statut Jeune Entreprise Innovante",
+          "url": "https://www.novaesens.fr/cir-cii-jei#jei"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Agrément CIR",
+          "description": "Accompagnement pour l'obtention de l'agrément CIR pour les prestataires de R&D",
+          "url": "https://www.novaesens.fr/cir-cii-jei#agrement"
+        }
+      }
+    ]
+  }
+};
+
+// Données de la page web courante
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": canonical + "#webpage",
+  "url": canonical,
+  "name": title,
+  "description": description,
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": ogImage
+  }
+};
+
+// Données du site web
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.novaesens.fr",
+  "url": "https://www.novaesens.fr",
+  "name": "Novaesens",
+  "description": "Expert CIR, CII et JEI",
+  "publisher": {
+    "@id": "https://www.novaesens.fr"
+  }
+};
 ---
 
 <head>
@@ -18,5 +122,9 @@ const { title, description, canonical, ogTitle, ogDescription, ogImage } = Astro
   <meta name="twitter:description" content={ogDescription} />
   <meta name="twitter:image" content={ogImage} />
 
-  <!-- Schema.org Markup (à insérer plus tard) -->
+  <!-- Schema.org Markup -->
+  <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(servicesSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
 </head> 

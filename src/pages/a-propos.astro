@@ -5,19 +5,19 @@ import Card from '../components/Card.astro';
 import '../styles/theme.css';
 
 const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
-  title: "Tout savoir sur le CIR et le CII - Novaesens",
-  description: "Qui est concerné par le crédit Impôt Recherche, crédit impot innovation et JEI, et les critères pour les obtenir",
-  ogTitle: "Tout sur le CIR, CII, JEI et agrément CIR - Novaesens",
-  ogDescription: "Qui est concerné par le crédit Impôt Recherche, crédit impot innovation et JEI, et les critères pour les obtenir",
-  ogImage: "/path/to/image.jpg",
-  canonical: "https://www.novaesens.com/"
+  title: "Expert CIR/CII - À propos de Novaesens | Parcours et Méthode",
+  description: "Découvrez l'expertise de Novaesens en CIR, CII et JEI. 25 ans d'expérience en R&D, docteur en imagerie radar. 19 clients accompagnés, 10.34M€ de crédits récupérés. Expertise technique et accompagnement personnalisé.",
+  ogTitle: "Expert CIR/CII - À propos de Novaesens | Parcours et Méthode",
+  ogDescription: "Découvrez l'expertise de Novaesens en CIR, CII et JEI. 25 ans d'expérience en R&D, docteur en imagerie radar. 19 clients accompagnés, 10.34M€ de crédits récupérés.",
+  ogImage: "/images/moh.png",
+  canonical: "https://www.novaesens.fr/a-propos"
 };
 ---
 
 <BaseLayout title={title} description={description} ogTitle={ogTitle} ogDescription={ogDescription} ogImage={ogImage} canonical={canonical}>
   <div class="page-container">
     <!-- Hero en arrière-plan -->
-    <section class="hero">
+    <section class="hero" id="hero">
       <div class="hero-container">
         <div class="hero-text-content">
 
@@ -35,9 +35,11 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     <div class="scrolling-content">
       <!-- Section Data -->
      
-      <section class="why-section" aria-labelledby="cir">
+      <section class="why-section" aria-labelledby="why" id="why">
         <div class="why-top-cta">
-          <CTA variant="cta1" label="Être accompagné d'un expert" />
+          <a href="/contact">
+            <CTA variant="cta1" label="Être accompagné d'un expert" />
+          </a>
         </div>
 
         <div class="why-container">
@@ -45,7 +47,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
             <div class="why-left">
               <h2>Pourquoi je fais ce métier, et pourquoi comme ça ?</h2>
               <div class="why-text">
-                <p>Cette vocation née d’un coup de foudre au plus jeune âge, mais l’histoire est belle. Belle parce qu’elle a coulé de source.</p>
+                <p>Cette vocation n'est pas née d’un coup de foudre au plus jeune âge, mais l’histoire est belle. Belle parce qu’elle a coulé de source.</p>
                 <p>Ce que j’ai toujours cherché, pour chacun de mes métiers, c’est la compréhension en profondeur des sujets complexes, et la transmission claire à ceux qui en ont besoin.</p>
               </div>
             </div>
@@ -150,13 +152,15 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
         <!-- CTA Section -->
         <div class="why-cta-section">
             <div class="why-cta-container">
-                <a href="#" class="why-text-link">
+                <a href="/#comment" class="why-text-link">
                 En savoir plus sur ma méthode
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 </a>
-                <CTA variant="cta2" label="Contactons-nous" />
+                <a href="/contact">
+                  <CTA variant="cta2" label="Contactons-nous" />
+                </a>
             </div>
             </div>
         </section>
@@ -196,10 +200,9 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
                   </svg>
                 </div>
                 <div class="stat-line">
-                  <span class="stat-number">543</span>
-                  <span class="stat-label">000€</span>
+                  <span class="stat-number">181 000€</span>
                 </div>
-                <div class="stat-line-1">par client en moyenne De crédit d'impôts en moyenne</div>
+                <div class="stat-line-1">de crédit d'impôt en moyenne par client et par an.</div>
               </div>
               <div class="stat-item">
                 <div class="stat-icon">
@@ -208,7 +211,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
                   </svg>
                 </div>
                 <div class="stat-line">
-                  <span class="stat-number">226</span>
+                  <span class="stat-number">+100</span>
                 </div>
                 <div class="stat-line-1">Projets intégrés dans les dispositifs CIR ou CII</div>
               </div>
@@ -231,28 +234,28 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
                   </svg>
                 </div>
                 <div class="stat-line">
-                  <span class="stat-number">765</span>
+                  <span class="stat-number">300</span>
                 </div>
                 <div class="stat-line-1">Jours de travail épargnés à mes clients</div>
               </div>
             </div>
             <div class="datawhy-cta-container">
-              <CTA variant="cta1" label="M'ajouter à ces chiffres" />
+              <a href="/contact">
+                <CTA variant="cta1" label="M'ajouter à ces chiffres" />
+              </a>
             </div>
           </div>
         </section>
 
         <!-- Nouvelle section Activités et Secteurs -->
-        <section class="activites-secteurs-section">
+        <section class="activites-secteurs-section" id="activites-secteurs">
           <div class="activites-secteurs-container">
             
             <!-- Premier bloc : Activités -->
             <div class="activites-block">
               <h2>Les activités déjà accompagnées</h2>
               <div class="activites-content">
-                <div class="activites-image">
-                  <img src="/images/activites-min.png" alt="Activités accompagnées" />
-                </div>
+                <div class="activites-image"></div>
                 <div class="activites-text-left">
                   <ul>
                     <li>CIR Dépollution des sols</li>
@@ -286,9 +289,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
             <div class="secteurs-block">
               <h2>Les secteurs déjà traités</h2>
               <div class="secteurs-content">
-                <div class="secteurs-image">
-                  <img src="/images/secteurs-min.png" alt="Secteurs traités" />
-                </div>
+                <div class="secteurs-image"></div>
                 <div class="secteurs-text-left">
                   <ul>
                     <li>CIR Environnement</li>
@@ -317,7 +318,9 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
 
             <!-- CTA -->
             <div class="activites-secteurs-cta">
-              <CTA variant="cta1" label="Prendre RDV" />
+              <a href="/contact">
+                <CTA variant="cta1" label="Prendre RDV" />
+              </a>
             </div>
 
           </div>
@@ -381,6 +384,9 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     margin: 0 auto;
     position: relative;
     padding: 0 2rem;
+  }
+  .hero-title {
+    font-size: var(--font-size-36);
   }
 
   .hero-text-content {
@@ -489,7 +495,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
   .scrolling-content {
     position: relative;
     z-index: 2;
-    margin-top: 80vh; /* Espacement pour le hero fixe */
+    margin-top: 70vh; /* Espacement pour le hero fixe */
   }
 
 
@@ -1259,16 +1265,20 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
 
   .activites-image,
   .secteurs-image {
-    flex: 0 0 5rem;
-    margin-left: 0;
-    padding-left: 0;
+    flex: 0 0 57px;
+    margin: 0;
+    padding: 0;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    align-self: stretch;
   }
 
-  .activites-image img,
-  .secteurs-image img {
-    width: 57px;
-    height: auto;
-    object-fit: cover;
+  .activites-image {
+    background-color: #E5FFEC;
+  }
+
+  .secteurs-image {
+    background-color: var(--novapurple);
   }
 
   .activites-text-left,
@@ -1277,6 +1287,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
   .secteurs-text-right {
     flex: 1;
     margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 
   .activites-text-left ul,
@@ -1325,6 +1336,8 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     .secteurs-text-left,
     .secteurs-text-right {
       flex: none;
+      margin-top: 2rem;
+      margin-bottom: 0;
     }
   }
 
@@ -1354,6 +1367,11 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
       -webkit-transform: translateZ(0);
       transform: translateZ(0);
     }
+  }
+
+  /* Retirer le soulignement du lien Contactons-nous */
+  .why-cta-container a {
+    text-decoration: none;
   }
 
 </style> 

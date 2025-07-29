@@ -5,19 +5,19 @@ import Card from '../components/Card.astro';
 import '../styles/theme.css';
 
 const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
-  title: "Accueil - Novaesens",
-  description: "Expert en Crédit Impôt Recherche, CII et JEI.",
-  ogTitle: "Accueil - Novaesens",
-  ogDescription: "Expert en Crédit Impôt Recherche, CII et JEI.",
-  ogImage: "/path/to/image.jpg",
-  canonical: "https://www.novaesens.com/"
+  title: "Expert CIR, CII, JEI - Novaesens | Accompagnement Crédit d'Impôt Recherche",
+  description: "Expert en Crédit Impôt Recherche (CIR), Crédit Impôt Innovation (CII) et Jeune Entreprise Innovante (JEI). 25 ans d'expertise pour optimiser vos crédits d'impôt R&D. 100% d'acceptation, 10.32M€ récupérés.",
+  ogTitle: "Expert CIR, CII, JEI - Novaesens | Accompagnement Crédit d'Impôt",
+  ogDescription: "Expert en Crédit Impôt Recherche, CII et JEI. 25 ans d'expertise pour optimiser vos crédits d'impôt R&D. 100% d'acceptation.",
+  ogImage: "/images/expert-photo.png",
+  canonical: "https://www.novaesens.fr/"
 };
 ---
 
-<BaseLayout title={title} description={description} ogTitle={ogTitle} ogDescription={ogDescription} ogImage={ogImage} canonical={canonical}>
+<BaseLayout title={title} description={description} ogTitle={ogTitle} ogDescription={ogDescription} ogImage={ogImage} canonical={canonical} isHomePage={true}>
   <div class="page-container">
     <!-- Hero en arrière-plan -->
-    <section class="hero">
+    <section class="hero" id="hero">
       <div class="hero-container">
         <div class="hero-text-content">
           <div class="hero-tag">
@@ -28,7 +28,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
         </div>
         
         <div class="hero-image">
-          <img src="/images/expert-photo.png" alt="Expert Novaesens" />
+          <img src="/images/expert-photo.png" alt="Expert Novaesens" fetchpriority="high" />
           <div class="hero-dots"></div>
         </div>
       </div>
@@ -37,10 +37,12 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     <!-- Contenu qui passe au-dessus -->
     <div class="scrolling-content">
       <!-- Section Data -->
-      <section class="data-section">
+      <section class="data-section" id="data">
         <div class="data-container">
           <div class="cta-container">
-            <CTA variant="cta1" label="Discutons de vos projets" />
+            <a href="/contact">
+              <CTA variant="cta1" label="Discutons de vos projets" />
+            </a>
           </div>
           
           <div class="stats-grid">
@@ -65,7 +67,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
                 </svg>
               </div>
               <div class="stat-line">
-                <div class="stat-number" data-target="226">0</div>
+                <div class="stat-number" data-target="100">0</div>
               </div>
               <p class="stat-line-1">Projets d'innovation</p>
               <p class="stat-line-2">traités pour CIR/CII</p>
@@ -102,7 +104,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
         </div>
       </section>
       
-      <section class="accompagnement-section" aria-labelledby="accompagnement">
+      <section class="accompagnement-section" aria-labelledby="accompagnement" id="accompagnement">
         <div class="accompagnement-container">
           <h2 id="accompagnement">Pourquoi être accompagné</h2>
           <p class="accompagnement-intro">
@@ -115,7 +117,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
           <div class="accompagnement-content">
             <!-- Image des cercles en arrière-plan -->
             <div class="circles-background">
-              <img src="/images/circles.png" alt="" />
+              <img src="/images/circles.png" alt="Éléments décoratifs de fond" />
             </div>
             
             <!-- Cartes créées directement -->
@@ -158,19 +160,21 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
 
           <div class="accompagnement-cta">
             <div class="cta-wrapper">
-              <a href="#dispositifs" class="cta-link">
+              <a href="/cir-cii-jei" class="cta-link">
                 <span>Voir le détail des dispositifs</span>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </a>
-              <CTA variant="cta1" label="Optimiser mes crédits d'impôts" />
+              <a href="/contact">
+                <CTA variant="cta1" label="Optimiser mes crédits d'impôts" />
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="dispositifs" aria-labelledby="dispositifs">
+      <section class="dispositifs" aria-labelledby="dispositifs" id="dispositifs">
         <div class="dispositifs-container">
           <div class="dispositifs-intro-container">
             <h2 id="dispositifs">Les dispositifs que je gère pour vous</h2>
@@ -195,8 +199,8 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
                   <h3>Le Crédit Impôt Recherche</h3>
                   <h4>CIR</h4>
                   <p>Ce dispositif fiscal permet de récupérer 30 % de vos dépenses en R&D : salaires, sous-traitance, prototypage, achats de matériels, développements... En tant que consultant CIR et ingénieur, j'audite vos projets, je définis le périmètre d'éligibilité et je constitue les dossiers techniques et financiers.</p>
-                  <a href="#" class="card-cta">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none">
+                  <a href="/cir-cii-jei" class="card-cta" aria-label="En savoir plus sur le Crédit Impôt Recherche (CIR)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none" aria-hidden="true">
                       <path d="M34.0383 27.5385C34.2356 27.3324 34.3902 27.0895 34.4933 26.8235C34.71 26.296 34.71 25.7043 34.4933 25.1768C34.3902 24.9109 34.2356 24.6679 34.0383 24.4618L27.5383 17.9618C27.1303 17.5538 26.577 17.3246 26 17.3246C25.423 17.3246 24.8696 17.5538 24.4617 17.9618C24.0537 18.3698 23.8245 18.9232 23.8245 19.5002C23.8245 20.0772 24.0537 20.6305 24.4617 21.0385L27.2783 23.8335H19.5C18.9254 23.8335 18.3743 24.0618 17.9679 24.4681C17.5616 24.8744 17.3333 25.4255 17.3333 26.0002C17.3333 26.5748 17.5616 27.1259 17.9679 27.5322C18.3743 27.9386 18.9254 28.1668 19.5 28.1668H27.2783L24.4617 30.9618C24.2586 31.1633 24.0974 31.4029 23.9874 31.6669C23.8774 31.9309 23.8208 32.2141 23.8208 32.5002C23.8208 32.7862 23.8774 33.0694 23.9874 33.3334C24.0974 33.5974 24.2586 33.8371 24.4617 34.0385C24.6631 34.2416 24.9027 34.4028 25.1667 34.5128C25.4308 34.6228 25.714 34.6794 26 34.6794C26.286 34.6794 26.5692 34.6228 26.8332 34.5128C27.0973 34.4028 27.3369 34.2416 27.5383 34.0385L34.0383 27.5385ZM47.6667 26.0002C47.6667 21.7149 46.3959 17.5259 44.0152 13.9628C41.6344 10.3998 38.2505 7.62268 34.2915 5.98278C30.3324 4.34288 25.976 3.91381 21.773 4.74982C17.5701 5.58584 13.7095 7.64939 10.6793 10.6795C7.6492 13.7097 5.58565 17.5703 4.74964 21.7732C3.91363 25.9761 4.3427 30.3326 5.9826 34.2916C7.6225 38.2507 10.3996 41.6346 13.9626 44.0153C17.5257 46.3961 21.7147 47.6668 26 47.6668C31.7463 47.6668 37.2573 45.3841 41.3206 41.3208C45.3839 37.2575 47.6667 31.7465 47.6667 26.0002V26.0002ZM8.66666 26.0002C8.66666 22.572 9.68324 19.2207 11.5878 16.3703C13.4925 13.5198 16.1996 11.2982 19.3668 9.98626C22.5341 8.67434 26.0192 8.33108 29.3816 8.99989C32.7439 9.6687 35.8324 11.3195 38.2565 13.7437C40.6806 16.1678 42.3315 19.2563 43.0003 22.6186C43.6691 25.9809 43.3258 29.4661 42.0139 32.6333C40.702 35.8006 38.4803 38.5077 35.6299 40.4123C32.7794 42.3169 29.4282 43.3335 26 43.3335C21.4029 43.3335 16.9941 41.5073 13.7435 38.2567C10.4928 35.0061 8.66666 30.5973 8.66666 26.0002V26.0002Z" fill="#2E3030"/>
                     </svg>
                   </a>
@@ -210,9 +214,9 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
                 <div class="card-text">
                   <h3>Le Crédit Impôt Innovation</h3>
                   <h4>CII / C2I</h4>
-                  <p>Votre PME développe un nouveau produit ? Le crédit impôt innovation permet de récupérer 20 % de vos dépenses liées. Je vous accompagne pour identifier ce qui est éligible (souvent plus que vous ne pensez) et constitue un dossier solide, sans jargon ni surcharge de travail.</p>
-                  <a href="#" class="card-cta">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none">
+                  <p>Votre PME développe un nouveau produit ? Le crédit impôt innovation permet de récupérer 20% de vos dépenses liées. Je vous accompagne pour identifier ce qui est éligible (souvent plus que vous ne pensez) et constitue un dossier solide, sans jargon ni surcharge de travail.</p>
+                  <a href="/cir-cii-jei" class="card-cta" aria-label="En savoir plus sur le Crédit Impôt Innovation (CII)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none" aria-hidden="true">
                       <path d="M34.0383 27.5385C34.2356 27.3324 34.3902 27.0895 34.4933 26.8235C34.71 26.296 34.71 25.7043 34.4933 25.1768C34.3902 24.9109 34.2356 24.6679 34.0383 24.4618L27.5383 17.9618C27.1303 17.5538 26.577 17.3246 26 17.3246C25.423 17.3246 24.8696 17.5538 24.4617 17.9618C24.0537 18.3698 23.8245 18.9232 23.8245 19.5002C23.8245 20.0772 24.0537 20.6305 24.4617 21.0385L27.2783 23.8335H19.5C18.9254 23.8335 18.3743 24.0618 17.9679 24.4681C17.5616 24.8744 17.3333 25.4255 17.3333 26.0002C17.3333 26.5748 17.5616 27.1259 17.9679 27.5322C18.3743 27.9386 18.9254 28.1668 19.5 28.1668H27.2783L24.4617 30.9618C24.2586 31.1633 24.0974 31.4029 23.9874 31.6669C23.8774 31.9309 23.8208 32.2141 23.8208 32.5002C23.8208 32.7862 23.8774 33.0694 23.9874 33.3334C24.0974 33.5974 24.2586 33.8371 24.4617 34.0385C24.6631 34.2416 24.9027 34.4028 25.1667 34.5128C25.4308 34.6228 25.714 34.6794 26 34.6794C26.286 34.6794 26.5692 34.6228 26.8332 34.5128C27.0973 34.4028 27.3369 34.2416 27.5383 34.0385L34.0383 27.5385ZM47.6667 26.0002C47.6667 21.7149 46.3959 17.5259 44.0152 13.9628C41.6344 10.3998 38.2505 7.62268 34.2915 5.98278C30.3324 4.34288 25.976 3.91381 21.773 4.74982C17.5701 5.58584 13.7095 7.64939 10.6793 10.6795C7.6492 13.7097 5.58565 17.5703 4.74964 21.7732C3.91363 25.9761 4.3427 30.3326 5.9826 34.2916C7.6225 38.2507 10.3996 41.6346 13.9626 44.0153C17.5257 46.3961 21.7147 47.6668 26 47.6668C31.7463 47.6668 37.2573 45.3841 41.3206 41.3208C45.3839 37.2575 47.6667 31.7465 47.6667 26.0002V26.0002ZM8.66666 26.0002C8.66666 22.572 9.68324 19.2207 11.5878 16.3703C13.4925 13.5198 16.1996 11.2982 19.3668 9.98626C22.5341 8.67434 26.0192 8.33108 29.3816 8.99989C32.7439 9.6687 35.8324 11.3195 38.2565 13.7437C40.6806 16.1678 42.3315 19.2563 43.0003 22.6186C43.6691 25.9809 43.3258 29.4661 42.0139 32.6333C40.702 35.8006 38.4803 38.5077 35.6299 40.4123C32.7794 42.3169 29.4282 43.3335 26 43.3335C21.4029 43.3335 16.9941 41.5073 13.7435 38.2567C10.4928 35.0061 8.66666 30.5973 8.66666 26.0002V26.0002Z" fill="#2E3030"/>
                     </svg>
                   </a>
@@ -227,8 +231,8 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
                   <h3>Statut JEI</h3>
                   <h4>Rescrit</h4>
                   <p>Le statut Jeune Entreprise Innovante (JEI) ouvre droit à d'importantes exonérations fiscales et sociales, CSE et taxe foncière. Avec vos informations, je monte un dossier rescrit complet qui sécurise ce statut, à jour des nouvelles exigences réglementaires.</p>
-                  <a href="#" class="card-cta">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none">
+                  <a href="/cir-cii-jei" class="card-cta" aria-label="En savoir plus sur le statut Jeune Entreprise Innovante (JEI)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none" aria-hidden="true">
                       <path d="M34.0383 27.5385C34.2356 27.3324 34.3902 27.0895 34.4933 26.8235C34.71 26.296 34.71 25.7043 34.4933 25.1768C34.3902 24.9109 34.2356 24.6679 34.0383 24.4618L27.5383 17.9618C27.1303 17.5538 26.577 17.3246 26 17.3246C25.423 17.3246 24.8696 17.5538 24.4617 17.9618C24.0537 18.3698 23.8245 18.9232 23.8245 19.5002C23.8245 20.0772 24.0537 20.6305 24.4617 21.0385L27.2783 23.8335H19.5C18.9254 23.8335 18.3743 24.0618 17.9679 24.4681C17.5616 24.8744 17.3333 25.4255 17.3333 26.0002C17.3333 26.5748 17.5616 27.1259 17.9679 27.5322C18.3743 27.9386 18.9254 28.1668 19.5 28.1668H27.2783L24.4617 30.9618C24.2586 31.1633 24.0974 31.4029 23.9874 31.6669C23.8774 31.9309 23.8208 32.2141 23.8208 32.5002C23.8208 32.7862 23.8774 33.0694 23.9874 33.3334C24.0974 33.5974 24.2586 33.8371 24.4617 34.0385C24.6631 34.2416 24.9027 34.4028 25.1667 34.5128C25.4308 34.6228 25.714 34.6794 26 34.6794C26.286 34.6794 26.5692 34.6228 26.8332 34.5128C27.0973 34.4028 27.3369 34.2416 27.5383 34.0385L34.0383 27.5385ZM47.6667 26.0002C47.6667 21.7149 46.3959 17.5259 44.0152 13.9628C41.6344 10.3998 38.2505 7.62268 34.2915 5.98278C30.3324 4.34288 25.976 3.91381 21.773 4.74982C17.5701 5.58584 13.7095 7.64939 10.6793 10.6795C7.6492 13.7097 5.58565 17.5703 4.74964 21.7732C3.91363 25.9761 4.3427 30.3326 5.9826 34.2916C7.6225 38.2507 10.3996 41.6346 13.9626 44.0153C17.5257 46.3961 21.7147 47.6668 26 47.6668C31.7463 47.6668 37.2573 45.3841 41.3206 41.3208C45.3839 37.2575 47.6667 31.7465 47.6667 26.0002V26.0002ZM8.66666 26.0002C8.66666 22.572 9.68324 19.2207 11.5878 16.3703C13.4925 13.5198 16.1996 11.2982 19.3668 9.98626C22.5341 8.67434 26.0192 8.33108 29.3816 8.99989C32.7439 9.6687 35.8324 11.3195 38.2565 13.7437C40.6806 16.1678 42.3315 19.2563 43.0003 22.6186C43.6691 25.9809 43.3258 29.4661 42.0139 32.6333C40.702 35.8006 38.4803 38.5077 35.6299 40.4123C32.7794 42.3169 29.4282 43.3335 26 43.3335C21.4029 43.3335 16.9941 41.5073 13.7435 38.2567C10.4928 35.0061 8.66666 30.5973 8.66666 26.0002V26.0002Z" fill="#2E3030"/>
                     </svg>
                   </a>
@@ -243,8 +247,8 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
                   <h3>Agrément CIR</h3>
                   <h4>Pour la sous-traitance</h4>
                   <p>Vous souhaitez que vos prestations de R&D soient éligibles au crédit impôt recherche pour vos clients ? L'agrément CIR est une autorisation délivrée par le Ministère de la Recherche permettant d'être reconnu comme sous-traitant éligible. Vos clients pourront déclarer les prestations de R&D facturées dans leur propre CIR.</p>
-                  <a href="#" class="card-cta">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none">
+                  <a href="/cir-cii-jei" class="card-cta" aria-label="En savoir plus sur l'Agrément CIR">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none" aria-hidden="true">
                       <path d="M34.0383 27.5385C34.2356 27.3324 34.3902 27.0895 34.4933 26.8235C34.71 26.296 34.71 25.7043 34.4933 25.1768C34.3902 24.9109 34.2356 24.6679 34.0383 24.4618L27.5383 17.9618C27.1303 17.5538 26.577 17.3246 26 17.3246C25.423 17.3246 24.8696 17.5538 24.4617 17.9618C24.0537 18.3698 23.8245 18.9232 23.8245 19.5002C23.8245 20.0772 24.0537 20.6305 24.4617 21.0385L27.2783 23.8335H19.5C18.9254 23.8335 18.3743 24.0618 17.9679 24.4681C17.5616 24.8744 17.3333 25.4255 17.3333 26.0002C17.3333 26.5748 17.5616 27.1259 17.9679 27.5322C18.3743 27.9386 18.9254 28.1668 19.5 28.1668H27.2783L24.4617 30.9618C24.2586 31.1633 24.0974 31.4029 23.9874 31.6669C23.8774 31.9309 23.8208 32.2141 23.8208 32.5002C23.8208 32.7862 23.8774 33.0694 23.9874 33.3334C24.0974 33.5974 24.2586 33.8371 24.4617 34.0385C24.6631 34.2416 24.9027 34.4028 25.1667 34.5128C25.4308 34.6228 25.714 34.6794 26 34.6794C26.286 34.6794 26.5692 34.6228 26.8332 34.5128C27.0973 34.4028 27.3369 34.2416 27.5383 34.0385L34.0383 27.5385ZM47.6667 26.0002C47.6667 21.7149 46.3959 17.5259 44.0152 13.9628C41.6344 10.3998 38.2505 7.62268 34.2915 5.98278C30.3324 4.34288 25.976 3.91381 21.773 4.74982C17.5701 5.58584 13.7095 7.64939 10.6793 10.6795C7.6492 13.7097 5.58565 17.5703 4.74964 21.7732C3.91363 25.9761 4.3427 30.3326 5.9826 34.2916C7.6225 38.2507 10.3996 41.6346 13.9626 44.0153C17.5257 46.3961 21.7147 47.6668 26 47.6668C31.7463 47.6668 37.2573 45.3841 41.3206 41.3208C45.3839 37.2575 47.6667 31.7465 47.6667 26.0002V26.0002ZM8.66666 26.0002C8.66666 22.572 9.68324 19.2207 11.5878 16.3703C13.4925 13.5198 16.1996 11.2982 19.3668 9.98626C22.5341 8.67434 26.0192 8.33108 29.3816 8.99989C32.7439 9.6687 35.8324 11.3195 38.2565 13.7437C40.6806 16.1678 42.3315 19.2563 43.0003 22.6186C43.6691 25.9809 43.3258 29.4661 42.0139 32.6333C40.702 35.8006 38.4803 38.5077 35.6299 40.4123C32.7794 42.3169 29.4282 43.3335 26 43.3335C21.4029 43.3335 16.9941 41.5073 13.7435 38.2567C10.4928 35.0061 8.66666 30.5973 8.66666 26.0002V26.0002Z" fill="#2E3030"/>
                     </svg>
                   </a>
@@ -261,25 +265,29 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
 
           <div class="dispositifs-footer">
             <div class="cta-wrapper">
-              <a href="#" class="cta-link">
+              <a href="/cir-cii-jei" class="cta-link">
                 <span>Voir le détail des dispositifs</span>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </a>
-              <CTA variant="cta1" label="Estimons votre éligibilité" />
+              <a href="/contact">
+                <CTA variant="cta1" label="Estimons votre éligibilité" />
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="comment-section" aria-labelledby="comment">
+      <section class="comment-section" aria-labelledby="comment" id="comment">
         <div class="comment-container">
           <div class="comment-left">
             <div class="sticky-content">
               <h2 id="comment">Comment je vous rend éligible</h2>
-              <p>Soyons clair, je ne fais pas de magie. Si vous ne faites pas de R&D, vous ne serez pas éligible. Mais si vous en faites, voici ma méthode pour vous faire accéder aux financements CIR ou C2I de la manière la plus simple possible pour vous, et la plus efficace.</p>
-              <CTA variant="cta1" label="Prenons contact" />
+              <p>Soyons clair, je ne fais pas de magie. Si vous ne faites pas de R&D, vous ne serez pas éligible. Mais si vous en faites, voici ma méthode pour vous faire accéder aux financements CIR ou CII de la manière la plus simple possible pour vous, et la plus efficace.</p>
+              <a href="/contact">
+                <CTA variant="cta1" label="Prenons contact" />
+              </a>
             </div>
           </div>
 
@@ -288,7 +296,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
           <div class="comment-right">
             <div class="step">
               <div class="step-left">
-                <img src="/images/01-min.avif" alt="" class="step-number" />
+                <img src="/images/01-min.avif" alt="Étape 1" class="step-number" />
                 <div class="step-content">
                   <h3>Audit de vos projets</h3>
                   <p class="step-description">Nous échangeons sur vos projets pour évaluer leur éligibilité et estimer leurs montants.</p>
@@ -301,7 +309,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
 
             <div class="step">
               <div class="step-left">
-                <img src="/images/02-min.avif" alt="" class="step-number" />
+                <img src="/images/02-min.avif" alt="Étape 2" class="step-number" />
                 <div class="step-content">
                   <h3>Chiffrage</h3>
                   <p class="step-description">Calcul précis du montant de crédit d'impôt auquel vous avez droit.</p>
@@ -314,7 +322,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
 
             <div class="step">
               <div class="step-left">
-                <img src="/images/03-min.avif" alt="" class="step-number" />
+                <img src="/images/03-min.avif" alt="Étape 3" class="step-number" />
                 <div class="step-content">
                   <h3>Rédaction technique</h3>
                   <p class="step-description">Rédaction du dossier technique décrivant les travaux de recherche et d'innovation.</p>
@@ -327,7 +335,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
 
             <div class="step">
               <div class="step-left">
-                <img src="/images/04-min.avif" alt="" class="step-number" />
+                <img src="/images/04-min.avif" alt="Étape 4" class="step-number" />
                 <div class="step-content">
                   <h3>Livrables</h3>
                   <p class="step-description">Livraison du CERFA (à destination de l'administration fiscale), du dossier financier et du dossier technique.</p>
@@ -345,9 +353,9 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
         </div>
       </section>
 
-      <section class="vision-section" aria-labelledby="vision">
+      <section class="vision-section" aria-labelledby="vision" id="vision">
         <div class="vision-background">
-          <img src="/images/circles-bg-min.png" alt="" />
+          <img src="/images/circles-bg-min.png" alt="Éléments décoratifs de fond" />
         </div>
         <div class="vision-container">
           <div class="vision-content">
@@ -356,7 +364,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
                 <h2>Ma vision du métier</h2>
               </div>
               <p>Pour bien vous accompagner, je dois comprendre votre activité, vos contraintes, vos ambitions et par conséquent être capable de créer une relation de confiance, dans la durée. Mon objectif n'est donc <strong>pas seulement que votre dossier passe, mais qu'il passe sans stress, sans réserve, et dans les meilleures conditions</strong>.</p>
-              <a href="#" class="text-link">
+              <a href="/a-propos" class="text-link">
                 <span>En savoir plus sur mon parcours</span>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M6 12l4-4-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -400,9 +408,9 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
           <div class="testimonials">
             <div class="testimonial-card">
               <div class="rating">★★★★★</div>
-              <p>Accompagnés sur le CII, l'expertise technique a fait la différence sur les agréments CIR lors de l'analyse par un expert. Sur le C2I, nous avons obtenu un montant de X euros. Les échanges ont été fluides car Mohamed est disponible, réactif et inspire confiance.</p>
+              <p>Accompagnés sur le CII, l'expertise technique a fait la différence sur les agréments CIR lors de l'analyse par un expert. Sur le C2I, nous avons obtenu un montant de 151 000€. Les échanges ont été fluides car Mohamed est disponible, réactif et inspire confiance.</p>
               <div class="author">
-                <img src="/images/florent-a.avif" alt="Florent A." />
+                <img src="/images/florent.png" alt="Florent A." loading="lazy"/>
                 <div class="author-info">
                   <strong>Florent A.</strong>
                   <span>Responsable de l'innovation</span>
@@ -412,9 +420,9 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
 
             <div class="testimonial-card">
               <div class="rating">★★★★★</div>
-              <p>Mohamed s'est très vite approprié nos projets R&D cinéma et vidéo. Nous avons obtenu un CIR de X euros après analyse des justificatifs par l'administration fiscale. L'accompagnement a été fluide et les réponses aux questions très claires.</p>
+              <p>Mohamed s'est très vite approprié nos projets R&D cinéma et vidéo. Nous avons obtenu un CIR de 41 000€. L'accompagnement a été fluide et les réponses aux questions très claires.</p>
               <div class="author">
-                <img src="/images/simon-t.avif" alt="Simon T." />
+                <img src="/images/simon.png" alt="Simon T." loading="lazy"/>
                 <div class="author-info">
                   <strong>Simon T.</strong>
                   <span>Co-gérant d'entreprise</span>
@@ -424,18 +432,20 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
 
             <div class="testimonial-card">
               <div class="rating">★★★★★</div>
-              <p>Mohamed est rigoureux dans le montage du dossier financier, ce qui nous a valu d'obtenir X euros sur notre CII après analyse des justificatifs de l'administration fiscale.</p>
+              <p>Mohamed est rigoureux dans le montage du dossier financier, ce qui nous a valu d'obtenir 706 000€ sur notre CII après analyse des justificatifs de l'administration fiscale.</p>
               <div class="author">
-                <img src="/images/elodie-p.avif" alt="Elodie P." />
+                <img src="/images/elodie.png" alt="Elodie P." loading="lazy" />
                 <div class="author-info">
-                  <strong>Elodie P.</strong>
+                  <strong>Nadine.L</strong>
                   <span>Responsable financier</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <CTA variant="cta1" label="Je veux aussi être satisfait" />
+          <a href="/contact">
+            <CTA variant="cta1" label="Je veux aussi être satisfait" />
+          </a>
         </div>
       </section>
     </div>
@@ -944,9 +954,6 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
       font-size: var(--font-size-36);
     }
 
-    .stat-line-1, .stat-line-2 {
-      font-size: var(--font-size-12);
-    }
 
     .stat-icon {
       width: 40px;
@@ -1216,6 +1223,8 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     align-items: center;
     width: 100%;
     margin-top: 3rem;
+    position: relative;
+    z-index: 3;
   }
 
   .cta-wrapper {
@@ -2030,6 +2039,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     display: flex;
     align-items: center;
     gap: 1rem;
+
   }
 
   .author img {

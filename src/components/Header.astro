@@ -1,17 +1,21 @@
 ---
+// Détecter la page active côté serveur
+const currentPath = Astro.url.pathname;
 ---
 
 <header class="header">
   <div class="header-container">
     <div class="logo">
-      <img src="/images/novaesens-logo-min.png" alt="Novaesens" />
+      <a href="/" aria-label="Retour à l'accueil - Novaesens" title="Accueil">
+        <img src="/images/novaesens-logo-min.png" alt="Novaesens - Expert CIR, CII et JEI" />
+      </a>
     </div>
     
     <nav class="main-nav" aria-label="Navigation principale">
       <ul class="nav-list">
-        <li><a href="/">Mon expertise</a></li>
-        <li><a href="/cir-cii-jei">CIR, CII et JEI</a></li>
-        <li><a href="/a-propos">À propos</a></li>
+        <li><a href="/" class="nav-link" data-page="home" class:list={[{ active: currentPath === '/' }]}>Mon expertise</a></li>
+        <li><a href="/cir-cii-jei" class="nav-link" data-page="cir" class:list={[{ active: currentPath.startsWith('/cir-cii-jei') }]}>CIR, CII et JEI</a></li>
+        <li><a href="/a-propos" class="nav-link" data-page="about" class:list={[{ active: currentPath.startsWith('/a-propos') }]}>À propos</a></li>
       </ul>
     </nav>
 
@@ -22,13 +26,13 @@
       </svg>
     </a>
 
-    <button class="menu-toggle mobile-only" aria-label="Menu" aria-expanded="false">
+    <button class="menu-toggle mobile-only" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="mobile-menu">
       <span class="hamburger"></span>
     </button>
   </div>
 
   <!-- Bottom Sheet -->
-  <div class="bottom-sheet">
+  <div class="bottom-sheet" id="mobile-menu" role="dialog" aria-modal="true" aria-hidden="true">
     <div class="bottom-sheet-content">
       <button class="close-menu" aria-label="Fermer le menu">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -39,7 +43,7 @@
       <nav class="mobile-nav">
         <ul class="mobile-nav-list">
           <li>
-            <a href="/mon-expertise">
+            <a href="/">
               <svg class="chevron-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -134,11 +138,33 @@
     font-weight: 500;
     color: var(--novablack);
     text-decoration: none;
-    transition: color 0.2s ease;
+    position: relative;
+    display: inline-block;
+    padding: 4px 0;
   }
 
-  .nav-list a:hover {
-    color: #2d9ccc;
+  /* Trait commun pour hover et active */
+  .nav-list a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    background-color: var(--novablack);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  /* Animation au hover */
+  .nav-list a:hover::after {
+    transform: scaleX(1);
+  }
+
+  /* Trait toujours visible sur la page active */
+  .nav-list a.active::after {
+    transform: scaleX(1);
   }
 
   .header-cta {
@@ -359,4 +385,5 @@
     }
 
   }
+
 </style> 

@@ -1,2 +1,21 @@
 User-agent: *
-Disallow: 
+Allow: /
+
+# Sitemap
+Sitemap: https://www.novaesens.fr/sitemap.xml
+
+# Crawl-delay pour éviter de surcharger le serveur
+Crawl-delay: 1
+
+# Bloquer l'accès aux fichiers sensibles
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.env
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /node_modules/
+
+# Permettre l'accès aux ressources importantes
+Allow: /images/
+Allow: /styles/
+Allow: /scripts/ 

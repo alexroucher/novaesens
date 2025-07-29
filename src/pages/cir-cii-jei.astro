@@ -5,19 +5,19 @@ import Card from '../components/Card.astro';
 import '../styles/theme.css';
 
 const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
-  title: "Tout savoir sur le CIR et le CII - Novaesens",
-  description: "Qui est concerné par le crédit Impôt Recherche, crédit impot innovation et JEI, et les critères pour les obtenir",
-  ogTitle: "Tout sur le CIR, CII, JEI et agrément CIR - Novaesens",
-  ogDescription: "Qui est concerné par le crédit Impôt Recherche, crédit impot innovation et JEI, et les critères pour les obtenir",
-  ogImage: "/path/to/image.jpg",
-  canonical: "https://www.novaesens.com/"
+  title: "CIR, CII, JEI - Guide Complet | Novaesens Expert",
+  description: "Guide complet CIR, CII, JEI et agrément CIR. Définition, éligibilité, démarches. Expert en crédit d'impôt recherche et innovation. 100% d'acceptation, accompagnement personnalisé.",
+  ogTitle: "CIR, CII, JEI - Guide Complet | Novaesens Expert",
+  ogDescription: "Guide complet CIR, CII, JEI et agrément CIR. Définition, éligibilité, démarches. Expert en crédit d'impôt recherche et innovation.",
+  ogImage: "/images/CIR-tech-min.png",
+  canonical: "https://www.novaesens.fr/cir-cii-jei"
 };
 ---
 
 <BaseLayout title={title} description={description} ogTitle={ogTitle} ogDescription={ogDescription} ogImage={ogImage} canonical={canonical}>
   <div class="page-container">
     <!-- Hero en arrière-plan -->
-    <section class="hero">
+    <section class="hero" id="hero">
       <div class="hero-container">
         <div class="hero-text-content">
           <div class="hero-tag-cir">
@@ -27,7 +27,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
           <p class="hero-subtitle">CIR, CII, JEI, agrément CIR… Ces dispositifs fiscaux sont de puissants leviers pour votre trésorerie, mais ils sont aussi techniques, encadrés, et régulièrement mis à jour par l’administration. Voici ce qu’il faut savoir sur ces crédits d’impôt.</p>
         </div>
         <div class="hero-image">
-          <img src="/images/CIR-tech-min.jpg" alt="Expert Novaesens" />
+          <img src="/images/CIR-tech-min.png" alt="Expert Novaesens" />
         </div>
       </div>
     </section>
@@ -36,12 +36,14 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     <div class="scrolling-content">
       <!-- Section Data -->
      
-      <section class="cir-section" aria-labelledby="cir">
+      <section class="cir-section" aria-labelledby="cir" id="cir">
         <div class="cir-section-background">
           <img src="/images/circles-bg-min.png" alt="illustration de fond" loading="lazy" />
             </div>
         <div class="cir-top-cta">
+          <a href="/contact">
           <CTA variant="cta1" label="Être accompagné d’un expert" />
+          </a>
           </div>
 
         <div class="template-container">
@@ -58,13 +60,15 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
               <h3 class="template-bottom-title">Réaliser son dossier seul ?</h3>
               <p class="template-bottom-subtitle">Vous pouvez. Mais c’est très fortement déconseillé.
                 Le CIR est un dispositif contrôlé par l’administration fiscale, qui nécessite la création de dossiers financiers et techniques solides pour être validés. Vous y passerez beaucoup de temps avec un résultat peu garanti. Un expert maximise très fortement les chances d’être accepté, et surtout, ce que vous dépenserez en honoraires sera largement compensé par la maximisation des montants (en plus de vous couvrir en cas de contrôle).</p>
-              <a href="#" class="cta-link">
+              <a href="/a-propos#datawhy" class="cta-link">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M9 18l6-6-6-6"/>
                 </svg>
                 Voir mes résultats
               </a>
+              <a href="/contact">
               <CTA variant="cta1" label="Mettre mon CIR entre des mains expertes" />
+              </a>
             </div>
           </div>
 
@@ -79,7 +83,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
               </div>
                 <div class="template-step-content">
                   <p>Le Crédit d'Impôt Recherche (CIR) est un levier fiscal pour financer la recherche et développement en entreprise.</p>
-                  <p>Il permet de récupérer 30 % des dépenses liées à des projets R&D (jusqu'à 100 M€ et 5% au-delà, soit l'Assiette R&D). Salaires de techniciens à ingenieurs ou encore dépense de développement expérimental.</p>
+                  <p>Il permet de récupérer 30 % des dépenses liées à des projets R&D (jusqu'à 100 M€ et 5% au-delà, qu'il s'agisse de recherche fondamentale, de recherche appliquée ou de développement expérimental.</p>
                 </div>
               </div>
             </div>
@@ -93,7 +97,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
                   <h3>Qui peut bénéficier du CIR ?</h3>
               </div>
                 <div class="template-step-content">
-                  <p>Le dispositif CIR est conçu pour toutes les entreprises industrielles. Et notamment startup, PME, TPE et bureaux d'études.</p>
+                  <p>Le dispositif CIR est conçu pour toutes les entreprises industrielles. Et notamment start-ups, PME, TPE, ETI ou bureaux d’étude.</p>
                   <p>Toutes les entreprises industrielles, technologiques, numériques ou scientifiques soumises à l'IS ou à l'IR sont concernées, sans condition de taille, ni secteur, ni localisation.</p>
                 </div>
               </div>
@@ -113,8 +117,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
                     <li><img src="/images/checksansfond.png" alt="✓" class="check-icon" loading="lazy" /> Travaux expérimentaux pour dépasser un verrou technologique</li>
                     <li><img src="/images/checksansfond.png" alt="✓" class="check-icon" loading="lazy" /> Amélioration d'un procédé ou développement d'un algorithme</li>
                     <li><img src="/images/checksansfond.png" alt="✓" class="check-icon" loading="lazy" /> Conception de preuve de concept, tests de faisabilité</li>
-                    <li><img src="/images/checksansfond.png" alt="✓" class="check-icon" loading="lazy" /> Conception de preuve de concept, tests de faisabilité</li>
-                    <li><img src="/images/checksansfond.png" alt="✓" class="check-icon" loading="lazy" /> Explorations techniques complexes pour concrétiser une innovation</li>
+                    <li><img src="/images/checksansfond.png" alt="✓" class="check-icon" loading="lazy" /> Explorations techniques complexes pour concevoir une innovation</li>
                   </ul>
                 </div>
               </div>
@@ -129,7 +132,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
                   <h3>Toutes les dépenses sont-elles valorisables ?</h3>
               </div>
                 <div class="template-step-content">
-                  <p>Si vos activités sont éligibles au CIR, voici les dépenses qui rentrent dans le montant valorisable :</p>
+                  <p>Si vos activités sont éligibles au CIR, voici les dépenses qui entrent dans le montant valorisable :</p>
                   <ul class="template-expenses-list">
                     <li><img src="/images/checksansfond.png" alt="✓" class="check-icon" loading="lazy" /> Rémunération du personnel de R&D (salaires + charges)</li>
                     <li><img src="/images/checksansfond.png" alt="✓" class="check-icon" loading="lazy" /> Dépenses de sous-traitance (prestataires agréés uniquement)</li>
@@ -146,12 +149,12 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
                   <h3>Agrément CIR : rendre éligible vos prestations</h3>
           </div>
                 <div class="template-step-content">
-                  <p>Startups, TPE, PME, bureaux d'études : vous réalisez des prestations R&D pour le compte de vos clients, il vous faut un agrément CIR pour faire bénéficier vos clients, sinon vos clients ne pourront pas déclarer dans leur CIR.</p>
-                  <a href="#" class="cta-link-agrement">
+                  <p>Startups, TPE, PME, bureaux d'études : vous réalisez des prestations R&D pour le compte de vos clients. Il vous faut un agrément CIR pour leur faire bénéficier du crédit impôt recherche</p>
+                  <a href="/cir-cii-jei#agrement" class="cta-link-agrement">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <path d="M9 18l6-6-6-6"/>
                     </svg>
-                    Voir mes résultats
+                    L'agrément CIR en détail
                   </a>
               </div>
               </div>
@@ -164,7 +167,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
             <h3 class="template-bottom-title">Réaliser son dossier seul ?</h3>
             <p class="template-bottom-subtitle">Vous pouvez. Mais c'est très fortement déconseillé.
               Le CIR est un dispositif contrôlé par l'administration fiscale, qui nécessite la création de dossiers financiers et techniques solides pour être validés. Vous y passerez beaucoup de temps avec un résultat peu garanti. Un expert maximise très fortement les chances d'être accepté, et surtout, ce que vous dépenserez en honoraires sera largement compensé par la maximisation des montants (en plus de vous couvrir en cas de contrôle).</p>
-            <a href="#" class="cta-link">
+            <a href="/a-propos#datawhy" class="cta-link">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M9 18l6-6-6-6"/>
               </svg>
@@ -176,9 +179,9 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
         </div>
       </section>
 
-      <section class="cii-section" aria-labelledby="cii">
+      <section class="cii-section" aria-labelledby="cii" id="cii">
         <div class="cii-section-background">
-          <img src="/images/circles-bg-min.png" alt="" />
+          <img src="/images/circles-bg-min.png" alt="Éléments décoratifs de fond" />
     </div>
         <div class="template-container">
           <div class="template-left">
@@ -193,13 +196,15 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
               <div class="template-separator"></div>
               <h3 class="template-bottom-title">Comme pour le CIR, faites-vous accompagner.</h3>
               <p class="template-bottom-subtitle">La procédure de demande de crédit impôt innovation requiert un formalisme rigoureux, mais surtout une très bonne compréhension des méthodes et besoins des inspecteurs des impôts ou experts du ministère de la recherche. Un spécialiste augmentera largement la probabilité d'un accord et les sommes prises en charge seront supérieures.</p>
-              <a href="#" class="cta-link">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M9 18l6-6-6-6"/>
-                </svg>
-                Voir mes résultats, ma méthode
-              </a>
+                <a href="/#comment-ca-marche" class="cta-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+              Voir mes résultats, ma méthode
+            </a>
+            <a href="/contact">
               <CTA variant="cta1" label="Je vous accompagne jusqu'à l'obtention" />
+            </a>
             </div>
           </div>
 
@@ -230,7 +235,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
                 </div>
                 <div class="template-step-content">
                   <p>Seules les PME au sens européen, soumises à l'IS ou IR, indépendantes peuvent en profiter. Elles peuvent être industrielles, commerciales, artisanales ou dans le domaine agricole.</p>
-                  <p>En Europe, les PME sont définis par un maximum de 250 salariés ou un CA inférieur à 50 millions d'euros (total bilan inférieur à 43M€) durant au moins 2 exercices.</p>
+                  <p>En Europe, les PME sont définies par un maximum de 250 salariés ou un CA inférieur à 50 millions d'euros (total bilan inférieur à 43M€) durant au moins 2 exercices.</p>
                 </div>
               </div>
             </div>
@@ -280,7 +285,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
             <div class="template-separator"></div>
             <h3 class="template-bottom-title">Comme pour le CIR, faites-vous accompagner.</h3>
             <p class="template-bottom-subtitle">La procédure de demande de crédit impôt innovation requiert un formalisme rigoureux, mais surtout une très bonne compréhension des méthodes et besoins des inspecteurs des impôts ou experts du ministère de la recherche. Un spécialiste augmentera largement la probabilité d'un accord et les sommes prises en charge seront supérieures.</p>
-            <a href="#" class="cta-link">
+            <a href="/#comment" class="cta-link">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M9 18l6-6-6-6"/>
               </svg>
@@ -292,7 +297,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
         </div>
       </section>
 
-      <section class="jei-section" aria-labelledby="cii">
+      <section class="jei-section" aria-labelledby="jei" id="jei">
         <div class="jei-section-background">
           <img src="/images/circles-bg-min.png" alt="illustration de fond" loading="lazy" />
         </div>
@@ -309,13 +314,15 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
               <div class="template-separator"></div>
               <h3 class="template-bottom-title">Maximisez vos chances d'accord</h3>
               <p class="template-bottom-subtitle">Plus simple que les dossiers CIR et CII, le dossier de rescrit JEI doit tout de même être solide et argumenté. Il est préférable de se faire accompagner pour éviter les refus.</p>
-              <a href="#" class="cta-link">
+              <a href="/a-propos" class="cta-link">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M9 18l6-6-6-6"/>
                 </svg>
                 En savoir plus sur mon approche
               </a>
-              <CTA variant="cta1" label="Prendre conseil" />
+              <a href="/contact">
+                <CTA variant="cta1" label="Prendre conseil" />
+              </a>
             </div>
           </div>
 
@@ -330,7 +337,9 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
                   <h3>Qu'est-ce que le JEI</h3>
                 </div>
                 <div class="template-step-content">
-                  <p>Le statut JEI (Jeune Entreprise Innovante) est un dispositif fiscal destiné aux entreprises innovantes et de R&D. Il nécessite un "rescrit JEI" pour sécuriser votre situation.</p>
+                  <p>Le statut Jeune Entreprise Innovante (JEI) fait la part belle à ceux qui osent créer et qui oeuvrent à faire avancer l’innovation. Ce statut JEI donne droit à des exonérations fiscales et sociales dès lors que votre entreprise consacre une part significative de ses dépenses à la R&D. 
+
+                    Pour sécuriser ce statut en amont, le rescrit JEI est nécessaire.</p>
                 </div>
               </div>
             </div>
@@ -344,7 +353,8 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
                   <h3>Quelle entreprise est concernée par le JEI ?</h3>
                 </div>
                 <div class="template-step-content">
-                  <p>Le statut JEI est accessible sans restriction de secteur, principalement pour les startups mais aussi les PME. Conditions : moins de 8 ans d'existence, moins de 250 salariés, créée ex-nihilo, et consacrant au moins 20% des charges à la R&D.</p>
+                  <p>Le JEI est accessible sans restriction de secteur.
+                    Les startups sont les plus concernés, mais les PME sont aussi éligibles, avec quelques critères d’exclusion toutefois. Votre entreprise doit avoir moins de 8 ans, moins de 250 salariés, être créée ex-nihilo, et dédiant au moins 20 % de ses charges à la R&D.</p>
                 </div>
               </div>
             </div>
@@ -358,7 +368,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
                   <h3>Toutes les activités sont-elles éligibles au JEI ?</h3>
                 </div>
                 <div class="template-step-content">
-                  <p>Pour être éligible au statut JEI, vos activités doivent correspondre aux critères suivants :</p>
+                  <p>Comme tous les crédits d’impots, le JEI est borné et limité à certaines activités :</p>
                   <ul class="template-activities-list">
                     <li><img src="/images/checksansfond.png" alt="✓" class="check-icon" loading="lazy" /> Développement expérimental</li>
                     <li><img src="/images/checksansfond.png" alt="✓" class="check-icon" loading="lazy" /> Recherche appliquée</li>
@@ -377,7 +387,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
                   <h3>Quelles exonérations sont liées au JEI</h3>
                 </div>
                 <div class="template-step-content">
-                  <p>Le statut JEI vous permet de bénéficier des exonérations suivantes :</p>
+                  <p>Lorsque vous obtenez le statut JEI, vous bénéficiez d’exonérations fiscales sur :</p>
                   <ul class="template-expenses-list">
                     <li><img src="/images/checksansfond.png" alt="✓" class="check-icon" loading="lazy" /> Exonération de charges sociales sur les salaires R&D</li>
                     <li><img src="/images/checksansfond.png" alt="✓" class="check-icon" loading="lazy" /> Exonération partielle d'impôt sur les sociétés (IS)</li>
@@ -393,7 +403,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
             <div class="template-separator"></div>
             <h3 class="template-bottom-title">Maximisez vos chances d'accord</h3>
             <p class="template-bottom-subtitle">Plus simple que les dossiers CIR et CII, le dossier de rescrit JEI doit tout de même être solide et argumenté. Il est préférable de se faire accompagner pour éviter les refus.</p>
-            <a href="#" class="cta-link">
+            <a href="/a-propos" class="cta-link">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M9 18l6-6-6-6"/>
               </svg>
@@ -405,7 +415,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
         </div>
       </section>
 
-      <section class="agr-section" aria-labelledby="cii">
+      <section class="agr-section" aria-labelledby="agr" id="agrement">
         <div class="agr-section-background">
           <img src="/images/circles-bg-min.png" alt="illustration de fond" loading="lazy" />
         </div>
@@ -413,22 +423,24 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
           <div class="template-left">
               <div class="template-sticky-content">
                 <h2 id="agr">L'agrément CIR</h2>
-                <p>Vous réalisez des prestations R&D pour le compte de vos clients ? L'agrément CIR est essentiel pour permettre à vos clients de valoriser vos prestations dans leur déclaration de crédit d'impôt recherche.</p>
+                <p>L’agrément CIR s’approche du CIR dans son formalisme. Il est très important pour les sociétés de service offrant une contribution externalisée aux projets de R&D. En devenant agréé CIR, vous réduisez le coût supporté par votre client. Voici les détails à connaitre.</p>
                 <div class="template-sticky-image">
                  <img src="/images/agr-image-min.png" alt="Illustration Agrement cir" loading="lazy" />
                </div>
              </div>
             <div class="template-leftbottom-content">
               <div class="template-separator"></div>
-              <h3 class="template-bottom-title">Sécurisez votre activité R&D</h3>
-              <p class="template-bottom-subtitle">L'agrément CIR est un gage de qualité et de reconnaissance officielle. Il vous permet de rassurer vos clients et d'augmenter vos tarifs grâce à cette certification.</p>
-              <a href="#" class="cta-link">
+              <h3 class="template-bottom-title">Un seul dépôt par an, pas le droit à l’erreur !</h3>
+              <p class="template-bottom-subtitle">Faites-vous accompagner. L’agrément CIR n’est pas forcément complexe sur le fond, mais c’est un processus exigent et surtout très formel et sélectif ! Le dossier doit être très structuré, et techniquement justifié. Oubliez la tentative marketing, seul le scientifique compte. Et vous n’avez qu’une chance par an.</p>
+              <a href="/#comment" class="cta-link">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M9 18l6-6-6-6"/>
                 </svg>
-                Découvrir ma méthode d'agrément
+                En savoir plus sur mes méthodes
               </a>
-              <CTA variant="cta1" label="Obtenir mon agrément CIR" />
+              <a href="/contact">
+                <CTA variant="cta1" label="Se faire accompagner" />
+              </a>
             </div>
           </div>
 
@@ -443,7 +455,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
                   <h3>Qu'est-ce que l'agrément CIR ?</h3>
                 </div>
                 <div class="template-step-content">
-                  <p>L'agrément CIR est une reconnaissance officielle délivrée par le ministère de la Recherche. Il permet aux prestataires de R&D d'être reconnus comme éligibles pour leurs clients.</p>
+                  <p>L’agrément CIR est une autorisation officielle délivrée par le Ministère de l’Enseignement supérieur et de la Recherche. Il permet à une entreprise de faire bénéficier à ses clients du crédit impôt recherche sur les prestations de R&D facturées.</p>
                 </div>
               </div>
             </div>
@@ -457,7 +469,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
                   <h3>Qui peut demander un agrément CIR ?</h3>
                 </div>
                 <div class="template-step-content">
-                  <p>Toute entreprise réalisant des prestations R&D pour le compte de tiers peut demander un agrément CIR. Cela concerne les bureaux d'études, cabinets de conseil, laboratoires privés, etc.</p>
+                  <p>Toute structure privée peut permettre à ses clients de bénéficier du CIR : Startups, TPE, PME, bureaux d'études, dès lors qu’elle assure des travaux de recherche et développement pour leur compte. L’agrément n’ouvre pas droit au crédit d’impôt pour vous, mais il rend vos prestations plus attractives pour vos clients.</p>
                 </div>
               </div>
             </div>
@@ -468,14 +480,15 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
               </div>
               <div class="template-step-content-wrapper">
                 <div class="template-step-header">
-                  <h3>Quelles prestations sont éligibles ?</h3>
+                  <h3>Quelles activités sont-elles éligibles à l’agrément CIR ?</h3>
                 </div>
                 <div class="template-step-content">
                   <p>Pour être éligibles à l'agrément CIR, vos prestations doivent correspondre aux critères suivants :</p>
                   <ul class="template-activities-list">
-                    <li><img src="/images/checksansfond.png" alt="✓" class="check-icon" /> Travaux de recherche fondamentale</li>
-                    <li><img src="/images/checksansfond.png" alt="✓" class="check-icon" /> Recherche appliquée et développement expérimental</li>
-                    <li><img src="/images/checksansfond.png" alt="✓" class="check-icon" /> Prestations répondant aux critères du CIR</li>
+                    <li><img src="/images/checksansfond.png" alt="✓" class="check-icon" /> Études expérimentales ou théoriques</li>
+                    <li><img src="/images/checksansfond.png" alt="✓" class="check-icon" /> Développement expérimental (conception et tests d'un prototype, nouveaux algorithme, amélioration d'un procédé, ...)</li>
+                    <li><img src="/images/checksansfond.png" alt="✓" class="check-icon" /> Activités nécessaires à la R&D (modélisation, simulation, tests et essais de faisabilité, ...)
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -487,16 +500,10 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
               </div>
               <div class="template-step-content-wrapper">
                 <div class="template-step-header">
-                  <h3>Quels sont les avantages de l'agrément ?</h3>
+                  <h3>Quelles sont les dépenses valorisées ?</h3>
                 </div>
                 <div class="template-step-content">
-                  <p>L'agrément CIR vous apporte les avantages suivants :</p>
-                  <ul class="template-expenses-list">
-                    <li><img src="/images/checksansfond.png" alt="✓" class="check-icon" /> Reconnaissance officielle de votre expertise R&D</li>
-                    <li><img src="/images/checksansfond.png" alt="✓" class="check-icon" /> Possibilité pour vos clients de valoriser vos prestations</li>
-                    <li><img src="/images/checksansfond.png" alt="✓" class="check-icon" /> Différenciation concurrentielle et augmentation des tarifs</li>
-                    <li><img src="/images/checksansfond.png" alt="✓" class="check-icon" /> Sécurisation de votre activité auprès des clients</li>
-                  </ul>
+                  <p>Ce sont vos clients qui valorisent ces dépenses dans leur propre déclaration CIR. Votre agrément leur permet de déclarer des dépenses de sous-traitance.</p>
                 </div>
               </div>
             </div>
@@ -507,13 +514,13 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
             <div class="template-separator"></div>
             <h3 class="template-bottom-title">Sécurisez votre activité R&D</h3>
             <p class="template-bottom-subtitle">L'agrément CIR est un gage de qualité et de reconnaissance officielle. Il vous permet de rassurer vos clients et d'augmenter vos tarifs grâce à cette certification.</p>
-            <a href="#" class="cta-link">
+            <a href="/#comment" class="cta-link">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M9 18l6-6-6-6"/>
               </svg>
-              Découvrir ma méthode d'agrément
+              En savoir plus sur mes méthodes
             </a>
-            <CTA variant="cta1" label="Obtenir mon agrément CIR" />
+            <CTA variant="cta1" label="Se faire accompagner" />
           </div>
 
         </div>
@@ -617,7 +624,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
   .scrolling-content {
     position: relative;
     z-index: 2;
-    margin-top: 80vh; /* Espacement pour le hero fixe */
+    margin-top: 70vh; /* Espacement pour le hero fixe */
   }
 
   /* Hero Responsive */
@@ -630,6 +637,11 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
       padding: 0 1rem;
       padding-top: 3rem;
     }
+
+    .hero-title {
+      font-size: var(--font-size-36);
+    }
+
     
     .hero-text-content {
       position: relative;
@@ -788,7 +800,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
 
   .cir-section {
     background: white;
-    padding: 5rem 0rem 0rem 0rem;
+    padding: 8rem 0rem 0rem 0rem;
     position: relative;
     border-radius: 80px 80px 0 0;
     box-shadow: 0px -11px 34px 0px rgba(0, 0, 0, 0.1);
@@ -860,7 +872,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
 
   .template-left p {
     font-family: 'Jost', sans-serif;
-    font-size: var(--font-size-16);
+    font-size: var(--font-size-18);
     line-height: 1.6;
     color: var(--novablack);
     margin-bottom: 2rem;
@@ -1067,7 +1079,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     }
 
     .scrolling-content {
-      margin-top: 0;      /* plus besoin de compenser le hero fixe */
+      margin-top: -80px;      /* plus besoin de compenser le hero fixe */
       margin-bottom: 60vh;
     }
     
@@ -1270,8 +1282,8 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
 
   /* Styles pour les icônes de check */
   .check-icon {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     margin-right: 8px;
     vertical-align: middle;
     flex-shrink: 0;
@@ -1290,4 +1302,50 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
   .template-expenses-list li:last-child {
     margin-bottom: 0;
   }
+
+  /* Animation des CTA1 */
+  @media (min-width: 768px) {
+    .scrolling-content a:has(.cta1) {
+      opacity: 0;
+      transform: translateX(-20px);
+      transition: all 0.6s ease;
+    }
+
+    .scrolling-content a:has(.cta1).animate-cta {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 </style> 
+
+<script>
+  // Ne pas exécuter l'animation sur mobile
+  if (window.innerWidth >= 768) {
+    document.addEventListener('DOMContentLoaded', function() {
+      // Sélectionner tous les liens contenant des CTA1 sauf ceux dans le hero
+      const ctaLinks = document.querySelectorAll('.scrolling-content a');
+      
+      // Créer l'observateur d'intersection
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-cta');
+            // Arrêter d'observer une fois animé
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.5, // Déclencher quand 50% du CTA est visible
+        rootMargin: '0px' // Pas de marge
+      });
+
+      // Observer chaque lien
+      ctaLinks.forEach(link => {
+        // Vérifier si le lien contient un CTA1
+        if (link.querySelector('.cta1')) {
+          observer.observe(link);
+        }
+      });
+    });
+  }
+</script> 

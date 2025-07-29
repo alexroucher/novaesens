@@ -4,12 +4,12 @@ import CTA from '../components/CTA.astro';
 import '../styles/theme.css';
 
 const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
-  title: "Contact - Novaesens",
-  description: "Contactez-nous pour un accompagnement expert en CIR, CII et JEI",
-  ogTitle: "Contact - Novaesens",
-  ogDescription: "Contactez-nous pour un accompagnement expert en CIR, CII et JEI",
-  ogImage: "/path/to/image.jpg",
-  canonical: "https://www.novaesens.com/contact"
+  title: "Contact Expert CIR, CII, JEI - Novaesens | Consultation Gratuite",
+  description: "Contactez l'expert Novaesens pour un accompagnement CIR, CII, JEI. Consultation gratuite 30 min. 100% d'acceptation, 10.34M€ récupérés. Toulouse et France entière.",
+  ogTitle: "Contact Expert CIR, CII, JEI - Novaesens | Consultation Gratuite",
+  ogDescription: "Contactez l'expert Novaesens pour un accompagnement CIR, CII, JEI. Consultation gratuite 30 min. 100% d'acceptation, 10.34M€ récupérés.",
+  ogImage: "/images/me.png",
+  canonical: "https://www.novaesens.fr/contact"
 };
 ---
 
@@ -27,7 +27,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
         <div class="contact-container">
           <div class="contact-content">
             <div class="contact-left">
-              <h2 id="contact">Assez parlé de moi, Parlons de vos projets.</h2>
+              <h2 id="contact">Assez parlé de moi, parlons de vos projets.</h2>
               <div class="contact-text">
                 <p>Inutile de lire tout ce site, appelons-nous 30 minutes et je vous explique tout.</p>
               </div>
@@ -35,7 +35,7 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
               <div class="contact-list">
                 <ul>
                   <li>
-                    <img src="/images/smile.svg" alt="Smile" class="check-icon" />
+                    <img src="/images/li-check.png" alt="Blue check" class="check-icon" />
                     <span>Pour un conseil sur le CIR et CII</span>
                   </li>
                   <li>
@@ -58,56 +58,66 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
                   <img src="/images/me.png" alt="Mohamed" />
                 </div>
                 <div class="contact-details">
-                  <p>06 10 10 10 10</p>
+                  <p>06 68 72 65 32</p>
                   <p>mohamed@novaesens.fr</p>
                   <p>8 rue de la fine équipe, Toulouse</p>
                 </div>
               </div>
             </div>
             <div class="contact-right">
-              <form class="contact-form">
+              <form class="contact-form" id="contact-form" aria-label="Formulaire de contact">
                 <div class="form-row">
                   <div class="form-group">
                     <label for="prenom">Prénom</label>
-                    <input type="text" id="prenom" name="prenom" />
+                    <input type="text" id="prenom" name="prenom" required />
                   </div>
                   <div class="form-group">
                     <label for="nom">Nom</label>
-                    <input type="text" id="nom" name="nom" />
+                    <input type="text" id="nom" name="nom" required />
                   </div>
                 </div>
                 
                 <div class="form-row">
                   <div class="form-group">
                     <label for="societe">Société</label>
-                    <input type="text" id="societe" name="societe" />
+                    <input type="text" id="societe" name="societe" required />
                   </div>
                   <div class="form-group">
                     <label for="role">Votre rôle</label>
-                    <input type="text" id="role" name="role" />
+                    <input type="text" id="role" name="role" required />
                   </div>
                 </div>
                 
                 <div class="form-row">
                   <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" />
+                    <input type="email" id="email" name="email" required />
                   </div>
                   <div class="form-group">
                     <label for="telephone">Téléphone</label>
-                    <input type="tel" id="telephone" name="telephone" />
+                    <input type="tel" id="telephone" name="telephone" required />
                   </div>
                 </div>
                 
                 <div class="form-group">
                   <label for="message">En quoi puis-je vous aider ?</label>
-                  <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet et vos besoins..."></textarea>
+                  <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet et vos besoins..." required></textarea>
                 </div>
                 
-                <button type="submit" class="submit-btn">
-                  Envoyer
+                <button type="submit" class="submit-btn" id="submit-btn" aria-describedby="submit-status">
+                  <span class="btn-text">Envoyer</span>
+                  <span class="btn-loading" style="display: none;">Envoi en cours...</span>
                 </button>
+                <div id="submit-status" class="sr-only" aria-live="polite"></div>
               </form>
+              
+              <!-- Messages de succès/erreur -->
+              <div id="success-message" class="message success" style="display: none;">
+                <p>✅ Votre message a été envoyé avec succès ! Je vous recontacte rapidement.</p>
+              </div>
+              <div id="error-message" class="message error" style="display: none;">
+                <p>❌ Une erreur est survenue. Veuillez réessayer ou me contacter directement.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -115,6 +125,105 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     </div>
   </div>
 </BaseLayout>
+
+<script>
+  import emailjs from '@emailjs/browser';
+  import { EMAILJS_CONFIG } from '../config/emailjs';
+
+  // Initialiser EmailJS
+  emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+    const btnText = submitBtn?.querySelector('.btn-text') as HTMLElement;
+    const btnLoading = submitBtn?.querySelector('.btn-loading') as HTMLElement;
+    const successMessage = document.getElementById('success-message') as HTMLElement;
+    const errorMessage = document.getElementById('error-message') as HTMLElement;
+
+    if (!form || !submitBtn || !btnText || !btnLoading || !successMessage || !errorMessage) {
+      console.error('Form elements not found');
+      return;
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Afficher l'état de chargement
+      btnText.style.display = 'none';
+      btnLoading.style.display = 'inline';
+      submitBtn.disabled = true;
+      
+      // Masquer les messages précédents
+      successMessage.style.display = 'none';
+      errorMessage.style.display = 'none';
+
+      // Récupérer les données du formulaire
+      const prenom = document.getElementById('prenom') as HTMLInputElement;
+      const nom = document.getElementById('nom') as HTMLInputElement;
+      const email = document.getElementById('email') as HTMLInputElement;
+      const telephone = document.getElementById('telephone') as HTMLInputElement;
+      const societe = document.getElementById('societe') as HTMLInputElement;
+      const role = document.getElementById('role') as HTMLInputElement;
+      const message = document.getElementById('message') as HTMLTextAreaElement;
+
+      const formData = {
+        user_name: prenom.value + ' ' + nom.value,
+        user_email: email.value,
+        user_phone: telephone.value,
+        user_company: societe.value,
+        user_role: role.value,
+        message: message.value
+      };
+
+      // Debug: Afficher les clés utilisées
+      console.log('EmailJS Config:', {
+        SERVICE_ID: EMAILJS_CONFIG.SERVICE_ID,
+        TEMPLATE_ID: EMAILJS_CONFIG.TEMPLATE_ID,
+        PUBLIC_KEY: EMAILJS_CONFIG.PUBLIC_KEY
+      });
+      console.log('Form Data:', formData);
+
+      // Test direct avec les clés hardcodées pour debug
+      console.log('Testing with hardcoded keys...');
+      
+      // Envoyer l'email via EmailJS
+      emailjs.send('service_dqabiqf', 'template_xxus05s', {
+        user_name: 'Test User',
+        user_email: 'test@example.com',
+        user_phone: '0123456789',
+        user_company: 'Test Company',
+        user_role: 'Test Role',
+        message: 'Test message'
+      })
+        .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+          
+          // Afficher le message de succès
+          successMessage.style.display = 'block';
+          
+          // Réinitialiser le formulaire
+          form.reset();
+          
+          // Remettre le bouton en état normal
+          btnText.style.display = 'inline';
+          btnLoading.style.display = 'none';
+          submitBtn.disabled = false;
+        })
+        .catch(function(error) {
+          console.log('FAILED...', error);
+          
+          // Afficher le message d'erreur
+          errorMessage.style.display = 'block';
+          
+          // Remettre le bouton en état normal
+          btnText.style.display = 'inline';
+          btnLoading.style.display = 'none';
+          submitBtn.disabled = false;
+        });
+    });
+  });
+</script>
 
 <style>
   /* Forcer l'application des media queries sur mobile */
@@ -352,6 +461,39 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
 
   .submit-btn:hover {
     opacity: 0.9;
+  }
+
+  .submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  /* Messages de succès/erreur */
+  .message {
+    margin-top: 0rem;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: var(--font-size-16);
+  }
+
+  .message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    margin-bottom: 3rem;
+
+  }
+
+  .message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    margin-bottom: 3rem;
+
+  }
+
+  .message p {
+    margin: 0;
   }
 
   /* Responsive */
