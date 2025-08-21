@@ -5,11 +5,14 @@
     "dev": "astro dev",
     "build": "astro build",
     "start": "astro preview",
-    "deploy": "npm run build && firebase deploy",
-    "deploy:hosting": "firebase deploy --only hosting"
+    "deploy:o2switch": "npm run build && echo '✅ Build terminé ! Uploadez le contenu du dossier dist/ vers votre hébergement O2switch'",
+    "optimize:images": "echo '🖼️  Optimisation des images recommandée :' && echo '1. Convertissez les PNG/JPG en WebP/AVIF' && echo '2. Utilisez des noms de fichiers avec hash pour le cache long' && echo '3. Compressez les images avec des outils comme TinyPNG'"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "astro": "^2.0.0"
+  },
+  "devDependencies": {
+    "terser": "^5.43.1"
   }
 }
