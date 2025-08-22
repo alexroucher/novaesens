@@ -1,3 +1,4 @@
+
 import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
@@ -20,7 +21,8 @@ export default defineConfig({
     host: true
   },
   
-  // Configuration SEO
+  // Configuration SEO 
+  output : 'static',
   site: 'https://www.novaesens.fr',
   
   // Optimisations pour la production
