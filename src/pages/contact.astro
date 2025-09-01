@@ -176,29 +176,9 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
         message: message.value
       };
 
-      // Debug: Afficher les clés utilisées
-      console.log('EmailJS Config:', {
-        SERVICE_ID: EMAILJS_CONFIG.SERVICE_ID,
-        TEMPLATE_ID: EMAILJS_CONFIG.TEMPLATE_ID,
-        PUBLIC_KEY: EMAILJS_CONFIG.PUBLIC_KEY
-      });
-      console.log('Form Data:', formData);
-
-      // Test direct avec les clés hardcodées pour debug
-      console.log('Testing with hardcoded keys...');
-      
-      // Envoyer l'email via EmailJS
-      emailjs.send('service_dqabiqf', 'template_xxus05s', {
-        user_name: 'Test User',
-        user_email: 'test@example.com',
-        user_phone: '0123456789',
-        user_company: 'Test Company',
-        user_role: 'Test Role',
-        message: 'Test message'
-      })
+      // Envoyer l'email via EmailJS avec les vraies données
+      emailjs.send(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.TEMPLATE_ID, formData)
         .then(function(response) {
-          console.log('SUCCESS!', response.status, response.text);
-          
           // Afficher le message de succès
           successMessage.style.display = 'block';
           
@@ -211,8 +191,6 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
           submitBtn.disabled = false;
         })
         .catch(function(error) {
-          console.log('FAILED...', error);
-          
           // Afficher le message d'erreur
           errorMessage.style.display = 'block';
           

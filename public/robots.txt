@@ -19,3 +19,7 @@ Disallow: /node_modules/
 Allow: /images/
 Allow: /styles/
 Allow: /scripts/ 
+
+# robots.txt minimal
+User-agent: *
+Allow: /

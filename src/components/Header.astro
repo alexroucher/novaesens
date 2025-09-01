@@ -13,9 +13,9 @@ const currentPath = Astro.url.pathname;
     
     <nav class="main-nav" aria-label="Navigation principale">
       <ul class="nav-list">
-        <li><a href="/" class="nav-link" data-page="home" class:list={[{ active: currentPath === '/' }]}>Mon expertise</a></li>
+        <li><a href="/" class="nav-link" data-page="home" class:list={[{ active: currentPath === '/' }]}>Accueil</a></li>
         <li><a href="/cir-cii-jei" class="nav-link" data-page="cir" class:list={[{ active: currentPath.startsWith('/cir-cii-jei') }]}>CIR, CII et JEI</a></li>
-        <li><a href="/a-propos" class="nav-link" data-page="about" class:list={[{ active: currentPath.startsWith('/a-propos') }]}>À propos de moi</a></li>
+        <li><a href="/a-propos" class="nav-link" data-page="about" class:list={[{ active: currentPath.startsWith('/a-propos') }]}>Mon expertise</a></li>
       </ul>
     </nav>
 
@@ -47,7 +47,7 @@ const currentPath = Astro.url.pathname;
               <svg class="chevron-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-              Mon expertise
+              Accueil
             </a>
             <p class="mobile-nav-subtitle">Pourquoi et comment je vous accompagne</p>
           </li>
@@ -65,7 +65,7 @@ const currentPath = Astro.url.pathname;
               <svg class="chevron-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-              À propos de moi
+              Mon expertise
             </a>
             <p class="mobile-nav-subtitle">Connaissons-nous pour bien travailler ensemble</p>
           </li>

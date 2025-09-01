@@ -1,11 +1,16 @@
 // Configuration EmailJS
-// Remplacez ces valeurs par vos vraies clés EmailJS
+// Utilise les variables d'environnement ou les valeurs par défaut
 
 export const EMAILJS_CONFIG = {
-  PUBLIC_KEY: 'F9m-eFEblp2JVLmo5', // Remplacez par votre Public Key EmailJS
-  SERVICE_ID: 'service_dqabiqf', // Remplacez par votre Service ID EmailJS
-  TEMPLATE_ID: 'template_xxus05s' // Remplacez par votre Template ID EmailJS
+  PUBLIC_KEY: import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY,
+  SERVICE_ID: import.meta.env.PUBLIC_EMAILJS_SERVICE_ID,
+  TEMPLATE_ID: import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID
 };
+
+// Vérification de sécurité
+if (!EMAILJS_CONFIG.PUBLIC_KEY || !EMAILJS_CONFIG.SERVICE_ID || !EMAILJS_CONFIG.TEMPLATE_ID) {
+  throw new Error('❌ Configuration EmailJS manquante ! Vérifiez vos variables d\'environnement PUBLIC_EMAILJS_*');
+}
 
 // Instructions pour configurer EmailJS :
 // 1. Créez un compte sur https://www.emailjs.com/

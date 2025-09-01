@@ -1,48 +1,27 @@
-# Configuration EmailJS pour le formulaire de contact
+# Configuration EmailJS - Guide de sécurité
 
-## Étape 1 : Créer un compte EmailJS
+## 🔐 Configuration sécurisée recommandée
 
-1. Allez sur [emailjs.com](https://www.emailjs.com/)
-2. Cliquez sur "Sign Up" et créez un compte gratuit
-3. Connectez-vous à votre dashboard
+### Option 1 : Variables d'environnement (Recommandé)
 
-## Étape 2 : Configurer votre service email
-
-1. Dans votre dashboard EmailJS, cliquez sur "Add New Service"
-2. Choisissez votre fournisseur email (Gmail, Outlook, etc.)
-3. Connectez votre compte email
-4. Notez le **Service ID** qui s'affiche
-
-## Étape 3 : Créer un template d'email
-
-1. Allez dans "Email Templates"
-2. Cliquez sur "Create New Template"
-3. Configurez votre template avec les variables suivantes :
-
-```html
-Nouveau message de contact depuis Novaesens
-
-Nom : {{user_name}}
-Email : {{user_email}}
-Téléphone : {{user_phone}}
-Société : {{user_company}}
-Rôle : {{user_role}}
-
-Message :
-{{message}}
+1. **Créez un fichier `.env` à la racine du projet :**
+```bash
+# Configuration EmailJS
+EMAILJS_PUBLIC_KEY=votre_public_key_ici
+EMAILJS_SERVICE_ID=votre_service_id_ici
+EMAILJS_TEMPLATE_ID=votre_template_id_ici
 ```
 
-4. Sauvegardez le template et notez le **Template ID**
+2. **Ajoutez `.env` à votre `.gitignore` :**
+```bash
+echo ".env" >> .gitignore
+```
 
-## Étape 4 : Récupérer votre Public Key
+3. **Pour la production (O2switch), configurez les variables d'environnement dans votre panneau d'hébergement.**
 
-1. Dans votre dashboard EmailJS, allez dans "Account" > "API Keys"
-2. Copiez votre **Public Key**
+### Option 2 : Configuration directe (Développement uniquement)
 
-## Étape 5 : Configurer le projet
-
-1. Ouvrez le fichier `src/config/emailjs.ts`
-2. Remplacez les valeurs par vos vraies clés :
+Si vous n'utilisez pas de variables d'environnement, modifiez `src/config/emailjs.ts` :
 
 ```typescript
 export const EMAILJS_CONFIG = {
@@ -52,27 +31,65 @@ export const EMAILJS_CONFIG = {
 };
 ```
 
-## Test du formulaire
+## 📧 Configuration EmailJS
 
-1. Lancez votre serveur de développement
-2. Allez sur la page contact
-3. Remplissez et envoyez le formulaire
-4. Vérifiez que vous recevez bien l'email
+### 1. Créer un compte EmailJS
+- Allez sur https://www.emailjs.com/
+- Créez un compte gratuit
 
-## Fonctionnalités incluses
+### 2. Configurer un service email
+- Ajoutez votre service email (Gmail, Outlook, etc.)
+- Notez le **Service ID** généré
 
-✅ **Validation des champs** : Tous les champs sont requis
-✅ **État de chargement** : Le bouton affiche "Envoi en cours..."
-✅ **Messages de feedback** : Succès/erreur avec styles
-✅ **Réinitialisation** : Le formulaire se vide après envoi
-✅ **Gestion d'erreur** : Affichage en cas d'échec
-✅ **Types TypeScript** : Code typé et sécurisé
+### 3. Créer un template d'email
+- Créez un nouveau template
+- Utilisez ces variables dans votre template :
+  - `{{user_name}}` : Nom complet
+  - `{{user_email}}` : Email
+  - `{{user_phone}}` : Téléphone
+  - `{{user_company}}` : Société
+  - `{{user_role}}` : Rôle
+  - `{{message}}` : Message
+- Notez le **Template ID** généré
 
-## Variables disponibles dans le template
+### 4. Récupérer votre Public Key
+- Dans votre dashboard EmailJS, copiez votre **Public Key**
 
-- `{{user_name}}` : Prénom + Nom
-- `{{user_email}}` : Adresse email
-- `{{user_phone}}` : Numéro de téléphone
-- `{{user_company}}` : Nom de la société
-- `{{user_role}}` : Rôle dans l'entreprise
-- `{{message}}` : Message de l'utilisateur 
+## 🚀 Déploiement
+
+### Variables d'environnement sur O2switch
+Contactez le support O2switch pour configurer les variables d'environnement :
+
+**EmailJS :**
+- `EMAILJS_PUBLIC_KEY`
+- `EMAILJS_SERVICE_ID`
+- `EMAILJS_TEMPLATE_ID`
+
+**Google Analytics :**
+- `GOOGLE_ANALYTICS_ID`
+
+### Test du formulaire
+1. Remplissez le formulaire de contact
+2. Vérifiez que l'email est bien reçu
+3. Vérifiez les logs dans la console du navigateur
+
+## 🔒 Sécurité
+
+- ⚠️ **Ne committez jamais vos vraies clés EmailJS dans Git**
+- ✅ Utilisez toujours des variables d'environnement en production
+- ✅ Limitez les permissions de votre service EmailJS
+- ✅ Surveillez l'utilisation de votre compte EmailJS
+
+## 🐛 Dépannage
+
+### Erreur "EmailJS not initialized"
+- Vérifiez que la Public Key est correcte
+- Vérifiez que EmailJS est bien chargé
+
+### Erreur "Service not found"
+- Vérifiez le Service ID
+- Vérifiez que le service est actif
+
+### Erreur "Template not found"
+- Vérifiez le Template ID
+- Vérifiez que le template est publié 
