@@ -822,8 +822,43 @@ const { title, description, ogTitle, ogDescription, ogImage, canonical } = {
     margin-top: 83vh; /* Espacement pour le hero fixe */
   }
 
+  /* Hero: responsive largeur + hauteur */
+.hero-title {
+  /* Mini 1.1rem, suit le plus petit des vw/vh, maxi = var(--font-size-36) */
+  font-size: clamp(1.1rem, min(5.2vw, 5.2vh), var(--font-size-48));
+}
 
+.hero-subtitle {
+  font-size: clamp(0.95rem, min(2.6vw, 2.6vh), var(--font-size-16));
+  max-width: min(42ch, 70%);
+}
 
+/* L’image suit la contrainte la plus restrictive (vw/vh) avec bornes */
+.hero-image {
+  width: clamp(900px, min(45vw, 100vh), 900px);
+}
+
+/* Hauteurs faibles (paysage/tablettes) */
+@media (max-height: 900px) {
+  .hero-title { font-size: clamp(1rem, min(4.6vw, 4.6vh), var(--font-size-30)); }
+  .hero-image { width: clamp(200px, min(42vw, 80vh), 750px); }
+}
+
+@media (max-height: 550px) {
+  .hero-title { font-size: clamp(0.95rem, min(3.9vw, 4vh), var(--font-size-28)); }
+  .hero-image { width: clamp(180px, min(38vw, 70vh), 640px); }
+}
+
+/* Conserver la logique largeur, mais la combiner avec la hauteur */
+@media (max-width: 768px) {
+  .hero-title { font-size: clamp(1.05rem, min(7vw, 5vh), var(--font-size-36)); }
+  .hero-image { width: clamp(240px, min(70vw, 52vh), 600px); }
+}
+
+@media (max-width: 480px) {
+  .hero-title { font-size: clamp(1rem, min(8vw, 5vh), var(--font-size-30)); }
+  .hero-image { width: clamp(220px, min(80vw, 46vh), 400px); }
+}
 
 
   /* Data Section */
